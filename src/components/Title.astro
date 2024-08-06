@@ -1,10 +1,16 @@
 ---
 interface Props {
     classname: string;
-    title: string;
+    title: string[];
 }
 
 const { classname, title } = Astro.props;
 ---
 
-<h2 class={`title title--${classname}`}>{title}</h2>
+<h2 class={`title title--${classname}`}>
+    {
+        title.map((item) => {
+            return <span>{item}</span>;
+        })
+    }
+</h2>

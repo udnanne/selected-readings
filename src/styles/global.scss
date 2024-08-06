@@ -85,6 +85,10 @@ main {
     letter-spacing: 0.5px;
     color: var(--septenary-color);
 
+    @media (max-width: $tablet) {
+        display: none;
+    }
+
     a {
         color: var(--septenary-color);
         transition: all 0.3s ease;

@@ -1,0 +1,167 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Title from "../../components/Title.astro";
+import "../../styles/title.scss";
+import "../../styles/brochure.scss";
+---
+
+<Layout title="活動簡章">
+    <main>
+        <div class="container breadcrumb">
+            <a href="#">首頁</a> / <a href="#">報名專區</a> / <a href="#"
+                >活動簡章</a
+            >
+        </div>
+
+        <div class="container">
+            <Title
+                title={["文化部第四十五次", "中小學生讀物選介簡章"]}
+                classname="brochure"
+            />
+
+            <div class="brochure">
+                <!--可在class添加"mt-5"、"mt-10"更改"margin-top"-->
+                <ul class="list-1">
+                    <li data-order="一、">
+                        <span class="list-title">活動宗旨：</span><br />
+                        為拓增養成國內閱讀人口，提升兒童、少年及青少年閱讀視野及興趣，特舉辦本評選活動。（以下簡稱本活動）。
+                    </li>
+
+                    <li data-order="二、">
+                        <span class="list-title">主辦單位：</span
+                        >文化部（以下簡稱本部）。<br />
+                        <span class="list-title">承辦單位：</span
+                        >聯合線上股份有限公司。
+                    </li>
+
+                    <li data-order="三、">
+                        <span class="list-title">報名日期：</span><br />
+                        中華民國（以下同）112年1月9日(一)至同年2月20日(一)止。
+                    </li>
+
+                    <li data-order="四、">
+                        <span class="list-title">報名方式：</span><br />
+                        採網路報名（網址：http://book.moc.gov.tw/），完成報名之後，申請人應以A4紙列印報名表，並加蓋申請人印章（申請人如為法人，應蓋妥法人及其負責人印章），連同報名應檢附之文件、參選讀物以掛號郵寄至承辦單位聯合線上股份有限公司（地址：22161新北市汐止區大同路一段369號）。請註明「參加中小學生讀物選介活動」。以郵戳日期為憑，逾期不予受理。（服務專線：02-8692-5588分機6083）<br
+                        />
+                        <button class="btn file mt-10" type="button">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="24.246"
+                                viewBox="0 0 18 24.246"
+                            >
+                                <path
+                                    id="Path_16276"
+                                    data-name="Path 16276"
+                                    d="M4,20.2H5v-1.01H4Zm2,0h8v-1.01H6ZM4,17.174H5v-1.01H4Zm2,0h8v-1.01H6ZM4,14.143H5v-1.01H4Zm2,0h8v-1.01H6Zm-2-3.03H5V10.1H4Zm2,0h8V10.1H6ZM4,8.082H5V7.072H4Zm2,0h8V7.072H6ZM2,2.02H12V4.988h4V22.162H2ZM0,0V24.246H18V4.041L13.938,0Z"
+                                    fill="#fff"></path>
+                            </svg>
+
+                            <span
+                                >文化部第四十五次中小攀生讀物選介簡章 (PDF檔)</span
+                            >
+                        </button>
+                    </li>
+
+                    <li data-order="五、">
+                        <span class="list-title"
+                            >申請人資格及參選讀物之規定：</span
+                        ><br />
+                        <ul class="list-2">
+                            <li data-order="（一）">
+                                申請人以於111年1月1日至同年12月31日期間出版發行
+                                (以著作權頁日期為準)圖書（包含電子書、有聲書）、套（叢）書或雜誌之法人、商號、團體、機關（構）、學校、個人為限。
+                            </li>
+                            <li data-order="（二）">
+                                參選讀物須於前款所定期間於本國出版發行，如為套（叢）書者，應於前款所定期間之終日前全部出版發行完畢，創作語言不限，並鼓勵以面臨傳承危機之國家語言創作之讀物報名。
+                            </li>
+                            <li data-order="（三）">
+                                參選讀物如為再版書，其編排、內容或印刷品質較前版為優者，亦得申請參選；前開日期之規定，均以著作權頁登載日期為準。
+                            </li>
+                            <li data-order="（四）">
+                                參選讀物不包括影印書、各級學校教科書及字典辭典。
+                            </li>
+                            <li data-order="（五）">
+                                漫畫類報名方式有二，如該系列已於該年度已完結，請以「套書」方式報名，並提供全套。如系列未完結，請以「單本」方式報名，提供最新出版一冊即可。
+                            </li>
+                            <li data-order="（六）">
+                                參選讀物適讀年齡層為學齡前到高中，請謹慎選填適讀年齡層及參選類組，以免影響入選。
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li data-order="六、">
+                        <span class="list-title">參選類組：</span><br />
+                        <ul class="list-2">
+                            <li data-order="（一）">
+                                圖畫書類：以「圖畫」或「繪本」為主之讀物。
+                            </li>
+                            <li data-order="（二）">
+                                自然科普類：包括「自然科學」及「應用科學」等。
+                            </li>
+                            <li data-order="（三）">
+                                人文社科類：包括「歷史」、「地理」、「藝術」、「心靈」、「教養」、「哲學」、「宗教」、「語言」、「商管」等。
+                            </li>
+                            <li data-order="（四）">
+                                文學類：以原創作品為主，包括遊記、文學賞析、小說、散文、詩歌等。
+                            </li>
+                            <li data-order="（五）">
+                                文學翻譯類：將國內外創作，譯為其他語言之文學作品。
+                            </li>
+                            <li data-order="（六）">叢書、工具書類。</li>
+                            <li data-order="（七）">漫畫類。</li>
+                            <li data-order="（八）">雜誌類。</li>
+                        </ul>
+                    </li>
+
+                    <li data-order="七、">
+                        <span class="list-title">報名應具文件：</span><br />
+                        <ul class="list-2">
+                            <li data-order="（一）">
+                                表一：申請人基本資料（為法人、商號者，應檢附公司、商業設立登記證明文件影本一份；為團體、個人者，應檢附團體立案證明或我國國民身分證明文件影本一份；為機關（構）、學校者，應檢附公函）。
+                            </li>
+                            <li data-order="（二）">表二：參選讀物資料。</li>
+                            <li data-order="（三）">
+                                參選讀物每種兩冊，如為電子書或有聲書，可由下列方式擇一提供：<br
+                                />
+                                <ul class="list-3 mt-5">
+                                    <li>燒錄為光碟。</li>
+                                    <li>
+                                        提供評選委員可經由網際網路閱覽或下載之連結網址，並可容許多位評選委員同時使用之有效帳號密碼及使用說明（需使評選委員能觀看完整內容，可使用時間至112年7月31日止）。
+                                    </li>
+                                    <li>
+                                        如以上皆無法提供，可洽承辦單位，將檔案上傳至承辦單位提供之雲端空間，或以其他適合形式提供。
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li data-order="八、">
+                        <span class="list-title">注意事項：</span><br />
+                        <ul class="list-2">
+                            <li data-order="（一）">
+                                本評選之評選作業、授權推廣方式、撤銷推介等規定，請參見「文化部中小學生讀物選介評選活動作業要點」(可至本部主管法規查詢系統查詢，網址：https://law.moc.gov.tw/law/)。
+                            </li>
+                            <li data-order="（二）">
+                                本部、本部所屬機關及承辦單位之相關人員不得申請報名。
+                            </li>
+                            <li data-order="（三）">
+                                評選委員對參選讀物之類別、適讀年齡層有修正權。
+                            </li>
+                            <li data-order="（四）">
+                                參選讀物無論是否推介概不退還，本部將作為公益及非營利之使用。
+                            </li>
+                            <li data-order="（五）">
+                                報名應檢附之文件、資料或應備內容有不全者，經承辦單位通知限期補正，屆時不補正或補正不完全者，應不予受理。補正以一次為限。
+                            </li>
+                            <li data-order="（六）">
+                                本評選鼓勵出版者持續創新並提升品質，出版適合中小學生之讀物，請參考過往評審標準，審慎評估公版書、經典重譯等類型之讀物是否報名參選，歷年評選標準可至本活動官網查詢(網址：http://book.moc.gov.tw/)。
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</Layout>
