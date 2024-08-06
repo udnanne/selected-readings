@@ -1,0 +1,36 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NewsItem from "../../components/NewsItem.astro";
+import Title from "../../components/Title.astro";
+import "../../styles/title.scss";
+import "../../styles/news.scss";
+---
+
+<Layout title="最新消息">
+    <main>
+        <div class="container breadcrumb">
+            <a href="#">首頁</a> / <a href="#">最新消息</a>
+        </div>
+
+        <div class="container">
+            <Title title="最新消息" classname="news" />
+
+            <div class="news-list">
+                <!--標準尺寸：300 * 250-->
+                <NewsItem width="300" height="250" />
+
+                <NewsItem width="350" height="250" />
+
+                <NewsItem width="300" height="300" />
+
+                <NewsItem width="350" height="300" />
+
+                <NewsItem width="250" height="250" />
+
+                <NewsItem width="300" height="200" />
+
+                <NewsItem width="250" height="200" />
+            </div>
+        </div>
+    </main>
+</Layout>

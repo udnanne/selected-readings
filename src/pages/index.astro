@@ -1,0 +1,372 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.astro";
+import TitleMore from "../components/TitleMore.astro";
+import SliderBanner from "../components/SliderBanner.jsx";
+import SliderNews from "../components/SliderNews.jsx";
+import SliderGuide from "../components/SliderGuide.jsx";
+import SliderRegistration from "../components/SliderRegistration.jsx";
+
+import "../styles/title.scss";
+import "../styles/slider.scss";
+import "../styles/index.scss";
+---
+
+<Layout title="中小學生讀物選介">
+    <main>
+        <SliderBanner client:only />
+
+        <div class="container">
+            <TitleMore classname="index" title="最新消息" />
+
+            <SliderNews client:only />
+
+            <TitleMore classname="index" title="選書指南" />
+
+            <SliderGuide client:only />
+        </div>
+
+        <div class="registration-area full-container">
+            <Title classname="registration-area" title="報名專區" />
+
+            <SliderRegistration client:only />
+        </div>
+
+        <div class="tour">
+            <a href="#">
+                <div class="tour-item tour-item1">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="65"
+                        height="65"
+                        viewBox="0 0 65 65"
+                    >
+                        <g id="Group_11308" data-name="Group 11308">
+                            <path
+                                id="Path_16278"
+                                data-name="Path 16278"
+                                d="M56.229,8.63A8.638,8.638,0,0,0,47.6,0H8.628A8.638,8.638,0,0,0,0,8.63V48.487H7.745V63.972H48.489V17.166A8.607,8.607,0,0,0,56.229,8.63M1.769,46.717V8.63A6.84,6.84,0,0,1,15.4,7.745H7.745V46.717ZM9.514,14.436V9.514H15.4A6.822,6.822,0,0,1,9.514,15.4Zm0,2.821H46.719V62.2H9.514ZM47.6,15.487H13.858A8.583,8.583,0,0,0,13.8,1.769H47.6a6.859,6.859,0,0,1,0,13.718"
+                                transform="translate(0.514 0.514)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16279"
+                                data-name="Path 16279"
+                                d="M12.278,18.853,9.126,15.7,7.876,16.954l4.592,4.594,6.421-8.56-1.417-1.062Z"
+                                transform="translate(8.383 12.43)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16280"
+                                data-name="Path 16280"
+                                d="M12.278,24.663,9.126,21.512,7.876,22.764l4.592,4.592L18.889,18.8l-1.417-1.062Z"
+                                transform="translate(8.383 18.235)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16281"
+                                data-name="Path 16281"
+                                d="M12.278,30.473,9.126,27.322,7.876,28.574l4.592,4.592,6.421-8.558-1.417-1.062Z"
+                                transform="translate(8.383 24.039)"
+                                fill="#fff"></path>
+                            <rect
+                                id="Rectangle_1182"
+                                data-name="Rectangle 1182"
+                                width="11.873"
+                                height="1.769"
+                                transform="translate(30.437 31.746)"
+                                fill="#fff"></rect>
+                            <rect
+                                id="Rectangle_1183"
+                                data-name="Rectangle 1183"
+                                width="11.873"
+                                height="1.769"
+                                transform="translate(30.437 43.359)"
+                                fill="#fff"></rect>
+                            <rect
+                                id="Rectangle_1184"
+                                data-name="Rectangle 1184"
+                                width="11.873"
+                                height="1.769"
+                                transform="translate(30.437 54.974)"
+                                fill="#fff"></rect>
+                            <path
+                                id="Path_16282"
+                                data-name="Path 16282"
+                                d="M27.242,18.778V54.714h9.512V18.778L32,9.266Zm1.769,4.966h5.973V45.2H29.011Zm0,23.228h5.973v5.973H29.011Zm5.973-25H29.011V19.2L32,13.222,34.985,19.2Z"
+                                transform="translate(27.732 9.772)"
+                                fill="#fff"></path>
+                        </g>
+                    </svg>
+                </div>
+                <span>報名專區</span>
+                <div class="arrow">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="5.73"
+                        height="9.394"
+                        viewBox="0 0 5.73 9.394"
+                    >
+                        <path
+                            id="Path_16283"
+                            data-name="Path 16283"
+                            d="M4.065,0,0,3.832,4.065,8,4.3,7.785.448,3.841,4.28.215Z"
+                            transform="translate(5.016 8.697) rotate(180)"
+                            fill="#ea7564"
+                            stroke="#fff"
+                            stroke-linecap="round"
+                            stroke-width="1"></path>
+                    </svg>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="tour-item tour-item2">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="60.361"
+                        height="65"
+                        viewBox="0 0 60.361 65"
+                    >
+                        <g
+                            id="Group_11317"
+                            data-name="Group 11317"
+                            transform="translate(-2 -3)"
+                        >
+                            <g
+                                id="Group_11316"
+                                data-name="Group 11316"
+                                transform="translate(2 3)"
+                            >
+                                <path
+                                    id="Path_16284"
+                                    data-name="Path 16284"
+                                    d="M3.671,46.21a.944.944,0,0,0,.949-.015c7.854-4.767,16.172-5.409,22.259-1.713l.017.008.009.008c.015.008.034,0,.049.013a.931.931,0,0,0,.371.094.752.752,0,0,0,.13-.008.9.9,0,0,0,.326-.094c.023-.011.051-.008.073-.021,6.085-3.7,14.407-3.055,22.257,1.713a.95.95,0,0,0,.489.136.94.94,0,0,0,.941-.941V14.9a.94.94,0,0,0-.454-.8c-3-1.82-5.424-3.132-9.29-3.4a.93.93,0,0,0-1,.875.942.942,0,0,0,.873,1c3.024.209,4.978,1.058,7.991,2.855V43.764c-7.449-4.05-15.222-4.651-21.352-1.671V33.113a.941.941,0,1,0-1.882,0v9.039c-6.132-2.994-13.893-2.445-21.352,1.611V15.433a17.04,17.04,0,0,1,8.108-2.7.941.941,0,1,0-.132-1.878,19.158,19.158,0,0,0-9.4,3.247.936.936,0,0,0-.454.8V45.39a.94.94,0,0,0,.48.821"
+                                    transform="translate(2.815 9.432)"
+                                    fill="#fff"></path>
+                                <path
+                                    id="Path_16285"
+                                    data-name="Path 16285"
+                                    d="M59.42,15.61a.941.941,0,0,0-.941.941V48.7c-11.166-5.974-20.909-7.043-28.3-3.128-7.391-3.915-17.132-2.842-28.3,3.128V16.551a.941.941,0,1,0-1.882,0V50.29a.937.937,0,0,0,.467.811.928.928,0,0,0,.474.13.941.941,0,0,0,.463-.122c7.937-4.485,19.287-8.768,28.313-3.662a.665.665,0,0,0,.1.034.9.9,0,0,0,.183.06,1.194,1.194,0,0,0,.354,0,.886.886,0,0,0,.181-.06.687.687,0,0,0,.105-.034c9.026-5.1,20.381-.822,28.313,3.662a.942.942,0,0,0,1.4-.819V16.551a.941.941,0,0,0-.941-.941"
+                                    transform="translate(0 13.768)"
+                                    fill="#fff"></path>
+                                <path
+                                    id="Path_16286"
+                                    data-name="Path 16286"
+                                    d="M16.3,29.354v3.329a4.253,4.253,0,0,0,4.248,4.25h1.8a4.253,4.253,0,0,0,4.25-4.25V29.354c0-2.366,1.541-4.327,3.049-5.934A11.006,11.006,0,0,0,33,15.581,11.3,11.3,0,0,0,21.45,4.281,11.373,11.373,0,0,0,13.3,7.494a11.217,11.217,0,0,0-3.4,8.087,11.006,11.006,0,0,0,3.356,7.839c1.508,1.607,3.049,3.568,3.049,5.934m8.415,3.329a2.371,2.371,0,0,1-2.368,2.368h-1.8a2.37,2.37,0,0,1-2.366-2.368V29.354a7.361,7.361,0,0,0-.085-1.107h6.7a7.361,7.361,0,0,0-.085,1.107ZM14.618,8.842A9.344,9.344,0,0,1,21.2,6.16c.077,0,.154,0,.231,0h.043a9.42,9.42,0,0,1,9.649,9.418,9.111,9.111,0,0,1-2.848,6.551,14.537,14.537,0,0,0-2.928,4.233h-.774V23.5a.941.941,0,1,0-1.882,0v2.861H20.712V23.5a.941.941,0,0,0-1.882,0v2.861H17.556a14.505,14.505,0,0,0-2.93-4.233,9.117,9.117,0,0,1-2.846-6.551,9.346,9.346,0,0,1,2.838-6.74"
+                                    transform="translate(8.73 3.773)"
+                                    fill="#fff"></path>
+                                <path
+                                    id="Path_16287"
+                                    data-name="Path 16287"
+                                    d="M14.041,12.84h.188v2.29a.941.941,0,0,0,1.882,0V12.84h5.531v2.29a.941.941,0,0,0,1.882,0V12.84h.122a.941.941,0,0,0,0-1.882h-.122v-.183a.941.941,0,0,0-1.882,0v.183H16.111v-.183a.941.941,0,0,0-1.882,0v.183h-.188a.941.941,0,0,0,0,1.882"
+                                    transform="translate(11.555 8.674)"
+                                    fill="#fff"></path>
+                                <path
+                                    id="Path_16288"
+                                    data-name="Path 16288"
+                                    d="M16.514,5.42a.941.941,0,0,0,.941-.941V.941a.941.941,0,1,0-1.882,0V4.479a.941.941,0,0,0,.941.941"
+                                    transform="translate(13.736 0)"
+                                    fill="#fff"></path>
+                                <path
+                                    id="Path_16289"
+                                    data-name="Path 16289"
+                                    d="M12.3,5.9a.944.944,0,0,0,.817.471.923.923,0,0,0,.469-.126.941.941,0,0,0,.344-1.285L12.157,1.9a.941.941,0,1,0-1.63.941Z"
+                                    transform="translate(9.174 1.257)"
+                                    fill="#fff"></path>
+                                <path
+                                    id="Path_16290"
+                                    data-name="Path 16290"
+                                    d="M7.107,7.005,10.17,8.773a.925.925,0,0,0,.469.128.941.941,0,0,0,.472-1.756L8.048,5.378a.94.94,0,1,0-.941,1.628"
+                                    transform="translate(5.853 4.629)"
+                                    fill="#fff"></path>
+                                <path
+                                    id="Path_16291"
+                                    data-name="Path 16291"
+                                    d="M23.9,8.768a.93.93,0,0,0,.471-.126L27.434,6.87a.94.94,0,1,0-.941-1.628L23.431,7.012A.94.94,0,0,0,23.9,8.768"
+                                    transform="translate(20.251 4.51)"
+                                    fill="#fff"></path>
+                                <path
+                                    id="Path_16292"
+                                    data-name="Path 16292"
+                                    d="M20.3,6.169a.93.93,0,0,0,.471.126.939.939,0,0,0,.815-.471L23.35,2.761a.941.941,0,0,0-1.63-.941L19.951,4.884A.941.941,0,0,0,20.3,6.169"
+                                    transform="translate(17.486 1.189)"
+                                    fill="#fff"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <span>選書指南</span>
+                <div class="arrow">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="5.73"
+                        height="9.394"
+                        viewBox="0 0 5.73 9.394"
+                    >
+                        <path
+                            id="Path_16283"
+                            data-name="Path 16283"
+                            d="M4.065,0,0,3.832,4.065,8,4.3,7.785.448,3.841,4.28.215Z"
+                            transform="translate(5.016 8.697) rotate(180)"
+                            fill="#ea7564"
+                            stroke="#fff"
+                            stroke-linecap="round"
+                            stroke-width="1"></path>
+                    </svg>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="tour-item tour-item3">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="65"
+                        height="64.959"
+                        viewBox="0 0 65 64.959"
+                    >
+                        <g id="Group_11318" data-name="Group 11318">
+                            <path
+                                id="Path_16293"
+                                data-name="Path 16293"
+                                d="M63.984,17.885H35.559C39.81,14.792,45.754,9.754,45.723,5.769c-.012-1.438-.81-2.608-2.433-3.579C39.871.15,37.4-.453,35.736.341,34.028,1.162,33,3.53,32.37,6.417,31.74,3.506,30.712,1.17,28.988.341c-1.672-.8-4.113-.207-7.552,1.85C19.809,3.163,19.012,4.335,19,5.773c-.028,3.981,5.858,8.988,10.16,12.112H1.016A1.016,1.016,0,0,0,0,18.9V30.956a1.016,1.016,0,0,0,1.016,1.016H7.25V63.944a1.016,1.016,0,0,0,1.016,1.016H56.507a1.015,1.015,0,0,0,1.016-1.016V31.972h6.461A1.016,1.016,0,0,0,65,30.956V18.9a1.016,1.016,0,0,0-1.016-1.016M36.611,2.175h0a1.693,1.693,0,0,1,.741-.14c.821,0,2.31.353,4.893,1.9,1.436.859,1.442,1.558,1.444,1.855.018,2.417-3.941,6.687-10.219,11.095-.012-.483-.028-.951-.047-1.387.435-10.469,2.182-12.84,3.185-13.319M21.036,5.787v0c0-.3.006-.993,1.442-1.85,2.628-1.572,4.111-1.9,4.889-1.9a1.734,1.734,0,0,1,.747.142c1,.479,2.748,2.858,3.187,13.374.018.455.035.924.051,1.4-6.342-4.43-10.333-8.726-10.317-11.166m-19,14.129H25.2V29.941H2.031Zm7.25,12.364H25.2V62.928H9.281Zm17.95-1.016V19.916H37.542V62.928H27.231ZM55.492,62.928H39.573V32.281H55.492Zm7.477-32.988h-23.4V19.916h23.4Z"
+                                transform="translate(0 0)"
+                                fill="#fff"></path>
+                        </g>
+                    </svg>
+                </div>
+                <span>有獎徵答</span>
+                <div class="arrow">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="5.73"
+                        height="9.394"
+                        viewBox="0 0 5.73 9.394"
+                    >
+                        <path
+                            id="Path_16283"
+                            data-name="Path 16283"
+                            d="M4.065,0,0,3.832,4.065,8,4.3,7.785.448,3.841,4.28.215Z"
+                            transform="translate(5.016 8.697) rotate(180)"
+                            fill="#ea7564"
+                            stroke="#fff"
+                            stroke-linecap="round"
+                            stroke-width="1"></path>
+                    </svg>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="tour-item tour-item4">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="65"
+                        height="54.754"
+                        viewBox="0 0 65 54.754"
+                    >
+                        <g id="Group_11320" data-name="Group 11320">
+                            <path
+                                id="Path_16294"
+                                data-name="Path 16294"
+                                d="M60.72,0H4.28A4.284,4.284,0,0,0,0,4.281V50.475a4.284,4.284,0,0,0,4.28,4.28H60.72A4.284,4.284,0,0,0,65,50.475V4.281A4.284,4.284,0,0,0,60.72,0M1.712,4.281A2.57,2.57,0,0,1,4.28,1.713H60.72a2.57,2.57,0,0,1,2.568,2.568v5.95H1.712ZM60.72,53.043H4.28a2.571,2.571,0,0,1-2.568-2.568V11.944H63.288V50.475a2.571,2.571,0,0,1-2.568,2.568"
+                                transform="translate(0 0)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16295"
+                                data-name="Path 16295"
+                                d="M5.121,2.238a2.14,2.14,0,1,0,2.14,2.14,2.141,2.141,0,0,0-2.14-2.14"
+                                transform="translate(2.123 1.593)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16296"
+                                data-name="Path 16296"
+                                d="M9.121,2.238a2.14,2.14,0,1,0,2.14,2.14,2.141,2.141,0,0,0-2.14-2.14"
+                                transform="translate(4.972 1.593)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16297"
+                                data-name="Path 16297"
+                                d="M13.121,2.238a2.14,2.14,0,1,0,2.14,2.14,2.141,2.141,0,0,0-2.14-2.14"
+                                transform="translate(7.821 1.593)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16298"
+                                data-name="Path 16298"
+                                d="M17.345,10.294H3.837a.856.856,0,0,0-.856.856v5.137a.856.856,0,0,0,.856.856H17.345a.856.856,0,0,0,.856-.856V11.15a.856.856,0,0,0-.856-.856"
+                                transform="translate(2.123 7.33)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16299"
+                                data-name="Path 16299"
+                                d="M49.289,10.572h-34.7a.856.856,0,0,0,0,1.712h34.7a.856.856,0,1,0,0-1.712"
+                                transform="translate(9.782 7.528)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16300"
+                                data-name="Path 16300"
+                                d="M49.289,13.017h-34.7a.856.856,0,0,0,0,1.712h34.7a.856.856,0,1,0,0-1.712"
+                                transform="translate(9.782 9.27)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16301"
+                                data-name="Path 16301"
+                                d="M17.345,16.739H3.837a.856.856,0,0,0-.856.856v5.137a.856.856,0,0,0,.856.856H17.345a.856.856,0,0,0,.856-.856V17.6a.856.856,0,0,0-.856-.856"
+                                transform="translate(2.123 11.921)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16302"
+                                data-name="Path 16302"
+                                d="M49.289,17.017h-34.7a.856.856,0,0,0,0,1.712h34.7a.856.856,0,0,0,0-1.712"
+                                transform="translate(9.782 12.119)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16303"
+                                data-name="Path 16303"
+                                d="M49.289,19.461h-34.7a.856.856,0,1,0,0,1.712h34.7a.856.856,0,1,0,0-1.712"
+                                transform="translate(9.782 13.859)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16304"
+                                data-name="Path 16304"
+                                d="M17.345,23.183H3.837a.856.856,0,0,0-.856.856v5.137a.856.856,0,0,0,.856.856H17.345a.856.856,0,0,0,.856-.856V24.039a.856.856,0,0,0-.856-.856"
+                                transform="translate(2.123 16.51)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16305"
+                                data-name="Path 16305"
+                                d="M49.289,23.461h-34.7a.856.856,0,1,0,0,1.712h34.7a.856.856,0,1,0,0-1.712"
+                                transform="translate(9.782 16.708)"
+                                fill="#fff"></path>
+                            <path
+                                id="Path_16306"
+                                data-name="Path 16306"
+                                d="M49.289,25.9h-34.7a.856.856,0,1,0,0,1.712h34.7a.856.856,0,1,0,0-1.712"
+                                transform="translate(9.782 18.449)"
+                                fill="#fff"></path>
+                        </g>
+                    </svg>
+                </div>
+                <span>主題活動</span>
+                <div class="arrow">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="5.73"
+                        height="9.394"
+                        viewBox="0 0 5.73 9.394"
+                    >
+                        <path
+                            id="Path_16283"
+                            data-name="Path 16283"
+                            d="M4.065,0,0,3.832,4.065,8,4.3,7.785.448,3.841,4.28.215Z"
+                            transform="translate(5.016 8.697) rotate(180)"
+                            fill="#ea7564"
+                            stroke="#fff"
+                            stroke-linecap="round"
+                            stroke-width="1"></path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </main>
+</Layout>

@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "NotoSansTC";
+    src: url("/fonts/Noto_Sans_TC/NotoSansTC.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --primary-color: #3b84b7;
+    --secondary-color: #86c0e9;
+    --tertiary-color: #e5f4ff;
+    --quaternary-color: #212f5d;
+    --quinary-color: #f3f3f3;
+    --senary-color: #d8d8d8;
+    --septenary-color: #7e7e7e;
+    --font-family: "NotoSansTC", sans-serif;
+    font-family: var(--font-family);
+    --weight-extra-light: 100;
+    --weight-light: 200;
+    --weight-normal: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
+    --weight-heavy: 900;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --container-largeDesktop: 1280px;
+    --container-desktop: 1257px;
+    --container-tablet: 983px;
+    --container-mobile: 727px;
+    --container-smallMobile: 280px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.full-container {
+    max-width: $largeDesktop;
+    width: 100%;
+
+    @media (max-width: $desktop) {
+        max-width: 100%;
+    }
+}
+
+.container {
+    max-width: var(--container-largeDesktop);
+    width: 100%;
+}
+
+.btn {
+    outline: none;
+    cursor: pointer;
+    border-style: solid;
+    transition: all 0.3s ease;
+}
+
+.breadcrumb {
+    margin-block: 20px 40px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    font-size: 13px;
+    font-weight: var(--weight-normal);
+    line-height: 1.462;
+    letter-spacing: 0.5px;
+    color: var(--septenary-color);
+
+    a {
+        color: var(--septenary-color);
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: var(--primary-color);
+        }
+
+        &:first-child {
+            @media (max-width: $desktop) {
+                margin-left: 20px;
+            }
+        }
+    }
+}

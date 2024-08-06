@@ -1,0 +1,415 @@
+@import "@splidejs/splide/css";
+
+.splide__pagination {
+    z-index: 0;
+}
+
+.splide__arrow {
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover {
+        &:not(:disabled) {
+            opacity: 1;
+        }
+    }
+}
+
+.splide-banner {
+    max-width: $largeDesktop;
+    width: 100%;
+    margin-bottom: 15px;
+
+    @media (max-width: $desktop) {
+        max-width: 100%;
+    }
+
+    .splide__track {
+        cursor: grab;
+    }
+
+    .splide__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 600px;
+        aspect-ratio: 1280/600;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-image: var(--bg-img);
+        filter: blur(100px);
+    }
+
+    .splide__slide img {
+        max-width: 100%;
+        height: 100%;
+        max-height: 600px;
+        aspect-ratio: 1280/600;
+        object-fit: contain;
+    }
+
+    .splide__arrow {
+        background: transparent;
+        border: 1px solid transparent;
+
+        &:hover {
+            border: 1px solid var(--primary-color);
+        }
+
+        svg {
+            path {
+                fill: var(--primary-color);
+            }
+        }
+
+        &--prev {
+            left: 7%;
+
+            @media (max-width: $desktop) {
+                left: 1em;
+            }
+        }
+
+        &--next {
+            right: 7%;
+
+            @media (max-width: $desktop) {
+                right: 1em;
+            }
+        }
+    }
+
+    .splide__pagination__page {
+        width: 10px;
+        height: 10px;
+        background: #f8f8f8;
+        opacity: 1;
+        box-shadow: 0 0 4px 0px #f0f0f0,
+            inset 0 0 6px -1px rgba($color: #000, $alpha: 0.1);
+
+        &.is-active {
+            transform: none;
+            background: var(--primary-color);
+            opacity: 1;
+        }
+    }
+}
+
+.splide-news,
+.splide-guide {
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .splide__track {
+        cursor: grab;
+    }
+
+    .splide__slide {
+        padding: 5px;
+    }
+
+    .splide__card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+        background-color: white;
+
+        &:hover {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    .splide__card--img {
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        position: relative;
+
+        span {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            padding: 1.5px 5px 3.5px;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+            color: white;
+            font-size: 14px;
+            font-weight: var(--weight-light);
+            letter-spacing: 0.3px;
+        }
+    }
+
+    .splide__card--text {
+        padding-block: 10px;
+        position: relative;
+
+        h3 {
+            font-size: 18px;
+            font-weight: var(--weight-regular);
+            color: #000;
+            margin-block: 0 5px;
+            line-height: 1.389;
+            -webkit-line-clamp: 2;
+            max-height: 2.778em;
+
+            @media (max-width: $tablet) {
+                font-size: 16px;
+                line-height: 1.438;
+                max-height: 2.876em;
+            }
+
+            span {
+                display: none;
+                margin-right: 10px;
+                color: var(--primary-color);
+
+                @media (max-width: $tablet) {
+                    display: inline-block;
+                }
+            }
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: var(--weight-normal);
+            color: var(--septenary-color);
+            margin-block: 0;
+            line-height: 1.429;
+            -webkit-line-clamp: 1;
+            max-height: 1.429em;
+        }
+
+        time {
+            font-size: 14px;
+            font-weight: var(--weight-bold);
+            color: var(--primary-color);
+            display: flex;
+
+            @media (max-width: $tablet) {
+                visibility: hidden;
+                position: absolute;
+                z-index: -1;
+            }
+        }
+
+        h3,
+        p {
+            display: inline-block;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        h3,
+        p,
+        time {
+            text-align: left;
+        }
+    }
+
+    .splide__arrow {
+        background: white;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+
+        svg {
+            path {
+                fill: var(--secondary-color);
+            }
+        }
+
+        &:hover {
+            svg path {
+                fill: var(--primary-color);
+            }
+        }
+    }
+}
+
+.splide-news {
+    max-width: 1260px;
+    margin-bottom: 15px;
+
+    @media (max-width: $desktop) {
+        max-width: calc(100% - 30px);
+    }
+
+    @media (max-width: $tablet) {
+        max-width: 100%;
+        margin-inline: 20px;
+    }
+
+    .splide__slide {
+        @media (max-width: $tablet) {
+            padding: 10px;
+            border-bottom: 1px dashed var(--senary-color);
+        }
+
+        &:first-child {
+            @media (max-width: $tablet) {
+                padding-block-start: 0;
+            }
+        }
+
+        &:last-child {
+            @media (max-width: $tablet) {
+                padding-block-end: 0;
+                border-bottom: none;
+            }
+        }
+    }
+
+    .splide__card {
+        @media (max-width: $tablet) {
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        &:hover {
+            @media (max-width: $tablet) {
+                box-shadow: none;
+            }
+        }
+    }
+
+    .splide__card--img {
+        width: 290px;
+        height: 240px;
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    .splide__card--text {
+        padding-inline: 20px;
+
+        @media (max-width: $tablet) {
+            padding-inline: 0;
+            padding-block: 0;
+        }
+
+        h3 {
+            @media (max-width: $tablet) {
+                margin-block-end: 0;
+                letter-spacing: 0.2px;
+            }
+        }
+    }
+
+    .splide__arrow {
+        &--prev {
+            left: -10px;
+        }
+
+        &--next {
+            right: -10px;
+        }
+    }
+}
+
+.splide-guide {
+    max-width: 1240px;
+    margin-bottom: 15px;
+
+    @media (max-width: $desktop) {
+        max-width: calc(100% - 30px);
+    }
+
+    @media (max-width: $tablet) {
+        max-width: 100%;
+        margin-inline: 15px;
+    }
+
+    .splide__card--img {
+        width: 180px;
+        height: 250px;
+
+        @media (max-width: $tablet) {
+            width: 155px;
+            height: 215px;
+        }
+    }
+
+    .splide__card--text {
+        padding-inline: 10px;
+    }
+
+    .splide__arrow {
+        &--prev {
+            left: -20px;
+
+            @media (max-width: $desktop) {
+                left: -10px;
+            }
+        }
+
+        &--next {
+            right: -20px;
+
+            @media (max-width: $desktop) {
+                right: -10px;
+            }
+        }
+    }
+}
+
+.splide-registration {
+    width: fit-content;
+    padding-inline: 20px;
+    margin-bottom: 20px;
+    z-index: 0;
+
+    .splide__list {
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    .splide__slide {
+        padding: 8px 10px;
+        background-color: white;
+        color: var(--septenary-color);
+        font-size: 16px;
+        font-weight: var(--weight-medium);
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        @media (max-width: $tablet) {
+            font-weight: var(--weight-regular);
+        }
+
+        &:first-child {
+            border-radius: 20px 0 0 20px;
+        }
+
+        &:last-child {
+            border-radius: 0 20px 20px 0;
+        }
+
+        &:hover {
+            color: var(--primary-color);
+        }
+
+        &.is-active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    }
+}
