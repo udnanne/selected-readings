@@ -7,13 +7,14 @@ interface Props {
 const { width, height } = Astro.props;
 ---
 
-<div class="news-item close">
+<article class="news-item close">
     <div class="news-img">
         <img
             src={`https://placehold.co/${width}x${height}`}
             alt=""
             width="300"
             height="250"
+            loading="lazy"
         />
     </div>
     <div>
@@ -43,7 +44,7 @@ const { width, height } = Astro.props;
             </p>
         </div>
     </div>
-</div>
+</article>
 
 <script>
     const newsItem = document.querySelectorAll(".news-item");

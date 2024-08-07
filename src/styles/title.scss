@@ -91,4 +91,12 @@
             align-items: flex-start;
         }
     }
+
+    &--book-list {
+        margin-block: 0 40px;
+
+        @media (max-width: $tablet) {
+            margin-block: 30px 20px;
+        }
+    }
 }

@@ -413,3 +413,16 @@
         }
     }
 }
+
+.splide-aside {
+    .splide__track {
+        @media (max-width: $tablet) {
+            overflow: hidden;
+        }
+    }
+
+    .splide__list {
+        padding-inline-start: 0;
+        margin-block: 0;
+    }
+}

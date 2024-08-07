@@ -7,7 +7,7 @@ interface Props {
 const { classname, title } = Astro.props;
 ---
 
-<div class={`title__wrapper title__wrapper--${classname}`}>
+<article class={`title__wrapper title__wrapper--${classname}`}>
     <h2 class={`title title--${classname}`}>{title}</h2>
 
     <a href="#" class="more">
@@ -46,4 +46,4 @@ const { classname, title } = Astro.props;
             </g>
         </svg>
     </a>
-</div>
+</article>

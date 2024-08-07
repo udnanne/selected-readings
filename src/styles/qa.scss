@@ -37,6 +37,11 @@
     transition: background-color 0.3s ease, border 0.3s ease;
     cursor: pointer;
 
+    &:hover {
+        background-color: var(--quinary-color);
+        border: 1px solid var(--quinary-color);
+    }
+
     @media (max-width: $tablet) {
         padding: 7px 15px;
     }

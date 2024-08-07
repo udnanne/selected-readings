@@ -89,18 +89,18 @@ main {
         display: none;
     }
 
+    nav {
+        @media (max-width: $desktop) {
+            margin-inline: 20px;
+        }
+    }
+
     a {
         color: var(--septenary-color);
         transition: all 0.3s ease;
 
         &:hover {
             color: var(--primary-color);
-        }
-
-        &:first-child {
-            @media (max-width: $desktop) {
-                margin-left: 20px;
-            }
         }
     }
 }

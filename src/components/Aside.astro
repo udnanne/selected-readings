@@ -1,0 +1,42 @@
+---
+import SliderAside from "./SliderAside";
+import "../styles/slider.scss";
+
+interface Props {
+    all: boolean;
+}
+
+const { all } = Astro.props;
+---
+
+{
+    all ? (
+        <a href="#" class="all">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="18.491"
+                height="25.394"
+                viewBox="0 0 18.491 25.394"
+            >
+                <g
+                    transform="matrix(1, 0, 0, 1, 0, 0)"
+                    filter="url(#Path_16309)"
+                >
+                    <path
+                        id="Path_16309-2"
+                        data-name="Path 16309"
+                        d="M7.622,0,0,7.185,7.622,15l.438-.4L.841,7.2,8.026.4Z"
+                        transform="translate(5.21 5.2)"
+                        stroke="#000"
+                        stroke-linecap="round"
+                        stroke-width="1"
+                    />
+                </g>
+            </svg>
+            所有分類
+        </a>
+    ) : null
+}
+
+<SliderAside client:only />
