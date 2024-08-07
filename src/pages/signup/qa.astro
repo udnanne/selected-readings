@@ -1,0 +1,29 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Title from "../../components/Title.astro";
+import QAItem from "../../components/QAItem.astro";
+import "../../styles/title.scss";
+import "../../styles/qa.scss";
+---
+
+<Layout title="常見問答">
+    <main>
+        <div class="container breadcrumb">
+            <a href="#">首頁</a> / <a href="#">報名專區</a> / <a href="#"
+                >常見問答</a
+            >
+        </div>
+
+        <div class="container">
+            <Title title={["常見問答"]} classname="qa" />
+
+            <div class="qa-list">
+                <QAItem />
+                <QAItem />
+                <QAItem />
+                <QAItem />
+                <QAItem />
+            </div>
+        </div>
+    </main>
+</Layout>

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-export default function SliderRegistration() {
+export default function SliderSignup() {
     const step = [
         "下載檔案",
         "線上填表、列印表單",
@@ -15,7 +15,7 @@ export default function SliderRegistration() {
     return (
         <>
             <Splide
-                className="splide-registration full-container" aria-label="報名專區"
+                className="splide-signup full-container" aria-label="報名專區"
                 options={{
                     type: "slide",
                     drag: false,
@@ -37,7 +37,7 @@ export default function SliderRegistration() {
                 ))}
             </Splide>
 
-            <div className="registration__wrapper">
+            <div className="signup__wrapper">
                 {/*可在class添加"mb-10"、"mb-20"更改"margin-botton"*/}
                 <p className="mb-10">活動簡章：</p>
 

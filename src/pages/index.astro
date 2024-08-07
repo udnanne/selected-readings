@@ -5,7 +5,7 @@ import TitleMore from "../components/TitleMore.astro";
 import SliderBanner from "../components/SliderBanner.jsx";
 import SliderNews from "../components/SliderNews.jsx";
 import SliderGuide from "../components/SliderGuide.jsx";
-import SliderRegistration from "../components/SliderRegistration.jsx";
+import SliderSignup from "../components/SliderSignup.jsx";
 
 import "../styles/title.scss";
 import "../styles/slider.scss";
@@ -26,10 +26,10 @@ import "../styles/index.scss";
             <SliderGuide client:only />
         </div>
 
-        <div class="registration-area full-container">
-            <Title classname="registration-area" title={["報名專區"]} />
+        <div class="signup-area full-container">
+            <Title classname="signup-area" title={["報名專區"]} />
 
-            <SliderRegistration client:only />
+            <SliderSignup client:only />
         </div>
 
         <div class="tour">

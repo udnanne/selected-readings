@@ -19,6 +19,7 @@
     grid-template-columns: 300px 1fr;
     gap: 30px;
     padding: 20px;
+    background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     letter-spacing: 0.3px;
@@ -110,10 +111,6 @@
 
         p {
             margin-block: 0;
-
-            &.mb-25 {
-                margin-bottom: 25px;
-            }
         }
     }
 

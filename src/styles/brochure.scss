@@ -6,6 +6,18 @@
         margin-bottom: 30px;
         margin-inline: 20px;
     }
+
+    a {
+        color: var(--primary-color);
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        position: relative;
+        bottom: 3px;
+
+        &:hover {
+            color: var(--septenary-color);
+        }
+    }
 }
 
 .list-1 {
