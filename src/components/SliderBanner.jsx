@@ -20,37 +20,37 @@ export default function SliderBanner() {
             }}
         >
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1280x600" alt="" width="1280" height="600" fetchPriority="high" />
+                <img className="splide__img" src="https://placehold.co/1280x600" alt="" width="1280" height="600" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1280x600")}></div>
             </SplideSlide>
 
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1500x600" alt="" width="1500" height="600" fetchPriority="high" />
+                <img className="splide__img" src="https://placehold.co/1500x600" alt="" width="1500" height="600" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1500x600")}></div>
             </SplideSlide>
 
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1280x800" alt="" width="1280" height="800" fetchPriority="high" />
+                <img className="splide__img" src="https://placehold.co/1280x800" alt="" width="1280" height="800" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1280x800")}></div>
             </SplideSlide>
 
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1500x800" alt="" width="1500" height="800" fetchPriority="high" />
+                <img className="splide__img" src="https://placehold.co/1500x800" alt="" width="1500" height="800" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1500x800")}></div>
             </SplideSlide>
 
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1080x600" alt="" width="1080" height="600" fetchPriority="high" />
+                <img className="splide__img" src="https://placehold.co/1080x600" alt="" width="1080" height="600" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1080x600")}></div>
             </SplideSlide>
 
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1280x400" alt="" width="1280" height="400" fetchPriority="high" />
+                <img className="splide__img" src="https://placehold.co/1280x400" alt="" width="1280" height="400" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1280x400")}></div>
             </SplideSlide>
 
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1080x400" alt="" width="1080" height="400" fetchPriority="high" />
+                <img className="splide__img" src="https://placehold.co/1080x400" alt="" width="1080" height="400" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1080x400")}></div>
             </SplideSlide>
         </Splide>

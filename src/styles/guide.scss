@@ -1,0 +1,105 @@
+.guide {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        margin-inline: 20px;
+        margin-bottom: 30px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
+
+.book-list {
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @media (max-width: $desktop) {
+            margin-right: 20px;
+        }
+
+        @media (max-width: $tablet) {
+            display: contents;
+            margin-right: 0;
+        }
+    }
+
+    .top-part {
+        @media (max-width: $tablet) {
+            order: 0;
+        }
+    }
+
+    .middle-part,
+    .bottom-part {
+        @media (max-width: $tablet) {
+            order: 1;
+        }
+    }
+
+    .results {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 42px;
+
+        @media (max-width: $tablet) {
+            gap: 30px 25px;
+        }
+        //display: grid;
+        //grid-template-columns: repeat(5, 1fr);
+        //gap: 40px 0;
+
+        //@media (max-width: $desktop) {
+        //    grid-template-columns: repeat(4, 1fr);
+        //}
+
+        //@media (max-width: $mobile) {
+        //    grid-template-columns: repeat(2, 1fr);
+        //    gap: 30px 0;
+        //}
+
+        //@media (max-width: $smallMobile) {
+        //    grid-template-columns: 1fr;
+        //}
+
+        .common-card__card {
+            //width: 180px;
+            width: calc((100% - (42px * 4)) / 5);
+            max-height: 346px;
+
+            @media (max-width: $desktop) {
+                width: calc((100% - (42px * 3)) / 4);
+            }
+
+            @media (max-width: $tablet) {
+                //width: 155px;
+                width: calc((100% - (25px * 1)) / 2);
+                max-height: 306px;
+            }
+
+            @media (max-width: $smallMobile) {
+                width: 100%;
+            }
+        }
+
+        //.common-card__card--img {
+        //    width: 180px;
+        //    height: 250px;
+
+        //    @media (max-width: $tablet) {
+        //        width: 155px;
+        //        height: 215px;
+        //    }
+        //}
+
+        .common-card__card--text {
+            padding-inline: 10px;
+        }
+    }
+}

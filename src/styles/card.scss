@@ -1,0 +1,114 @@
+.common-card {
+    &__card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+        background-color: white;
+
+        &:hover {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &__card--img {
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        span {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            padding: 1.5px 5px 3.5px;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+            color: white;
+            font-size: 14px;
+            font-weight: var(--weight-light);
+            letter-spacing: 0.3px;
+        }
+    }
+
+    &__card--text {
+        padding-block: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 76px;
+
+        @media (max-width: $tablet) {
+            min-height: 71px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: var(--weight-regular);
+            color: #000;
+            margin-block: 0 5px;
+            line-height: 1.417;
+            -webkit-line-clamp: 2;
+            max-height: 2.834em;
+
+            @media (max-width: $tablet) {
+                font-size: 16px;
+                line-height: 1.438;
+                max-height: 2.876em;
+            }
+
+            span {
+                display: none;
+                margin-right: 10px;
+                color: var(--primary-color);
+
+                @media (max-width: $tablet) {
+                    display: inline-block;
+                }
+            }
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: var(--weight-normal);
+            color: var(--septenary-color);
+            margin-block: 0;
+            line-height: 1.429;
+            -webkit-line-clamp: 1;
+            max-height: 1.429em;
+        }
+
+        time {
+            font-size: 14px;
+            font-weight: var(--weight-bold);
+            color: var(--primary-color);
+            display: flex;
+
+            @media (max-width: $tablet) {
+                visibility: hidden;
+                position: absolute;
+                z-index: -1;
+            }
+        }
+
+        h3,
+        p {
+            display: inline-block;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        h3,
+        p,
+        time {
+            text-align: left;
+        }
+    }
+}

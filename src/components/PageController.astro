@@ -1,0 +1,251 @@
+---
+
+---
+
+<div class="arrow-left">
+    <a href="#" class="double-arrow">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17.594"
+            height="16.281"
+            viewBox="0 0 17.594 16.281"
+        >
+            <g id="雙箭頭" transform="translate(0.718 0.697)">
+                <path
+                    id="Path_16312"
+                    data-name="Path 16312"
+                    d="M19.627,0l-.4.4,7.131,6.748-7.166,7.34.435.4,7.566-7.757Z"
+                    transform="translate(-11.029 0)"
+                    fill="#d8d8d8"
+                    stroke="#d8d8d8"
+                    stroke-width="1"></path>
+                <path
+                    id="Path_16313"
+                    data-name="Path 16313"
+                    d="M.435,0l-.4.4L7.166,7.148,0,14.488l.435.4L8,7.131Z"
+                    transform="translate(0 0)"
+                    fill="#d8d8d8"
+                    stroke="#d8d8d8"
+                    stroke-width="1"></path>
+            </g>
+        </svg>
+    </a>
+
+    <a href="#" class="arrow">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="8"
+            height="15"
+            viewBox="8 8 8 15"
+        >
+            <g id="箭頭" transform="translate(16.218 23.084) rotate(180)">
+                <g
+                    transform="matrix(-1, 0, 0, -1, 16.22, 23.08)"
+                    filter="url(#Path_16311)"
+                >
+                    <path
+                        id="Path_16311-2"
+                        data-name="Path 16311"
+                        d="M7.565,0,0,7.13l7.565,7.756.435-.4L.834,7.148,7.965.4Z"
+                        transform="translate(16.22 23.08) rotate(180)"
+                        fill="#d8d8d8"
+                        stroke="#d8d8d8"
+                        stroke-linecap="round"
+                        stroke-width="1"></path>
+                </g>
+            </g>
+        </svg>
+    </a>
+</div>
+<ul class="pages-pc">
+    {
+        Array.from({ length: 10 }, (_, i) =>
+            i === 0 ? (
+                <li>
+                    <a href="#" class="active">
+                        {i + 1}
+                    </a>
+                </li>
+            ) : (
+                <li>
+                    <a href="#">{i + 1}</a>
+                </li>
+            )
+        )
+    }
+</ul>
+<ul class="pages-m">
+    {
+        Array.from({ length: 5 }, (_, i) =>
+            i === 0 ? (
+                <li>
+                    <a href="#" class="active">
+                        {i + 1}
+                    </a>
+                </li>
+            ) : (
+                <li>
+                    <a href="#">{i + 1}</a>
+                </li>
+            )
+        )
+    }
+</ul>
+<div class="arrow-right">
+    <a href="#" class="arrow">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="8"
+            height="15"
+            viewBox="8 8 8 15"
+        >
+            <g id="箭頭" transform="translate(16.218 23.084) rotate(180)">
+                <g
+                    transform="matrix(-1, 0, 0, -1, 16.22, 23.08)"
+                    filter="url(#Path_16311)"
+                >
+                    <path
+                        id="Path_16311-2"
+                        data-name="Path 16311"
+                        d="M7.565,0,0,7.13l7.565,7.756.435-.4L.834,7.148,7.965.4Z"
+                        transform="translate(16.22 23.08) rotate(180)"
+                        fill="#d8d8d8"
+                        stroke="#d8d8d8"
+                        stroke-linecap="round"
+                        stroke-width="1"></path>
+                </g>
+            </g>
+        </svg>
+    </a>
+
+    <a href="#" class="double-arrow">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17.594"
+            height="16.281"
+            viewBox="0 0 17.594 16.281"
+        >
+            <g id="雙箭頭" transform="translate(0.718 0.697)">
+                <path
+                    id="Path_16312"
+                    data-name="Path 16312"
+                    d="M19.627,0l-.4.4,7.131,6.748-7.166,7.34.435.4,7.566-7.757Z"
+                    transform="translate(-11.029 0)"
+                    fill="#d8d8d8"
+                    stroke="#d8d8d8"
+                    stroke-width="1"></path>
+                <path
+                    id="Path_16313"
+                    data-name="Path 16313"
+                    d="M.435,0l-.4.4L7.166,7.148,0,14.488l.435.4L8,7.131Z"
+                    transform="translate(0 0)"
+                    fill="#d8d8d8"
+                    stroke="#d8d8d8"
+                    stroke-width="1"></path>
+            </g>
+        </svg>
+    </a>
+</div>
+
+<style is:global lang="scss">
+    .page-controller {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .pages-pc {
+            display: flex;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .pages-m {
+            display: none;
+
+            @media (max-width: 768px) {
+                display: flex;
+            }
+        }
+
+        ul {
+            gap: 10px;
+            list-style: none;
+            margin: 0 20px;
+            padding: 0;
+
+            li {
+                a {
+                    display: block;
+                    width: 28px;
+                    height: 28px;
+                    border: 1px solid var(--senary-color);
+                    border-radius: 5px;
+                    background-color: white;
+                    color: var(--senary-color);
+                    font-size: 16px;
+                    text-align: center;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        border: 1px solid var(--primary-color);
+                        color: var(--primary-color);
+                    }
+
+                    &.active {
+                        border: 1px solid var(--primary-color);
+                        background-color: var(--primary-color);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .arrow,
+        .double-arrow {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            height: 30px;
+
+            g path {
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                g path {
+                    fill: var(--primary-color);
+                    stroke: var(--primary-color);
+                }
+            }
+        }
+
+        .arrow {
+            width: 8px;
+        }
+
+        .double-arrow {
+            width: 17px;
+        }
+
+        .arrow-left,
+        .arrow-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .arrow-left {
+            .arrow {
+                transform: rotate(180deg);
+            }
+            .double-arrow {
+                transform: rotate(180deg);
+            }
+        }
+    }
+</style>

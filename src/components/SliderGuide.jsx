@@ -26,8 +26,8 @@ export default function SliderGuide() {
             }}
         >
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/180x250"
                             alt=""
@@ -37,7 +37,7 @@ export default function SliderGuide() {
                         />
                         <span>圖畫書類</span>
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)
                         </h3>
@@ -49,8 +49,8 @@ export default function SliderGuide() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/250x250"
                             alt=""
@@ -60,7 +60,7 @@ export default function SliderGuide() {
                         />
                         <span>圖畫書類</span>
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)
                         </h3>
@@ -72,8 +72,8 @@ export default function SliderGuide() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/180x280"
                             alt=""
@@ -83,7 +83,7 @@ export default function SliderGuide() {
                         />
                         <span>圖畫書類</span>
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)
                         </h3>
@@ -95,8 +95,8 @@ export default function SliderGuide() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/280x280"
                             alt=""
@@ -106,7 +106,7 @@ export default function SliderGuide() {
                         />
                         <span>圖畫書類</span>
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)
                         </h3>
@@ -118,8 +118,8 @@ export default function SliderGuide() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/150x250"
                             alt=""
@@ -129,7 +129,7 @@ export default function SliderGuide() {
                         />
                         <span>圖畫書類</span>
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)
                         </h3>
@@ -141,8 +141,8 @@ export default function SliderGuide() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/180x150"
                             alt=""
@@ -152,7 +152,7 @@ export default function SliderGuide() {
                         />
                         <span>圖畫書類</span>
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)
                         </h3>
@@ -164,8 +164,8 @@ export default function SliderGuide() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/280x280"
                             alt=""
@@ -175,7 +175,7 @@ export default function SliderGuide() {
                         />
                         <span>圖畫書類</span>
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)
                         </h3>

@@ -23,8 +23,8 @@ export default function SliderNews() {
             }}
         >
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/290x240"
                             alt=""
@@ -33,7 +33,7 @@ export default function SliderNews() {
                             loading="lazy"
                         />
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活
                         </h3>
@@ -43,8 +43,8 @@ export default function SliderNews() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/350x240"
                             alt=""
@@ -53,7 +53,7 @@ export default function SliderNews() {
                             loading="lazy"
                         />
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活
                         </h3>
@@ -63,8 +63,8 @@ export default function SliderNews() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/290x350"
                             alt=""
@@ -73,7 +73,7 @@ export default function SliderNews() {
                             loading="lazy"
                         />
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活
                         </h3>
@@ -83,8 +83,8 @@ export default function SliderNews() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/350x290"
                             alt=""
@@ -93,7 +93,7 @@ export default function SliderNews() {
                             loading="lazy"
                         />
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活
                         </h3>
@@ -103,8 +103,8 @@ export default function SliderNews() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/240x240"
                             alt=""
@@ -113,7 +113,7 @@ export default function SliderNews() {
                             loading="lazy"
                         />
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活
                         </h3>
@@ -123,8 +123,8 @@ export default function SliderNews() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/290x200"
                             alt=""
@@ -133,7 +133,7 @@ export default function SliderNews() {
                             loading="lazy"
                         />
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活
                         </h3>
@@ -143,8 +143,8 @@ export default function SliderNews() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card">
-                    <div className="splide__card--img">
+                <a href="#" className="splide__card common-card__card">
+                    <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/240x200"
                             alt=""
@@ -153,7 +153,7 @@ export default function SliderNews() {
                             loading="lazy"
                         />
                     </div>
-                    <div className="splide__card--text">
+                    <div className="splide__card--text common-card__card--text">
                         <h3>
                             <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活
                         </h3>

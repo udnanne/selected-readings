@@ -4,9 +4,10 @@ import "../styles/slider.scss";
 
 interface Props {
     all: boolean;
+    active: boolean;
 }
 
-const { all } = Astro.props;
+const { all, active } = Astro.props;
 ---
 
 {
@@ -39,4 +40,104 @@ const { all } = Astro.props;
     ) : null
 }
 
-<SliderAside client:only />
+<SliderAside client:only>
+    {
+        active ? (
+            <a href="#" class="active" slot="item">
+                人文社科類
+            </a>
+        ) : (
+            <a href="#">人文社科類</a>
+        )
+    }
+</SliderAside>
+
+<style is:global lang="scss">
+    aside {
+        width: 100%;
+        max-width: 180px;
+
+        @media (max-width: $desktop) {
+            margin-left: 20px;
+        }
+
+        @media (max-width: $tablet) {
+            order: 1;
+            max-width: 100%;
+            margin-left: 0;
+            border-bottom: 1px solid var(--senary-color);
+        }
+
+        a {
+            font-size: 18px;
+            font-weight: var(--weight-regular);
+            color: #000;
+            padding-inline: 20px;
+            text-align: center;
+            text-align: left;
+            transition: all 0.3s ease;
+
+            svg {
+                position: relative;
+                left: -4px;
+
+                g path {
+                    transition: all 0.3s ease;
+                }
+            }
+
+            &:hover {
+                color: var(--primary-color);
+
+                svg g path {
+                    stroke: var(--primary-color);
+                }
+            }
+
+            &:not(.all) {
+                padding-block: 7px;
+                border-radius: 5px;
+                background-color: white;
+                width: calc(100% - 40px);
+                padding-inline: 20px;
+                display: inline-block;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                line-height: 1.52;
+                -webkit-line-clamp: 1;
+                max-height: 1.445em;
+
+                @media (max-width: $tablet) {
+                    border-radius: 5px 5px 0 0;
+                    background-color: var(--tertiary-color);
+                    color: var(--primary-color);
+                }
+
+                &:hover {
+                    background-color: var(--primary-color);
+                    color: white;
+                }
+            }
+
+            &.all {
+                display: flex;
+                padding-bottom: 20px;
+
+                @media (max-width: $tablet) {
+                    display: none;
+                }
+            }
+
+            &.active {
+                color: var(--primary-color);
+                background-color: var(--tertiary-color);
+
+                @media (max-width: $tablet) {
+                    color: white;
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+    }
+</style>

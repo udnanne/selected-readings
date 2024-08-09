@@ -21,5 +21,6 @@ export default defineConfig({
             }
         }
     },
-    integrations: [react()]
+    integrations: [react()],
+    compressHTML: false,
 });

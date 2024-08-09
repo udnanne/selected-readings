@@ -1,0 +1,439 @@
+---
+interface Props {
+    search: string;
+    catebtn: string;
+}
+
+const { search, catebtn } = Astro.props;
+---
+
+<div class="filter">
+    <div class="search filter-row">
+        <span class="label">{search}-全部-不限年齡</span>
+        <form action="" method="">
+            <input type="text" placeholder="搜尋書籍" />
+            <button type="submit">
+                <svg
+                    id="Group_11209"
+                    data-name="Group 11209"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                >
+                    <defs>
+                        <clipPath id="clip-path">
+                            <rect
+                                id="Rectangle_1141"
+                                data-name="Rectangle 1141"
+                                width="20"
+                                height="20"
+                                fill="#7e7e7e"></rect>
+                        </clipPath>
+                    </defs>
+                    <g
+                        id="Group_11208"
+                        data-name="Group 11208"
+                        clip-path="url(#clip-path)"
+                    >
+                        <path
+                            id="Path_16149"
+                            data-name="Path 16149"
+                            d="M20,19.177l-6.664-6.6A7.646,7.646,0,0,0,7.568,0a7.639,7.639,0,0,0,0,15.278,7.5,7.5,0,0,0,4.963-1.886L19.194,20l.8-.823ZM7.568,14.125a6.486,6.486,0,0,1,0-12.972,6.486,6.486,0,0,1,0,12.972"
+                            fill="#7e7e7e"></path>
+                    </g>
+                </svg>
+            </button>
+        </form>
+        <span class="prompt">
+            提供書名/作者/類別/出版社/書籍簡介/適讀年齡等關鍵字搜尋
+        </span>
+    </div>
+
+    <div class="quick filter-row">
+        <span class="label">快速篩選</span>
+
+        <div class="method selector__wrapper">
+            <div class="cate selector">
+                <div class="selector-btn">
+                    <span>{catebtn}</span>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="9.061"
+                        viewBox="0 0 16 9.061"
+                    >
+                        <path
+                            id="Path_165"
+                            data-name="Path 165"
+                            d="M.4,0,0,.438,7.815,8.061,15,.438l-.4-.4L7.8,7.22Z"
+                            transform="translate(0.5 0.5)"
+                            stroke="#000"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"></path>
+                    </svg>
+                </div>
+
+                <div class="options">
+                    <a href="#" class="option">人文社科類</a>
+                    <a href="#" class="option">叢書工具書類</a>
+                    <a href="#" class="option">圖畫書類</a>
+                    <a href="#" class="option">文學翻譯類</a>
+                    <a href="#" class="option">文學類</a>
+                    <a href="#" class="option">漫畫類</a>
+                    <a href="#" class="option">自然科普類</a>
+                    <a href="#" class="option">雜誌類</a>
+                </div>
+            </div>
+
+            <div class="age selector">
+                <div class="selector-btn">
+                    <span>適讀年齡</span>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="9.061"
+                        viewBox="0 0 16 9.061"
+                    >
+                        <path
+                            id="Path_165"
+                            data-name="Path 165"
+                            d="M.4,0,0,.438,7.815,8.061,15,.438l-.4-.4L7.8,7.22Z"
+                            transform="translate(0.5 0.5)"
+                            stroke="#000"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"></path>
+                    </svg>
+                </div>
+
+                <div class="options">
+                    <a href="#" class="option">學齡前</a>
+                    <a href="#" class="option">小學低年級</a>
+                    <a href="#" class="option">小學中年級</a>
+                    <a href="#" class="option">小學高年級</a>
+                    <a href="#" class="option">國中</a>
+                    <a href="#" class="option">高中</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="download filter-row">
+        <span class="label">檔案下載</span>
+
+        <div class="files selector__wrapper">
+            <div class="complete selector">
+                <div class="selector-btn">
+                    <span>完整書單</span>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="9.061"
+                        viewBox="0 0 16 9.061"
+                    >
+                        <path
+                            id="Path_165"
+                            data-name="Path 165"
+                            d="M.4,0,0,.438,7.815,8.061,15,.438l-.4-.4L7.8,7.22Z"
+                            transform="translate(0.5 0.5)"
+                            stroke="#000"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"></path>
+                    </svg>
+                </div>
+
+                <ul class="options">
+                    <li class="option">.xls</li>
+                    <li class="option">.odf</li>
+                </ul>
+            </div>
+
+            <div class="selection selector">
+                <div class="selector-btn">
+                    <span>評選報告</span>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="9.061"
+                        viewBox="0 0 16 9.061"
+                    >
+                        <path
+                            id="Path_165"
+                            data-name="Path 165"
+                            d="M.4,0,0,.438,7.815,8.061,15,.438l-.4-.4L7.8,7.22Z"
+                            transform="translate(0.5 0.5)"
+                            stroke="#000"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"></path>
+                    </svg>
+                </div>
+
+                <ul class="options">
+                    <li class="option">.pdf</li>
+                    <li class="option">.odf</li>
+                </ul>
+            </div>
+
+            <div class="age selector">
+                <div class="selector-btn">
+                    <span>分齡書單</span>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="9.061"
+                        viewBox="0 0 16 9.061"
+                    >
+                        <path
+                            id="Path_165"
+                            data-name="Path 165"
+                            d="M.4,0,0,.438,7.815,8.061,15,.438l-.4-.4L7.8,7.22Z"
+                            transform="translate(0.5 0.5)"
+                            stroke="#000"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"></path>
+                    </svg>
+                </div>
+
+                <ul class="options">
+                    <li class="option">學齡前書單</li>
+                    <li class="option">小學低年級書單</li>
+                    <li class="option">小學中年級書單</li>
+                    <li class="option">小學高年級書單</li>
+                    <li class="option">國中書單</li>
+                    <li class="option">高中書單</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style is:global lang="scss">
+    .filter {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-inline: 10px;
+
+        @media (max-width: $tablet) {
+            padding-inline: 0;
+        }
+
+        &-row {
+            display: flex;
+
+            @media (max-width: $tablet) {
+                flex-direction: column;
+            }
+        }
+
+        .label {
+            font-size: 18px;
+            font-weight: var(--weight-regular);
+            line-height: 2.223;
+            letter-spacing: 1px;
+            margin-right: 30px;
+            word-break: keep-all;
+
+            @media (max-width: $tablet) {
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0.3px;
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+        }
+
+        .prompt {
+            font-size: 14px;
+            font-weight: var(--weight-light);
+            line-height: 2.858;
+            letter-spacing: 0.3px;
+            color: var(--septenary-color);
+            margin-left: 20px;
+
+            @media (max-width: $tablet) {
+                line-height: 1.429;
+                letter-spacing: 0.25px;
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+
+        .options {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            padding-block: 5px;
+
+            .option {
+                padding-inline: 20px;
+                padding-block: 7px 2px;
+                font-size: 16px;
+                font-weight: var(--weight-normal);
+                color: #000;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+
+        ul.options {
+            list-style: none;
+            padding-inline-start: 0;
+            margin-block: 0;
+
+            li {
+                cursor: pointer;
+            }
+        }
+
+        .selector {
+            position: relative;
+
+            &.open .options {
+                display: flex;
+                width: 100%;
+                top: 40px;
+                left: 0;
+                z-index: 1;
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+            }
+
+            &__wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px 20px;
+
+                @media (max-width: $tablet) {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 10px 35px;
+                    width: 100%;
+                }
+            }
+
+            &-btn {
+                display: grid;
+                grid-template-columns: 1fr 15px;
+                gap: 5px;
+                padding: 7px 20px;
+                align-items: center;
+                cursor: pointer;
+                border: 1px solid var(--senary-color);
+                border-radius: 5px;
+
+                @media (max-width: $tablet) {
+                    padding: 8.5px 10px;
+                }
+
+                span {
+                    font-size: 18px;
+                    font-weight: var(--weight-regular);
+                    width: 118px;
+                    display: inline-block;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    line-height: 1.334;
+                    -webkit-line-clamp: 1;
+                    max-height: 1.334em;
+
+                    @media (max-width: $tablet) {
+                        font-size: 16px;
+                        width: 100%;
+                        line-height: 1.313;
+                        max-height: 1.313em;
+                    }
+                }
+            }
+        }
+
+        .search {
+            form {
+                display: grid;
+                grid-template-columns: 246px 20px;
+                gap: 7px;
+                border: 1px solid var(--senary-color);
+                border-radius: 5px;
+                height: fit-content;
+                margin-block: auto;
+                padding-block: 9px;
+                padding-inline: 15px 10px;
+                background-color: white;
+
+                @media (max-width: $tablet) {
+                    grid-template-columns: 1fr 20px;
+                    width: calc(100% - 25px);
+                }
+
+                input {
+                    border: 0;
+                    outline: 0;
+                    background-color: transparent;
+                    font-size: 16px;
+                    font-weight: var(--weight-light);
+                    padding: 0;
+
+                    &::placeholder {
+                        color: var(--septenary-color);
+                    }
+                }
+
+                button {
+                    display: inline-flex;
+                    padding: 0;
+                    border: 0;
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+</style>
+
+<script>
+    const selector = document.querySelectorAll(".selector");
+    const selectorBtn = document.querySelectorAll(".selector-btn");
+
+    selectorBtn.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            const parent = (e.target as Element).closest(".selector");
+            parent.classList.toggle("open");
+
+            selector.forEach((item) => {
+                if (item !== parent) {
+                    item.classList.remove("open");
+                }
+            });
+        });
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!(e.target as Element).closest(".selector")) {
+            selector.forEach((item) => {
+                item.classList.remove("open");
+            });
+        }
+    });
+</script>

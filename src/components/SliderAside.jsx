@@ -1,6 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-export default function SliderAside() {
+export default function SliderAside(props) {
     return (
         <Splide
             className="splide-aside" aria-label="側欄"
@@ -12,16 +12,14 @@ export default function SliderAside() {
                 autoWidth: true,
                 mediaQuery: 'min',
                 breakpoints: {
-                    1023: {
+                    1024: {
                         destroy: true,
                     },
                 },
             }}
         >
             <SplideSlide>
-                <a href="#">
-                    人文社科類
-                </a>
+                {props.item}
             </SplideSlide>
 
             <SplideSlide>

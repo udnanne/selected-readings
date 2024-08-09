@@ -493,6 +493,7 @@
                 padding-block: 9px;
                 padding-inline: 10px 15px;
                 width: calc(300px - 27px);
+                background-color: white;
 
                 @media (max-width: $tablet) {
                     padding-block: 7px;
@@ -822,6 +823,7 @@
     const menuIcon = document.querySelector(".menu-icon");
     const closeIcon = document.querySelector("header nav .close-icon");
     const nav = document.querySelector("header nav");
+    const navList = document.querySelectorAll("header nav .nav-list");
     const navTitle = document.querySelectorAll(".nav-title div");
     const mask = document.querySelector("header .mask");
 
@@ -841,10 +843,30 @@
         mask.classList.remove("open");
     });
 
+    mask.addEventListener("click", () => {
+        nav.classList.remove("open");
+        mask.classList.remove("open");
+    });
+
     navTitle.forEach((title) => {
         title.addEventListener("click", () => {
-            title.parentElement.parentElement.classList.toggle("open");
+            const parent = title.parentElement.parentElement;
+            parent.classList.toggle("open");
+
+            navList.forEach((item) => {
+                if (item !== parent) {
+                    item.classList.remove("open");
+                }
+            });
         });
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!(e.target as Element).closest("header nav .nav-list")) {
+            navList.forEach((item) => {
+                item.classList.remove("open");
+            });
+        }
     });
 
     searchIcon.addEventListener("click", () => {
