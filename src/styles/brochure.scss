@@ -33,6 +33,7 @@
         width: calc(100% - 42px);
         position: relative;
         left: 42px;
+        color: #000;
 
         @media (max-width: $tablet) {
             font-size: 16px;
@@ -85,6 +86,7 @@
         margin-bottom: 10px;
         width: calc(100% - 43px);
         left: 43px;
+        color: #000;
 
         @media (max-width: $tablet) {
             letter-spacing: 0.3px;
@@ -122,6 +124,7 @@
         letter-spacing: 0.3px;
         width: calc(100% - 20px);
         left: 20px;
+        color: #000;
 
         @media (max-width: $tablet) {
             width: 100%;

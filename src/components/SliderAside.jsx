@@ -20,9 +20,6 @@ export default function SliderAside(props) {
         "第41次推介",
     ]
 
-    console.log(props.default);
-    console.log(props.recommend);
-
     return (
         <Splide
             className="splide-aside" aria-label="側欄"
@@ -40,6 +37,15 @@ export default function SliderAside(props) {
                 },
             }}
         >
+            {props.review ?
+                <SplideSlide>
+                    <a href="#" className="active">
+                        評選報告
+                    </a>
+                </SplideSlide>
+                : null
+            }
+
             {props.recommend ? recommendList.map((item, index) => (
                 (index === 0) ?
                     <SplideSlide key={index}>

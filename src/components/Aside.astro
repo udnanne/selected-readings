@@ -4,11 +4,12 @@ import "../styles/slider.scss";
 
 interface Props {
     all: boolean;
+    review: boolean;
     active: boolean;
     type: string;
 }
 
-const { all, active, type } = Astro.props;
+const { all, review, active, type } = Astro.props;
 ---
 
 {
@@ -44,6 +45,7 @@ const { all, active, type } = Astro.props;
 <SliderAside
     client:only
     active={active}
+    review={review}
     default={type === "recommend" ? null : "default"}
     recommend={type === "recommend" ? "recommend" : null}
 />
@@ -58,7 +60,6 @@ const { all, active, type } = Astro.props;
         }
 
         @media (max-width: $tablet) {
-            order: 1;
             max-width: 100%;
             margin-left: 0;
             border-bottom: 1px solid var(--senary-color);
@@ -133,6 +134,15 @@ const { all, active, type } = Astro.props;
                     color: white;
                     background-color: var(--primary-color);
                 }
+            }
+        }
+    }
+
+    .book-list,
+    .recommend {
+        aside {
+            @media (max-width: $tablet) {
+                order: 1;
             }
         }
     }

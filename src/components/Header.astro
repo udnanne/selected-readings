@@ -638,7 +638,7 @@
             &:not(:last-child) {
                 .nav-title::after {
                     content: "．";
-                    color: black;
+                    color: #000;
                     position: absolute;
                     right: -10px;
 
@@ -664,6 +664,8 @@
                 div {
                     cursor: pointer;
                     padding: 0 26px 5px 26px;
+                    color: #000;
+                    transition: all 0.3s ease;
 
                     @media (max-width: $tablet) {
                         display: flex;
@@ -722,7 +724,7 @@
                     list-style: none;
 
                     a {
-                        color: black;
+                        color: #000;
                         font-size: 18px;
                         font-weight: var(--weight-normal);
                         display: block;
