@@ -1,0 +1,10 @@
+.method {
+    @media (max-width: $desktop) {
+        margin-inline: 20px;
+    }
+
+    &__banner {
+        width: 100%;
+        height: auto;
+    }
+}
