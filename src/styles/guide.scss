@@ -14,7 +14,8 @@
     }
 }
 
-.book-list {
+.book-list,
+.recommend {
     .main-content {
         display: flex;
         flex-direction: column;
@@ -48,25 +49,9 @@
         flex-wrap: wrap;
         gap: 40px 42px;
 
-        @media (max-width: $tablet) {
+        @media (max-width: $desktop) {
             gap: 30px 25px;
         }
-        //display: grid;
-        //grid-template-columns: repeat(5, 1fr);
-        //gap: 40px 0;
-
-        //@media (max-width: $desktop) {
-        //    grid-template-columns: repeat(4, 1fr);
-        //}
-
-        //@media (max-width: $mobile) {
-        //    grid-template-columns: repeat(2, 1fr);
-        //    gap: 30px 0;
-        //}
-
-        //@media (max-width: $smallMobile) {
-        //    grid-template-columns: 1fr;
-        //}
 
         .common-card__card {
             //width: 180px;
@@ -74,13 +59,17 @@
             max-height: 346px;
 
             @media (max-width: $desktop) {
-                width: calc((100% - (42px * 3)) / 4);
+                width: calc((100% - (25px * 3)) / 4);
             }
 
             @media (max-width: $tablet) {
                 //width: 155px;
-                width: calc((100% - (25px * 1)) / 2);
+                width: calc((100% - (25px * 2)) / 3);
                 max-height: 306px;
+            }
+
+            @media (max-width: $mobile) {
+                width: calc((100% - (25px * 1)) / 2);
             }
 
             @media (max-width: $smallMobile) {

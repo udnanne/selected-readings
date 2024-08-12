@@ -24,14 +24,18 @@ import "../../../styles/guide.scss";
         <div class="container">
             <div class="guide book-list">
                 <aside>
-                    <Aside all={true} active={true} />
+                    <Aside all={true} active={true} type={"book-list"} />
                 </aside>
 
                 <div class="main-content">
                     <div class="top-part">
-                        <Title title={["所有書籍"]} classname="book-list" />
+                        <Title title={["人文社科類"]} classname="book-list" />
 
-                        <Filter search="獲選書籍" catebtn="人文社科類" />
+                        <Filter
+                            search="獲選書籍"
+                            catebtn="人文社科類"
+                            featured={false}
+                        />
                     </div>
 
                     <div class="middle-part results">

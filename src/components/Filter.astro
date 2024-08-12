@@ -2,9 +2,10 @@
 interface Props {
     search: string;
     catebtn: string;
+    featured: boolean;
 }
 
-const { search, catebtn } = Astro.props;
+const { search, catebtn, featured } = Astro.props;
 ---
 
 <div class="filter">
@@ -214,6 +215,38 @@ const { search, catebtn } = Astro.props;
                     <li class="option">高中書單</li>
                 </ul>
             </div>
+
+            {
+                featured ? (
+                    <div class="featured selector">
+                        <div class="selector-btn">
+                            <span>精選之星</span>
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="9.061"
+                                viewBox="0 0 16 9.061"
+                            >
+                                <path
+                                    id="Path_165"
+                                    data-name="Path 165"
+                                    d="M.4,0,0,.438,7.815,8.061,15,.438l-.4-.4L7.8,7.22Z"
+                                    transform="translate(0.5 0.5)"
+                                    stroke="#000"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1"
+                                />
+                            </svg>
+                        </div>
+
+                        <ul class="options">
+                            <li class="option">第45次精選之星手冊</li>
+                        </ul>
+                    </div>
+                ) : null
+            }
         </div>
     </div>
 </div>
@@ -232,23 +265,23 @@ const { search, catebtn } = Astro.props;
 
         &-row {
             display: flex;
+            align-items: center;
 
             @media (max-width: $tablet) {
                 flex-direction: column;
+                align-items: flex-start;
             }
         }
 
         .label {
             font-size: 18px;
             font-weight: var(--weight-regular);
-            line-height: 2.223;
             letter-spacing: 1px;
             margin-right: 30px;
             word-break: keep-all;
 
             @media (max-width: $tablet) {
                 font-size: 16px;
-                line-height: 1.5;
                 letter-spacing: 0.3px;
                 margin-right: 0;
                 margin-bottom: 5px;
@@ -258,13 +291,11 @@ const { search, catebtn } = Astro.props;
         .prompt {
             font-size: 14px;
             font-weight: var(--weight-light);
-            line-height: 2.858;
             letter-spacing: 0.3px;
             color: var(--septenary-color);
             margin-left: 20px;
 
             @media (max-width: $tablet) {
-                line-height: 1.429;
                 letter-spacing: 0.25px;
                 margin-left: 0;
                 margin-top: 5px;

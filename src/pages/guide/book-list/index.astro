@@ -24,14 +24,18 @@ import "../../../styles/guide.scss";
         <div class="container">
             <div class="guide book-list">
                 <aside>
-                    <Aside all={false} active={false} />
+                    <Aside all={false} active={false} type={"book-list"} />
                 </aside>
 
                 <div class="main-content">
                     <div class="top-part">
                         <Title title={["所有書籍"]} classname="book-list" />
 
-                        <Filter search="獲選書籍" catebtn="書籍類別" />
+                        <Filter
+                            search="獲選書籍"
+                            catebtn="書籍類別"
+                            featured={false}
+                        />
                     </div>
 
                     <div class="middle-part results">

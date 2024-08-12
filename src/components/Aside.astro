@@ -5,9 +5,10 @@ import "../styles/slider.scss";
 interface Props {
     all: boolean;
     active: boolean;
+    type: string;
 }
 
-const { all, active } = Astro.props;
+const { all, active, type } = Astro.props;
 ---
 
 {
@@ -40,17 +41,12 @@ const { all, active } = Astro.props;
     ) : null
 }
 
-<SliderAside client:only>
-    {
-        active ? (
-            <a href="#" class="active" slot="item">
-                人文社科類
-            </a>
-        ) : (
-            <a href="#">人文社科類</a>
-        )
-    }
-</SliderAside>
+<SliderAside
+    client:only
+    active={active}
+    default={type === "recommend" ? null : "default"}
+    recommend={type === "recommend" ? "recommend" : null}
+/>
 
 <style is:global lang="scss">
     aside {

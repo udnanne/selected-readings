@@ -1,6 +1,28 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 export default function SliderAside(props) {
+    const defaultList = [
+        "人文社科類",
+        "叢書工具書類",
+        "圖畫書類",
+        "文學翻譯類",
+        "文學類",
+        "漫畫類",
+        "自然科普類",
+        "雜誌類",
+    ];
+
+    const recommendList = [
+        "第45次推介",
+        "第44次推介",
+        "第43次推介",
+        "第42次推介",
+        "第41次推介",
+    ]
+
+    console.log(props.default);
+    console.log(props.recommend);
+
     return (
         <Splide
             className="splide-aside" aria-label="側欄"
@@ -18,51 +40,33 @@ export default function SliderAside(props) {
                 },
             }}
         >
-            <SplideSlide>
-                {props.item}
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#">
-                    叢書工具書類
-                </a>
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#">
-                    圖畫書類
-                </a>
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#">
-                    文學翻譯類
-                </a>
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#">
-                    文學類
-                </a>
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#">
-                    漫畫類
-                </a>
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#">
-                    自然科普類
-                </a>
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#">
-                    雜誌類
-                </a>
-            </SplideSlide>
+            {props.recommend ? recommendList.map((item, index) => (
+                (index === 0) ?
+                    <SplideSlide key={index}>
+                        <a href="#" className={props.active ? "active" : ""}>
+                            {item}
+                        </a>
+                    </SplideSlide>
+                    :
+                    <SplideSlide key={index}>
+                        <a href="#">
+                            {item}
+                        </a>
+                    </SplideSlide>
+            )) : defaultList.map((item, index) => (
+                (index === 0) ?
+                    <SplideSlide key={index}>
+                        <a href="#" className={props.active ? "active" : ""}>
+                            {item}
+                        </a>
+                    </SplideSlide>
+                    :
+                    <SplideSlide key={index}>
+                        <a href="#">
+                            {item}
+                        </a>
+                    </SplideSlide>
+            ))}
         </Splide>
     );
 }
