@@ -1,0 +1,47 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Title from "../../components/Title.astro";
+import MarkImage from "../../../public/mark.png";
+import "../../styles/title.scss";
+import "../../styles/guide.scss";
+---
+
+<Layout title="當屆獲選書單">
+    <main>
+        <div class="container breadcrumb">
+            <nav>
+                <a href="#">首頁</a> / <a href="#">選書指南</a> / <a href="#"
+                    >當屆評選報告</a
+                > / <a href="#">評選報告</a>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="guide mark">
+                <div class="main-content">
+                    <Title
+                        title={["中小學生讀物選介獲選標章"]}
+                        classname="mark"
+                    />
+
+                    <div class="top-part">
+                        <img
+                            src={MarkImage.src}
+                            alt="獲選標章"
+                            width="250"
+                            height="250"
+                        />
+                    </div>
+
+                    <p class="bottom-part">
+                        如欲使用此標章，請來信至客服信箱<a href="#"
+                            >book.service@moc.gov.tw</a
+                        >聯繫申請，本標章僅限當次獲選讀物使用，嚴禁任意修改內文、用於不法用途。<br
+                        />
+                        並請依「文化部中小學生讀物選介評選活動作業要點」第六條規定加以使用。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
