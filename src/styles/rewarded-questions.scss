@@ -3,7 +3,6 @@
 .winner-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-bottom: 60px;
 
     @media (max-width: $desktop) {
@@ -68,7 +67,6 @@
                 border-radius: 50%;
 
                 @media (max-width: $tablet) {
-                    top: 13px;
                     left: -10px;
                     width: 5px;
                     height: 5px;
@@ -157,6 +155,7 @@
         margin-block: 40px;
         padding: 40px;
         position: relative;
+        border-left: 3px solid var(--senary-color);
 
         @media (max-width: $tablet) {
             margin-block: 20px;
@@ -187,6 +186,10 @@
         font-size: 20px;
         font-weight: var(--weight-medium);
         letter-spacing: 0.2px;
+
+        @media (max-width: $tablet) {
+            font-size: 16px;
+        }
     }
 
     &__title--block {
@@ -204,6 +207,7 @@
         text-decoration: underline;
         text-underline-offset: 4px;
         letter-spacing: 0.3px;
+        transition: all 0.3s ease;
 
         &:hover {
             color: var(--septenary-color);
@@ -222,16 +226,380 @@
         color: var(--primary-color);
     }
 
-    .mb-20 {
-        margin-block-end: 20px;
-    }
-
     .mt-10 {
         margin-block-start: 10px;
     }
 
     .mt-20 {
         margin-block-start: 20px;
+    }
+}
+
+.join {
+    font-size: 20px;
+    font-weight: var(--weight-regular);
+    letter-spacing: 0.3px;
+    color: #000;
+
+    @media (max-width: $tablet) {
+        font-size: 16px;
+    }
+
+    form {
+        text-align: left;
+        margin-block: 40px;
+
+        @media (max-width: $tablet) {
+            margin-block: 20px;
+        }
+    }
+
+    b {
+        font-size: 22px;
+        font-weight: var(--weight-medium);
+        display: inline-block;
+        margin-bottom: 20px;
+
+        @media (max-width: $tablet) {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+
+    p {
+        margin-block: 0;
+    }
+
+    .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        margin-block: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media (max-width: $tablet) {
+            margin-block: 20px;
+            gap: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        input,
+        label {
+            cursor: pointer;
+        }
+
+        label {
+            transition: all 0.3s ease;
+            padding-left: 50px;
+
+            @media (max-width: $tablet) {
+                padding-left: 30px;
+            }
+        }
+
+        input {
+            position: absolute;
+            top: 3px;
+            width: 30px;
+            height: 30px;
+            appearance: none;
+            -webkit-appearance: none;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #000;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            outline-offset: 0px;
+            outline: none;
+            background-color: white;
+
+            @media (max-width: $tablet) {
+                width: 20px;
+                height: 20px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -2px;
+                left: -1px;
+                width: 30px;
+                height: 30px;
+                clip-path: polygon(
+                    41% 83%,
+                    87% 11%,
+                    95% 11%,
+                    100% 17%,
+                    49% 96%,
+                    42% 100%,
+                    34% 96%,
+                    0 60%,
+                    2% 53%,
+                    9% 51%
+                );
+                transform: rotate(10deg) scale(0);
+                background-color: var(--primary-color);
+
+                @media (max-width: $tablet) {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            &:hover {
+                border: 1px solid var(--primary-color);
+            }
+
+            &:hover + label {
+                color: var(--primary-color);
+            }
+
+            &:checked {
+                border: 1px solid var(--primary-color);
+            }
+
+            &:checked::before {
+                transform: rotate(10deg) scale(0.6);
+            }
+
+            &:checked + label {
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    &__form-group {
+        position: relative;
+        margin-top: 40px;
+        padding: 40px;
+        border-left: 3px solid var(--senary-color);
+        font-size: 18px;
+
+        @media (max-width: $tablet) {
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: var(--quinary-color);
+        }
+
+        textarea {
+            display: block;
+            width: calc(100% - 42px);
+            height: 180px;
+            resize: none;
+            outline-offset: 0px;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid var(--senary-color);
+            margin-block: 20px 40px;
+            padding: 12px 20px;
+            font-size: 16px;
+
+            @media (max-width: $tablet) {
+                width: calc(100% - 22px);
+                height: 200px;
+                margin-block: 10px 20px;
+                padding: 10px;
+            }
+        }
+
+        .select-group {
+            margin-block: 10px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            span {
+                word-break: keep-all;
+            }
+        }
+
+        .join__form-select {
+            position: relative;
+            width: 430px;
+            height: 40px;
+
+            @media (max-width: $tablet) {
+                width: 100%;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                border-radius: 5px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 12px;
+                right: 15px;
+                width: 0;
+                height: 0;
+                border: solid black;
+                border-width: 0 1px 1px 0;
+                display: inline-block;
+                padding: 4.82px;
+                transform: rotate(45deg);
+            }
+        }
+
+        select {
+            width: 100%;
+            height: 100%;
+            padding-block: 0;
+            padding-inline: 10px 40px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid var(--senary-color);
+            outline-offset: 0px;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: transparent;
+            color: #000;
+            cursor: pointer;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            @media (max-width: $tablet) {
+                font-size: 16px;
+            }
+        }
+
+        .join__form-btns {
+            margin-inline: auto;
+            max-width: 280px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            @media (max-width: $tablet) {
+                max-width: 270px;
+            }
+
+            button {
+                max-width: 120px;
+                width: 100%;
+                padding-block: 7px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                border-width: 1px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 18px;
+                font-weight: var(--weight-regular);
+                letter-spacing: 0.3px;
+
+                @media (max-width: $tablet) {
+                    font-size: 16px;
+                    padding-block: 8.5px;
+                }
+            }
+
+            .join__form-submit {
+                color: white;
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+
+                &:hover {
+                    background-color: var(--septenary-color);
+                    border-color: var(--septenary-color);
+                }
+            }
+
+            .join__form-reset {
+                color: var(--primary-color);
+                background-color: white;
+                border-color: var(--primary-color);
+
+                &:hover {
+                    color: var(--septenary-color);
+                    border-color: var(--septenary-color);
+                }
+            }
+        }
+    }
+
+    .join-test {
+        max-width: 88px;
+        width: 100%;
+        background-color: white;
+        border-width: 1px;
+        border-color: var(--primary-color);
+        border-radius: 50px;
+        color: var(--primary-color);
+        font-size: 18px;
+        padding: 6px 20px;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $tablet) {
+            max-width: 78px;
+            font-size: 16px;
+            padding-block: 7px;
+        }
+
+        svg {
+            position: relative;
+            top: 2px;
+
+            path {
+                transition: all 0.3s ease;
+            }
+        }
+
+        &:hover {
+            border-color: var(--septenary-color);
+            color: var(--septenary-color);
+
+            svg path {
+                fill: var(--septenary-color);
+                stroke: var(--septenary-color);
+            }
+        }
+    }
+
+    .mb-20 {
+        margin-block-end: 20px;
+    }
+
+    .m-mb-10 {
+        @media (max-width: $tablet) {
+            margin-block-end: 10px;
+        }
+    }
+
+    .text-blue {
+        color: var(--primary-color);
     }
 }
 

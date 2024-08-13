@@ -18,6 +18,7 @@
         text-underline-offset: 5px;
         position: relative;
         bottom: 3px;
+        transition: all 0.3s ease;
 
         &:hover {
             color: var(--septenary-color);

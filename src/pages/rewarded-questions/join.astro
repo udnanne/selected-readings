@@ -19,6 +19,7 @@ import "../../styles/rewarded-questions.scss";
             <Title title={["我要參加"]} classname="join" />
 
             <div class="join">
+                {/*可在class添加"m-mb-10"、"mb-20"更改"margin-bottom"*/}
                 <img
                     src="https://placehold.co/1280x300"
                     alt=""
@@ -26,6 +27,131 @@ import "../../styles/rewarded-questions.scss";
                     height="300"
                     class="join__banner"
                 />
+
+                <form action="#" method="post" class="join__form">
+                    <b>編號0045隊員 請注意！</b>
+                    <p>
+                        冒險總部傳來祕密任務，必須在入冬前收集到世間最美好、最怪誕的事物，才能唤醒沉睡千年的時空害櫃。<br
+                        />
+                        請挑選你的冒險首站（勾選）：
+                    </p>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="place1" name="place1" />
+                            <label for="place1"
+                                >危亡雨林：蘊藏意想不到的生機與危機。</label
+                            >
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="place2" name="place2" />
+                            <label for="place2"
+                                >失落之城：置身歴史長河，挖掘文明之根。</label
+                            >
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="place3" name="place3" />
+                            <label for="place3"
+                                >地心畫室：走進畫中，不只能遇見會說話的免子......</label
+                            >
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="place4" name="place4" />
+                            <label for="place4"
+                                >荒蕪之路：歡迎孤獨旅者，生命解答將在途中一一浮現。</label
+                            >
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="place5" name="place5" />
+                            <label for="place5"
+                                >無邊帝國：地球語言近乎失效，總部已為你安排好隨行譯者。</label
+                            >
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="place6" name="place6" />
+                            <label for="place6"
+                                >微物宇宙：探查線索、留意指引，絕對能在龐大宇宙找到出口。</label
+                            >
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="place7" name="place7" />
+                            <label for="place7"
+                                >粉紅孤島：所有顏色竟有了自己的意志！它們的大暴走讓島嶼既奇怪又好看。</label
+                            >
+                        </div>
+                    </div>
+                    <p>
+                        選得好極了！趕緊收拾行李，每個地點都有對應類別的書，能讓你更認識它們。<br
+                        />
+                        趕緊收拾行李，準備啟程吧。
+                    </p>
+
+                    <div class="join__form-group">
+                        <Title title={["冒險啟程"]} classname="join__form" />
+                        <p class="mb-20 m-mb-10">
+                            為甦醒的時光書櫃<br />
+                            獻上你精心挑選的書冊，時光通道將為你開傲。<br />
+                            冒險總部祝福你旅途順利！
+                        </p>
+                        <p>
+                            此刻你收到了總部的任務指引，時間還足夠你光臨附近的書铺。<br
+                            />
+                            在你看完書鋪老固的<span class="text-blue"
+                                >精選文章</span
+                            >與<span class="text-blue">推薦書單</span>後，
+                        </p>
+                        <div class="select-group">
+                            <span>決定挑選</span>
+                            <div class="join__form-select">
+                                <select name="name" id="name">
+                                    <option value="1"
+                                        >寶寶眼中的媽媽圖鑑：我媽媽是這樣誕生的</option
+                                    >
+                                </select>
+                            </div>
+                        </div>
+                        <p>作為獻給時光書櫃的好書，因為這本書</p>
+                        <textarea
+                            name="name"
+                            id="name"
+                            class="join__form-input"
+                            placeholder="(自由填寫，不限字数)"></textarea>
+
+                        <div class="join__form-btns">
+                            <button type="submit" class="btn join__form-submit"
+                                >送出</button
+                            >
+                            <button type="reset" class="btn join__form-reset"
+                                >清除重填</button
+                            >
+                        </div>
+                    </div>
+                </form>
+
+                <a href="#" class="btn join-test">
+                    開始測驗
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="7.879"
+                        height="13.394"
+                        viewBox="0 0 7.879 13.394"
+                    >
+                        <path
+                            id="Path_16331"
+                            data-name="Path 16331"
+                            d="M6.1,0,0,5.748,6.1,12l.35-.322L.672,5.762,6.42.323Z"
+                            transform="translate(7.166 12.697) rotate(180)"
+                            fill="#3B84B7"
+                            stroke="#3B84B7"
+                            stroke-linecap="round"
+                            stroke-width="1"></path>
+                    </svg>
+                </a>
             </div>
         </div>
     </main>
