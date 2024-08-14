@@ -560,7 +560,6 @@
         margin-inline: auto;
         display: flex;
         justify-content: space-between;
-        align-items: center;
 
         @media (max-width: $tablet) {
             max-width: 78px;
@@ -570,7 +569,11 @@
 
         svg {
             position: relative;
-            top: 2px;
+            top: 7px;
+
+            @media (max-width: $tablet) {
+                top: 6px;
+            }
 
             path {
                 transition: all 0.3s ease;
