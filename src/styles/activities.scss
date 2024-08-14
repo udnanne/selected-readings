@@ -1,0 +1,48 @@
+.review,
+.entity,
+.online {
+    margin-bottom: 60px;
+
+    @media (max-width: $desktop) {
+        margin-inline: 20px;
+    }
+
+    @media (max-width: $tablet) {
+        margin-bottom: 30px;
+    }
+
+    .main-content {
+        display: grid;
+        gap: 40px 30px;
+    }
+}
+
+.review .main-content,
+.entity .main-content {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: $desktop) {
+        gap: 35px 25px;
+    }
+
+    @media (max-width: $tablet) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.online .main-content {
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: $desktop) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+    }
+}

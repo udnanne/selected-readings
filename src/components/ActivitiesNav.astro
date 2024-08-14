@@ -2,10 +2,10 @@
 import SliderActivities from "./SliderActivities";
 
 interface Props {
-    review: boolean;
+    type: string;
 }
 
-const { review } = Astro.props;
+const { type } = Astro.props;
 
 const years = [
     "113",
@@ -22,9 +22,138 @@ const years = [
 ---
 
 <nav>
-    <a href="#" class="btn">線上活動</a>
-    <a href="#" class="btn">實體活動</a>
-    <a href="#" class="btn">精彩回顧</a>
+    <a href="#" class={type == "online" ? "btn active" : "btn"}>線上活動</a>
+    <a href="#" class={type == "entity" ? "btn active" : "btn"}>實體活動</a>
+    <a href="#" class={type == "review" ? "btn active" : "btn"}>精彩回顧</a>
 </nav>
 
-{review && <SliderActivities client:only years={years} />}
+{type == "review" && <SliderActivities client:only years={years} />}
+
+<style is:global lang="scss">
+    .entity nav,
+    .online nav,
+    .review nav {
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px solid var(--senary-color);
+
+        @media (max-width: $tablet) {
+            margin-top: 30px;
+        }
+
+        a {
+            color: var(--primary-color);
+            background-color: var(--tertiary-color);
+            border-color: var(--tertiary-color);
+            border-radius: 5px 5px 0 0;
+            font-size: 22px;
+            font-weight: var(--weight-normal);
+            letter-spacing: 3px;
+            margin-inline: 10px;
+            padding: 6px 17px;
+
+            @media (max-width: $mobile) {
+                font-size: 16px;
+                letter-spacing: 0.3px;
+                margin-inline: 0;
+                padding: 5px 7px;
+            }
+
+            &:first-child {
+                margin-inline-start: 20px;
+
+                @media (max-width: $mobile) {
+                    margin-inline-start: 0;
+                }
+            }
+
+            &:last-child {
+                margin-inline-end: 20px;
+
+                @media (max-width: $mobile) {
+                    margin-inline-end: 0;
+                }
+            }
+
+            &:hover {
+                color: white;
+                border-color: var(--primary-color);
+                background-color: var(--primary-color);
+            }
+
+            &.active {
+                color: white;
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+            }
+        }
+    }
+
+    .splide-activities {
+        a {
+            display: inline-block;
+            padding-block: 6px;
+            padding-inline: 15.5px;
+            position: relative;
+            background-color: white;
+            color: var(--primary-color);
+            font-size: 18px;
+            font-weight: var(--weight-regular);
+            letter-spacing: 0.3px;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+
+            @media (max-width: $mobile) {
+                padding-inline: 9px;
+                font-size: 16px;
+            }
+
+            &:hover {
+                color: var(--septenary-color);
+                border: 1px solid var(--septenary-color);
+            }
+
+            &.active {
+                margin-bottom: 10px;
+            }
+
+            &.active:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                width: 14px;
+                height: 14px;
+                border: 1px solid var(--primary-color);
+                background-color: white;
+                border-radius: 0px 0px 3px 0px;
+                left: 41px;
+                bottom: -9px;
+                transform: rotate(45deg);
+
+                @media (max-width: $mobile) {
+                    left: 31px;
+                }
+            }
+
+            &.active:after {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 1px;
+                background-color: white;
+                left: 39px;
+                bottom: -1px;
+
+                @media (max-width: $mobile) {
+                    left: 29px;
+                }
+            }
+
+            &.active:hover {
+                color: var(--primary-color);
+                border: 1px solid var(--primary-color);
+            }
+        }
+    }
+</style>

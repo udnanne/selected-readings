@@ -65,10 +65,6 @@ main {
 .container {
     max-width: var(--container-largeDesktop);
     width: 100%;
-
-    @media (max-width: $desktop) {
-        max-width: var(--container-desktop);
-    }
 }
 
 .btn {

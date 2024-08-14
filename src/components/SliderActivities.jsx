@@ -10,10 +10,15 @@ export default function SliderActivities(props) {
                 pagination: false,
                 arrows: false,
                 autoWidth: true,
-                mediaQuery: 'min',
+                gap: '20px',
+                //padding: {
+                //    right: '20px',
+                //    left: '20px',
+                //},
+                //mediaQuery: 'min',
                 breakpoints: {
-                    1024: {
-                        destroy: true,
+                    767: {
+                        gap: '10px',
                     },
                 },
             }}

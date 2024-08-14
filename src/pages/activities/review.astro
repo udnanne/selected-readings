@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import ActivitiesNav from "../../components/ActivitiesNav.astro";
 import ActivitiesCard from "../../components/ActivitiesCard.astro";
+import "../../styles/slider.scss";
 import "../../styles/activities.scss";
 ---
 
@@ -17,8 +18,9 @@ import "../../styles/activities.scss";
 
         <div class="container">
             <div class="review">
-                <ActivitiesNav review={true} />
+                <ActivitiesNav type="review" />
                 <div class="main-content">
+                    <ActivitiesCard type="review" />
                     <ActivitiesCard type="review" />
                     <ActivitiesCard type="review" />
                 </div>

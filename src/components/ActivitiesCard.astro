@@ -8,39 +8,39 @@ const { type } = Astro.props;
 
 {
     type === "entity" && (
-        <div class="entity-card">
+        <div class="activities-card ended">
             <img src="https://placehold.co/585x160" alt="線上活動" width="585" height="160" />
-            <div class="entity-card__title">
+            <div class="activities-card__title">
                 <span>主題</span>
                 <h3>臺南市安南區土城圖書館《文化部第43次中小學生讀物選介》主題書展</h3>
             </div>
-            <div class="entity-card__detail">
-                <p class="entity-card__time ended">2021年11月3日～11月30日<span class="entity-card__ended">※活動已結束</span></p>
-                <p class="entity-card__location">臺南市安南區土城圖書館（709台南市安南區城安路85號）</p>
+            <div class="activities-card__detail">
+                <p class="activities-card__time">2021年11月3日～11月30日<span class="activities-card__ended">※活動已結束</span></p>
+                <p class="activities-card__location">臺南市安南區土城圖書館（709台南市安南區城安路85號）</p>
             </div>
         </div>
 
-        <div class="entity-card">
+        <div class="activities-card">
             <img src="https://placehold.co/585x160" alt="線上活動" width="585" height="160" />
-            <div class="entity-card__title">
+            <div class="activities-card__title">
                 <span>主題</span>
                 <h3>雲林縣土庫鎮立圖書館馬光分館 《第43次中小學生讀物選介》主題書展</h3>
             </div>
-            <div class="entity-card__detail">
-                <p class="entity-card__time">2021年10月6日～11月7日<span class="entity-card__ended">※活動已結束</span></p>
-                <p class="entity-card__location">雲林縣土庫鎮立圖書館馬光分館（633雲林縣土庫鎮民權路43-1號）</p>
+            <div class="activities-card__detail">
+                <p class="activities-card__time">2021年10月6日～11月7日<span class="activities-card__ended">※活動已結束</span></p>
+                <p class="activities-card__location">雲林縣土庫鎮立圖書館馬光分館（633雲林縣土庫鎮民權路43-1號）</p>
             </div>
         </div>
 
-        <div class="entity-card">
+        <div class="activities-card ended">
             <img src="https://placehold.co/585x160" alt="線上活動" width="585" height="160" />
-            <div class="entity-card__title">
+            <div class="activities-card__title">
                 <span>主題</span>
                 <h3>小兔子書坊 一起陪孩子探尋好書</h3>
             </div>
-            <div class="entity-card__detail">
-                <p class="entity-card__time ended">2021年10月2日～10月30日<span class="entity-card__ended">※活動已結束</span></p>
-                <p class="entity-card__location">小兔子書坊（324桃園市平鎮區民族路二段193巷15弄61號）</p>
+            <div class="activities-card__detail">
+                <p class="activities-card__time">2021年10月2日～10月30日<span class="activities-card__ended">※活動已結束</span></p>
+                <p class="activities-card__location">小兔子書坊（324桃園市平鎮區民族路二段193巷15弄61號）</p>
             </div>
         </div>
     )
@@ -48,52 +48,187 @@ const { type } = Astro.props;
 
 {
     type === "online" && (
-        <div class="online-card">
+        <a href="#" class="activities-card">
             <img src="https://placehold.co/290x240" alt="實體活動" width="290" height="240" />
-            <div class="online-card__title">
+            <div class="activities-card__title">
                 <h3>【讀之冒險】第45次中小學生讀物選介書展7折起</h3>
             </div>
-            <div class="online-card__detail">
-                <p class="online-card__time">2023年9月1日(五)～10月15日(日)</p>
+            <div class="activities-card__detail">
+                <p class="activities-card__time">2023年9月1日(五)～10月15日(日)</p>
             </div>
-        </div>
+        </a>
     )
 }
 
 {
     type === "review" && (
-        <div class="review-card">
+        <div class="activities-card ended">
             <img src="https://placehold.co/585x160" alt="精彩回顧" width="585" height="160" />
-            <div class="review-card__title">
+            <div class="activities-card__title">
                 <span>主題</span>
                 <h3>雲林縣土庫鎮立圖書館馬光分館 《第43次中小學生讀物選介》主題書展</h3>
             </div>
-            <div class="review-card__detail">
-                <p class="review-card__time ended">2021年10月6日～11月7日<span class="review-card__ended">※活動已結束</span></p>
-                <p class="review-card__location">雲林縣土庫鎮立圖書館馬光分館（633雲林縣土庫鎮民權路43-1號）</p>
+            <div class="activities-card__detail">
+                <p class="activities-card__time">2021年10月6日～11月7日<span class="activities-card__ended">※活動已結束</span></p>
+                <p class="activities-card__location">雲林縣土庫鎮立圖書館馬光分館（633雲林縣土庫鎮民權路43-1號）</p>
             </div>
         </div>
 
-        <div class="review-card">
+        <a href="#" class="activities-card">
             <img src="https://placehold.co/585x160" alt="精彩回顧" width="585" height="160" />
-            <div class="review-card__title">
+            <div class="activities-card__title">
                 <h3>臺南市安南區土城圖書館《文化部第43次中小學生讀物選介》主題書展</h3>
             </div>
-            <div class="review-card__detail">
-                <p class="review-card__time">2021年11月3日～11月30日</p>
+            <div class="activities-card__detail">
+                <p class="activities-card__time">2021年11月3日～11月30日</p>
             </div>
         </div>
 
-        <div class="review-card">
+        <div class="activities-card">
             <img src="https://placehold.co/585x160" alt="精彩回顧" width="585" height="160" />
-            <div class="review-card__title">
+            <div class="activities-card__title">
                 <span>主題</span>
                 <h3>小兔子書坊 一起陪孩子探尋好書</h3>
             </div>
-            <div class="review-card__detail">
-                <p class="review-card__time">2021年10月2日～10月30日<span class="review-card__ended">※活動已結束</span></p>
-                <p class="review-card__location">小兔子書坊（324桃園市平鎮區民族路二段193巷15弄61號）</p>
+            <div class="activities-card__detail">
+                <p class="activities-card__time">2021年10月2日～10月30日<span class="activities-card__ended">※活動已結束</span></p>
+                <p class="activities-card__location">小兔子書坊（324桃園市平鎮區民族路二段193巷15弄61號）</p>
             </div>
         </div>
     )
 }
+
+<style is:global lang="scss">
+    .activities-card {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        background-color: white;
+        text-align: left;
+        padding-bottom: 10px;
+        color: #000;
+        font-weight: var(--weight-regular);
+        letter-spacing: 0.3px;
+
+        &:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        &__title {
+            margin-block: 10px 5px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #000;
+            height: 50px;
+            display: flex;
+            align-items: center;
+
+            @media (max-width: $mobile) {
+                height: auto;
+            }
+
+            h3 {
+                font-size: 20px;
+                font-weight: var(--weight-regular);
+                letter-spacing: 0.35px;
+                margin-block: 0;
+                display: inline-block;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                line-height: 1.25;
+                -webkit-line-clamp: 2;
+                max-height: 2.5em;
+
+                @media (max-width: $mobile) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &__detail {
+            p {
+                font-size: 16px;
+                margin-block: 0;
+
+                @media (max-width: $mobile) {
+                    font-size: 14px;
+                    letter-spacing: 0.35px;
+                }
+            }
+        }
+
+        &__time {
+            &::before {
+                content: "書展時間：";
+            }
+        }
+
+        &__location {
+            &::before {
+                content: "書展地點：";
+            }
+        }
+
+        &__ended {
+            color: var(--primary-color);
+            font-size: 16px;
+            display: none;
+
+            @media (max-width: $mobile) {
+                font-size: 14px;
+                letter-spacing: 0.35px;
+            }
+        }
+
+        &.ended .activities-card__ended {
+            display: inline-flex;
+            padding-left: 10px;
+        }
+    }
+
+    .review .activities-card, .entity .activities-card {
+        padding-inline: 20px;
+        padding-top: 20px;
+
+        @media (max-width: $mobile) {
+            padding-inline: 10px;
+            padding-top: 10px;
+        }
+
+        &:has(span) .activities-card__title {
+            display: grid;
+            grid-template-columns: 50px auto;
+            align-items: center;
+            gap: 10px;
+
+            @media (max-width: $mobile) {
+                grid-template-columns: 40px auto;
+            }
+
+            span {
+                font-size: 18px;
+                color: white;
+                background-color: var(--primary-color);
+                border-radius: 5px;
+                padding: 1px 6.5px 3px;
+
+                @media (max-width: $mobile) {
+                    font-size: 14px;
+                    padding: 2.5px 5px;
+                }
+            }
+        }
+    }
+
+    .online .activities-card {
+        &__title {
+            margin-inline: 20px;
+        }
+    }
+</style>
