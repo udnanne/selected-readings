@@ -9,7 +9,10 @@ const { type } = Astro.props;
 {
     type === "entity" && (
         <div class="activities-card ended">
-            <img src="https://placehold.co/585x160" alt="線上活動" width="585" height="160" />
+            <picture class="activities-card__image">
+                <source srcset="https://placehold.co/585x160" media="(min-width: 768px)" />
+                <img src="https://placehold.co/315x160" alt="實體活動" width="585" height="160" />
+            </picture>
             <div class="activities-card__title">
                 <span>主題</span>
                 <h3>臺南市安南區土城圖書館《文化部第43次中小學生讀物選介》主題書展</h3>
@@ -21,7 +24,10 @@ const { type } = Astro.props;
         </div>
 
         <div class="activities-card">
-            <img src="https://placehold.co/585x160" alt="線上活動" width="585" height="160" />
+            <picture class="activities-card__image">
+                <source srcset="https://placehold.co/585x160" media="(min-width: 768px)" />
+                <img src="https://placehold.co/315x160" alt="實體活動" width="585" height="160" />
+            </picture>
             <div class="activities-card__title">
                 <span>主題</span>
                 <h3>雲林縣土庫鎮立圖書館馬光分館 《第43次中小學生讀物選介》主題書展</h3>
@@ -33,7 +39,10 @@ const { type } = Astro.props;
         </div>
 
         <div class="activities-card ended">
-            <img src="https://placehold.co/585x160" alt="線上活動" width="585" height="160" />
+            <picture class="activities-card__image">
+                <source srcset="https://placehold.co/585x160" media="(min-width: 768px)" />
+                <img src="https://placehold.co/315x160" alt="實體活動" width="585" height="160" />
+            </picture>
             <div class="activities-card__title">
                 <span>主題</span>
                 <h3>小兔子書坊 一起陪孩子探尋好書</h3>
@@ -49,7 +58,10 @@ const { type } = Astro.props;
 {
     type === "online" && (
         <a href="#" class="activities-card">
-            <img src="https://placehold.co/290x240" alt="實體活動" width="290" height="240" />
+            <picture class="activities-card__image">
+                <source srcset="https://placehold.co/290x240" media="(min-width: 768px)" />
+                <img src="https://placehold.co/315x160" alt="線上活動" width="290" height="240" />
+            </picture>
             <div class="activities-card__title">
                 <h3>【讀之冒險】第45次中小學生讀物選介書展7折起</h3>
             </div>
@@ -63,7 +75,10 @@ const { type } = Astro.props;
 {
     type === "review" && (
         <div class="activities-card ended">
-            <img src="https://placehold.co/585x160" alt="精彩回顧" width="585" height="160" />
+            <picture class="activities-card__image">
+                <source srcset="https://placehold.co/585x160" media="(min-width: 768px)" />
+                <img src="https://placehold.co/315x160" alt="精彩回顧" width="585" height="160" />
+            </picture>
             <div class="activities-card__title">
                 <span>主題</span>
                 <h3>雲林縣土庫鎮立圖書館馬光分館 《第43次中小學生讀物選介》主題書展</h3>
@@ -75,7 +90,10 @@ const { type } = Astro.props;
         </div>
 
         <a href="#" class="activities-card">
-            <img src="https://placehold.co/585x160" alt="精彩回顧" width="585" height="160" />
+            <picture class="activities-card__image">
+                <source srcset="https://placehold.co/585x160" media="(min-width: 768px)" />
+                <img src="https://placehold.co/315x160" alt="精彩回顧" width="585" height="160" />
+            </picture>
             <div class="activities-card__title">
                 <h3>臺南市安南區土城圖書館《文化部第43次中小學生讀物選介》主題書展</h3>
             </div>
@@ -85,7 +103,10 @@ const { type } = Astro.props;
         </div>
 
         <div class="activities-card">
-            <img src="https://placehold.co/585x160" alt="精彩回顧" width="585" height="160" />
+            <picture class="activities-card__image">
+                <source srcset="https://placehold.co/585x160" media="(min-width: 768px)" />
+                <img src="https://placehold.co/315x160" alt="精彩回顧" width="585" height="160" />
+            </picture>
             <div class="activities-card__title">
                 <span>主題</span>
                 <h3>小兔子書坊 一起陪孩子探尋好書</h3>
@@ -118,6 +139,11 @@ const { type } = Astro.props;
         img {
             width: 100%;
             height: auto;
+            object-fit: contain;
+
+            @media (max-width: $mobile) {
+                aspect-ratio: 315/160;
+            }
         }
 
         &__title {
@@ -227,8 +253,24 @@ const { type } = Astro.props;
     }
 
     .online .activities-card {
-        &__title {
+        @media (max-width: $mobile) {
+            padding-inline: 10px;
+            padding-top: 10px;
+        }
+
+        img {
+            border-radius: 5px 5px 0 0;
+
+            @media (max-width: $mobile) {
+                border-radius: 0;
+            }
+        }
+        &__title,&__time {
             margin-inline: 20px;
+
+            @media (max-width: $mobile) {
+                margin-inline: 0;
+            }
         }
     }
 </style>
