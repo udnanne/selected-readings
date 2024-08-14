@@ -4,12 +4,31 @@ import "../styles/slider.scss";
 
 interface Props {
     all: boolean;
-    review: boolean;
+    selection: boolean;
     active: boolean;
     type: string;
 }
 
-const { all, review, active, type } = Astro.props;
+const { all, selection, active, type } = Astro.props;
+
+const defaultList = [
+    "人文社科類",
+    "叢書工具書類",
+    "圖畫書類",
+    "文學翻譯類",
+    "文學類",
+    "漫畫類",
+    "自然科普類",
+    "雜誌類",
+];
+
+const recommendList = [
+    "第45次推介",
+    "第44次推介",
+    "第43次推介",
+    "第42次推介",
+    "第41次推介",
+];
 ---
 
 {
@@ -45,7 +64,8 @@ const { all, review, active, type } = Astro.props;
 <SliderAside
     client:only
     active={active}
-    review={review}
+    selection={selection}
+    list={type === "recommend" ? recommendList : defaultList}
     default={type === "recommend" ? null : "default"}
     recommend={type === "recommend" ? "recommend" : null}
 />

@@ -1,0 +1,30 @@
+---
+import SliderActivities from "./SliderActivities";
+
+interface Props {
+    review: boolean;
+}
+
+const { review } = Astro.props;
+
+const years = [
+    "113",
+    "112",
+    "111",
+    "110",
+    "109",
+    "108",
+    "107",
+    "106",
+    "105",
+    "104",
+];
+---
+
+<nav>
+    <a href="#" class="btn">線上活動</a>
+    <a href="#" class="btn">實體活動</a>
+    <a href="#" class="btn">精彩回顧</a>
+</nav>
+
+{review && <SliderActivities client:only years={years} />}
