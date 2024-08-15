@@ -10,7 +10,7 @@ const { type } = Astro.props;
     type === "entity" && (
         <div class="activities-card ended">
             <picture class="activities-card__image">
-                <source srcset="https://placehold.co/585x160" media="(min-width: 768px)" />
+                <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="實體活動" width="585" height="160" />
             </picture>
             <div class="activities-card__title">
@@ -25,7 +25,7 @@ const { type } = Astro.props;
 
         <div class="activities-card">
             <picture class="activities-card__image">
-                <source srcset="https://placehold.co/585x160" media="(min-width: 768px)" />
+                <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="實體活動" width="585" height="160" />
             </picture>
             <div class="activities-card__title">
@@ -40,7 +40,7 @@ const { type } = Astro.props;
 
         <div class="activities-card ended">
             <picture class="activities-card__image">
-                <source srcset="https://placehold.co/585x160" media="(min-width: 768px)" />
+                <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="實體活動" width="585" height="160" />
             </picture>
             <div class="activities-card__title">
@@ -59,7 +59,7 @@ const { type } = Astro.props;
     type === "online" && (
         <a href="#" class="activities-card">
             <picture class="activities-card__image">
-                <source srcset="https://placehold.co/290x240" media="(min-width: 768px)" />
+                <source srcset="https://placehold.co/290x240" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="線上活動" width="290" height="240" />
             </picture>
             <div class="activities-card__title">
@@ -76,7 +76,7 @@ const { type } = Astro.props;
     type === "review" && (
         <div class="activities-card ended">
             <picture class="activities-card__image">
-                <source srcset="https://placehold.co/585x160" media="(min-width: 768px)" />
+                <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="精彩回顧" width="585" height="160" />
             </picture>
             <div class="activities-card__title">
@@ -91,7 +91,7 @@ const { type } = Astro.props;
 
         <a href="#" class="activities-card">
             <picture class="activities-card__image">
-                <source srcset="https://placehold.co/585x160" media="(min-width: 768px)" />
+                <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="精彩回顧" width="585" height="160" />
             </picture>
             <div class="activities-card__title">
@@ -104,7 +104,7 @@ const { type } = Astro.props;
 
         <div class="activities-card">
             <picture class="activities-card__image">
-                <source srcset="https://placehold.co/585x160" media="(min-width: 768px)" />
+                <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="精彩回顧" width="585" height="160" />
             </picture>
             <div class="activities-card__title">
@@ -141,7 +141,7 @@ const { type } = Astro.props;
             height: auto;
             object-fit: contain;
 
-            @media (max-width: $mobile) {
+            @media (max-width: $tablet) {
                 aspect-ratio: 315/160;
             }
         }
@@ -154,7 +154,7 @@ const { type } = Astro.props;
             display: flex;
             align-items: center;
 
-            @media (max-width: $mobile) {
+            @media (max-width: $tablet) {
                 height: auto;
             }
 
@@ -171,7 +171,7 @@ const { type } = Astro.props;
                 -webkit-line-clamp: 2;
                 max-height: 2.5em;
 
-                @media (max-width: $mobile) {
+                @media (max-width: $tablet) {
                     font-size: 16px;
                 }
             }
@@ -182,7 +182,7 @@ const { type } = Astro.props;
                 font-size: 16px;
                 margin-block: 0;
 
-                @media (max-width: $mobile) {
+                @media (max-width: $tablet) {
                     font-size: 14px;
                     letter-spacing: 0.35px;
                 }
@@ -206,7 +206,7 @@ const { type } = Astro.props;
             font-size: 16px;
             display: none;
 
-            @media (max-width: $mobile) {
+            @media (max-width: $tablet) {
                 font-size: 14px;
                 letter-spacing: 0.35px;
             }
@@ -222,7 +222,7 @@ const { type } = Astro.props;
         padding-inline: 20px;
         padding-top: 20px;
 
-        @media (max-width: $mobile) {
+        @media (max-width: $tablet) {
             padding-inline: 10px;
             padding-top: 10px;
         }
@@ -233,7 +233,7 @@ const { type } = Astro.props;
             align-items: center;
             gap: 10px;
 
-            @media (max-width: $mobile) {
+            @media (max-width: $tablet) {
                 grid-template-columns: 40px auto;
             }
 
@@ -244,7 +244,7 @@ const { type } = Astro.props;
                 border-radius: 5px;
                 padding: 1px 6.5px 3px;
 
-                @media (max-width: $mobile) {
+                @media (max-width: $tablet) {
                     font-size: 14px;
                     padding: 2.5px 5px;
                 }
@@ -253,7 +253,7 @@ const { type } = Astro.props;
     }
 
     .online .activities-card {
-        @media (max-width: $mobile) {
+        @media (max-width: $tablet) {
             padding-inline: 10px;
             padding-top: 10px;
         }
@@ -261,14 +261,14 @@ const { type } = Astro.props;
         img {
             border-radius: 5px 5px 0 0;
 
-            @media (max-width: $mobile) {
+            @media (max-width: $tablet) {
                 border-radius: 0;
             }
         }
         &__title,&__time {
             margin-inline: 20px;
 
-            @media (max-width: $mobile) {
+            @media (max-width: $tablet) {
                 margin-inline: 0;
             }
         }
