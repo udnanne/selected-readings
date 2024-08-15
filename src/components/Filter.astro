@@ -12,8 +12,12 @@ const { search, catebtn, featured } = Astro.props;
     <div class="search filter-row">
         <span class="label">{search}-全部-不限年齡</span>
         <form action="" method="">
-            <input type="text" placeholder="搜尋書籍" />
-            <button type="submit">
+            <input
+                type="text"
+                placeholder="搜尋書籍"
+                aria-label="搜尋書籍 輸入欄位"
+            />
+            <button type="submit" aria-label="搜尋書籍 提交按鈕">
                 <svg
                     id="Group_11209"
                     data-name="Group 11209"

@@ -10,7 +10,7 @@ const { classname, title } = Astro.props;
 <article class={`title__wrapper title__wrapper--${classname}`}>
     <h2 class={`title title--${classname}`}>{title}</h2>
 
-    <a href="#" class="more">
+    <a href="#" class="more" aria-label="看更多">
         <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"

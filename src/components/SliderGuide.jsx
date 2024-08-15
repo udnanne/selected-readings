@@ -26,11 +26,11 @@ export default function SliderGuide() {
             }}
         >
             <SplideSlide>
-                <a href="#" className="splide__card common-card__card">
+                <a href="#" className="splide__card common-card__card" aria-label="查看書籍">
                     <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/180x250"
-                            alt=""
+                            alt="《做伙來踅大稻埕》台文繪本套書 圖片"
                             width="180"
                             height="250"
                             loading="lazy"
@@ -49,11 +49,11 @@ export default function SliderGuide() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card common-card__card">
+                <a href="#" className="splide__card common-card__card" aria-label="查看書籍">
                     <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/250x250"
-                            alt=""
+                            alt="《做伙來踅大稻埕》台文繪本套書 圖片"
                             width="180"
                             height="250"
                             loading="lazy"
@@ -72,11 +72,11 @@ export default function SliderGuide() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card common-card__card">
+                <a href="#" className="splide__card common-card__card" aria-label="查看書籍">
                     <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/180x280"
-                            alt=""
+                            alt="《做伙來踅大稻埕》台文繪本套書 圖片"
                             width="180"
                             height="250"
                             loading="lazy"
@@ -95,11 +95,11 @@ export default function SliderGuide() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card common-card__card">
+                <a href="#" className="splide__card common-card__card" aria-label="查看書籍">
                     <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/280x280"
-                            alt=""
+                            alt="《做伙來踅大稻埕》台文繪本套書 圖片"
                             width="180"
                             height="250"
                             loading="lazy"
@@ -118,11 +118,11 @@ export default function SliderGuide() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card common-card__card">
+                <a href="#" className="splide__card common-card__card" aria-label="查看書籍">
                     <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/150x250"
-                            alt=""
+                            alt="《做伙來踅大稻埕》台文繪本套書 圖片"
                             width="180"
                             height="250"
                             loading="lazy"
@@ -141,11 +141,11 @@ export default function SliderGuide() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card common-card__card">
+                <a href="#" className="splide__card common-card__card" aria-label="查看書籍">
                     <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/180x150"
-                            alt=""
+                            alt="《做伙來踅大稻埕》台文繪本套書 圖片"
                             width="180"
                             height="250"
                             loading="lazy"
@@ -164,11 +164,11 @@ export default function SliderGuide() {
             </SplideSlide>
 
             <SplideSlide>
-                <a href="#" className="splide__card common-card__card">
+                <a href="#" className="splide__card common-card__card" aria-label="查看書籍">
                     <div className="splide__card--img common-card__card--img">
                         <img
                             src="https://placehold.co/280x280"
-                            alt=""
+                            alt="《做伙來踅大稻埕》台文繪本套書 圖片"
                             width="180"
                             height="250"
                             loading="lazy"
