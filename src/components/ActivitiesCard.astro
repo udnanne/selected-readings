@@ -120,9 +120,33 @@ const { type } = Astro.props;
 }
 
 <style is:global lang="scss">
+    @supports (grid-template-rows: subgrid) {
+        .activities-card {
+            display: grid;
+            grid-template-rows: subgrid;
+            grid-row: span 3;
+            gap: 0;
+        }
+    }
+
+    @supports not (grid-template-rows: subgrid) {
+        .activities-card {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                display: flex;
+                align-items: center;
+                height: 50px;
+
+                @media (max-width: $tablet) {
+                    height: auto;
+                }
+            }
+        }
+    }
+
     .activities-card {
-        display: flex;
-        flex-direction: column;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
         border-radius: 5px;
         background-color: white;
@@ -150,13 +174,6 @@ const { type } = Astro.props;
             margin-block: 10px 5px;
             padding-bottom: 5px;
             border-bottom: 1px solid #000;
-            height: 50px;
-            display: flex;
-            align-items: center;
-
-            @media (max-width: $tablet) {
-                height: auto;
-            }
 
             h3 {
                 font-size: 20px;
