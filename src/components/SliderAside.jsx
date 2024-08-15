@@ -20,7 +20,7 @@ export default function SliderAside(props) {
         >
             {props.selection ?
                 <SplideSlide>
-                    <a href="#" className="active">
+                    <a href="/selection" className={props.active ? "" : "active"}>
                         評選報告
                     </a>
                 </SplideSlide>
@@ -43,7 +43,7 @@ export default function SliderAside(props) {
             )) : props.list.map((item, index) => (
                 (index === 0) ?
                     <SplideSlide key={index}>
-                        <a href="#" className={props.active ? "active" : ""}>
+                        <a href={props.selection ? "/selection-category" : "/books-category"} className={props.active ? "active" : ""}>
                             {item}
                         </a>
                     </SplideSlide>

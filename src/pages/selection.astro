@@ -1,0 +1,108 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.astro";
+import Aside from "../components/Aside.astro";
+import "../styles/title.scss";
+import "../styles/slider.scss";
+import "../styles/guide.scss";
+---
+
+<Layout title="評選報告">
+    <main>
+        <div class="container breadcrumb">
+            <nav>
+                <a href="/">首頁</a> / <a href="/books">選書指南</a> / <a
+                    href="/selection">當屆評選報告</a
+                > / <a href="/selection">評選報告</a>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="guide selection">
+                <aside>
+                    <Aside
+                        all={false}
+                        selection={true}
+                        active={false}
+                        type="selection"
+                    />
+                </aside>
+
+                <div class="main-content">
+                    <div class="top-part">
+                        <Title
+                            title={["第45次評審委員評選報告"]}
+                            classname="selection"
+                        />
+
+                        <div class="middle-part">
+                            <span class="convener">召集人：謝佳螢</span>
+
+                            <div class="selector">
+                                <div class="selector-btn">
+                                    <span>下載評選報告</span>
+
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="9.061"
+                                        viewBox="0 0 16 9.061"
+                                    >
+                                        <path
+                                            id="Path_165"
+                                            data-name="Path 165"
+                                            d="M.4,0,0,.438,7.815,8.061,15,.438l-.4-.4L7.8,7.22Z"
+                                            transform="translate(0.5 0.5)"
+                                            stroke="#000"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1"></path>
+                                    </svg>
+                                </div>
+
+                                <ul class="options">
+                                    <li class="option">.pdf</li>
+                                    <li class="option">.odf</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="bottom-part">
+                        2023 年是新冠病毒疫情解封的一年，在 2022
+                        年底美國「國家教育進展評測」(NAEP)公布的調查顯示，九歲孩子的數學與閱讀分數，出現了30年來最大幅的下滑，閱讀絕對是後疫情時代要急起直追的要務。<br
+                        />
+                        <br />
+                        2023 年也是人工智慧(AI)技術成熟問世的一年，當人心惶惶，擔心人工智能將迅速取代傳統行業，專家也趕緊點出,但凡需要仰賴人類情感、創作、同理、詮釋和協作溝通等工作，是AI還無法取代的領域。這也凸顯了文化部年年舉辦「中小學生讀物選介」的時代意義：透過二十四位資深的學者、出版家、翻譯家與閱讀推廣專家，分組閱讀八大類
+                        3674 種，共計 4646 冊書籍，共同會商與辯論，期望為中小學生挑選出一批精彩的書籍，提升兒童、少年及青少年閱讀視野及興趣，拓展閱讀人口，同時正展現出臺灣閱讀環境中無可取代的「詮釋力」。<br
+                        />
+                        <br />
+                        文化部所舉辦的「中小學生讀物選介」評審，其實大有為臺灣出版界與教育界釐定「準經典」的意涵，畢竟當「選介書單」出爐，勢必成為國內各級學校圖書館、地方圖書館以及家長的購書參考，成為學子共讀的重要引導。義大利小說家卡爾維(Italo
+                        Calvino)在《為什麼閱讀經典》一書中，反覆強調：「經典是初讀，卻感覺像重讀的書。經典之書對其讀者所述永無止境。經典之書帶著前人理解的光環來到我們面前，尾隨其後的又是他們穿過時光長河在各文化中(或者是不同的語言和風俗)所留下的痕跡。」相信所有評審都是秉持著慎重而欣悅的態度，為下一代挑選值得一讀的書籍，也為明日的「經典」提出一份藍圖。<br
+                        />
+                        <br />
+                        本年度的評選標準中，相當重視本土創作，如圖畫書類組強調「臺灣原創佳作優先推薦」，雜誌類組與人文社科類也重視「本土與在地觀點」，文學類組則更提出「本土創作為優先，考量多元族群之代表性，促進國家語言保存」，評審期待所選擇的作品中，固然應當具有國際觀點，或能重新詮解傳統文史知識，本屆評選更重視這份書單應當立基於土地的關懷，展現臺灣多元族群的歷史文化，更能促進國家語言的傳承、復振及發展。<br
+                        />
+                        <br />
+                        評審委員在三個半月中，歷經細讀與會議，一共推薦了 652 種(812冊)好書，其中不乏有聲書與電子書，展現出臺灣出版界的活力與創新能量，也將帶給學子嶄新的閱聽經驗。感謝評審委員埋首書海,反覆推敲與思索，為不同年齡層的讀者，依照可讀性與知識程度，分門別類，釐定書目，寫作推薦評語，提供學生、老師與家長索引的基礎。更要感謝文化部與承辦單位的通力合作，無論是會議安排，還有大量書籍的寄送與評閱場地安排，都完善了評選作業。「中小學生讀物選介」雖然年年舉辦，看似傳統，其實書單中飽含著滿滿的時代新意，無論是台語文學、後疫情、身心疾病、人工智慧等議題，都閃現在這份嶄新的書目上，有待新生代讀者接受挑戰，以閱讀展開一場又一場的冒險。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<script>
+    const selector = document.querySelector(".selector");
+    const selectorBtn = document.querySelector(".selector-btn");
+
+    selectorBtn.addEventListener("click", () => {
+        selector.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!selector.contains(e.target as Element)) {
+            selector.classList.remove("open");
+        }
+    });
+</script>

@@ -1,6 +1,6 @@
 .method,
 .join,
-.winner-list {
+.winners {
     display: flex;
     flex-direction: column;
     margin-bottom: 60px;
@@ -606,7 +606,7 @@
     }
 }
 
-.winner-list {
+.winners {
     gap: 40px;
 
     @media (max-width: $tablet) {

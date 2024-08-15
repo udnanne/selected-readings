@@ -2,8 +2,10 @@ import { defineConfig } from 'astro/config';
 import { fileURLToPath } from 'url';
 import { resolve, dirname } from 'path';
 import react from "@astrojs/react";
+import relativeLinks from "astro-relative-links";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,8 +21,17 @@ export default defineConfig({
                     additionalData: `@import "@/styles/variables.scss";`
                 }
             }
-        }
+        },
+        build: {
+            rollupOptions: {
+                output: {
+                    entryFileNames: 'assets/[name].js',
+                    chunkFileNames: 'assets/[name].js',
+                    assetFileNames: 'assets/[name].[ext]',
+                },
+            },
+        },
     },
-    integrations: [react()],
-    compressHTML: false,
+    integrations: [react(), relativeLinks()],
+    compressHTML: false
 });

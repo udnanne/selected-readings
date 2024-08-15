@@ -1,30 +1,30 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Title from "../../components/Title.astro";
-import "../../styles/title.scss";
-import "../../styles/rewarded-questions.scss";
+import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.astro";
+import "../styles/title.scss";
+import "../styles/rewarded-questions.scss";
 ---
 
 <Layout title="得獎名單">
     <main>
         <div class="container breadcrumb">
             <nav>
-                <a href="#">首頁</a> / <a href="#">有獎徵答</a> / <a href="#"
-                    >得獎名單</a
+                <a href="/">首頁</a> / <a href="/method">有獎徵答</a> / <a
+                    href="/winners">得獎名單</a
                 >
             </nav>
         </div>
 
         <div class="container">
-            <Title title={["得獎名單"]} classname="winner-list" />
+            <Title title={["得獎名單"]} classname="winners" />
 
-            <div class="winner-list">
+            <div class="winners">
                 <img
                     src="https://placehold.co/1280x300"
                     alt=""
                     width="1280"
                     height="300"
-                    class="winner-list__banner"
+                    class="winners__banner"
                 />
 
                 <div class="top-part">

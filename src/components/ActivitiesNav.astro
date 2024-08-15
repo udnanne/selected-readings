@@ -22,9 +22,15 @@ const years = [
 ---
 
 <nav>
-    <a href="#" class={type == "online" ? "btn active" : "btn"}>線上活動</a>
-    <a href="#" class={type == "entity" ? "btn active" : "btn"}>實體活動</a>
-    <a href="#" class={type == "review" ? "btn active" : "btn"}>精彩回顧</a>
+    <a href="/online" class={type == "online" ? "btn active" : "btn"}
+        >線上活動</a
+    >
+    <a href="/entity" class={type == "entity" ? "btn active" : "btn"}
+        >實體活動</a
+    >
+    <a href="/review" class={type == "review" ? "btn active" : "btn"}
+        >精彩回顧</a
+    >
 </nav>
 
 {type == "review" && <SliderActivities client:only years={years} />}
