@@ -113,6 +113,10 @@
         p {
             margin-block: 0;
             color: #000;
+
+            @media (max-width: $tablet) {
+                color: var(--septenary-color);
+            }
         }
     }
 
