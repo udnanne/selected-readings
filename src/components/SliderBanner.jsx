@@ -25,32 +25,32 @@ export default function SliderBanner() {
             </SplideSlide>
 
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1500x600" alt="首頁大圖2" width="1500" height="600" fetchpriority="high" />
+                <img className="splide__img" src="https://placehold.co/1500x600" alt="首頁大圖2" width="1280" height="600" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1500x600")}></div>
             </SplideSlide>
 
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1280x800" alt="首頁大圖3" width="1280" height="800" fetchpriority="high" />
+                <img className="splide__img" src="https://placehold.co/1280x800" alt="首頁大圖3" width="1280" height="600" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1280x800")}></div>
             </SplideSlide>
 
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1500x800" alt="首頁大圖4" width="1500" height="800" fetchpriority="high" />
+                <img className="splide__img" src="https://placehold.co/1500x800" alt="首頁大圖4" width="1280" height="600" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1500x800")}></div>
             </SplideSlide>
 
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1080x600" alt="首頁大圖5" width="1080" height="600" fetchpriority="high" />
+                <img className="splide__img" src="https://placehold.co/1080x600" alt="首頁大圖5" width="1280" height="600" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1080x600")}></div>
             </SplideSlide>
 
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1280x400" alt="首頁大圖6" width="1280" height="400" fetchpriority="high" />
+                <img className="splide__img" src="https://placehold.co/1280x400" alt="首頁大圖6" width="1280" height="600" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1280x400")}></div>
             </SplideSlide>
 
             <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1080x400" alt="首頁大圖7" width="1080" height="400" fetchpriority="high" />
+                <img className="splide__img" src="https://placehold.co/1080x400" alt="首頁大圖7" width="1280" height="600" fetchpriority="high" />
                 <div className="splide__bg" style={bgImgStyle("https://placehold.co/1080x400")}></div>
             </SplideSlide>
         </Splide>
