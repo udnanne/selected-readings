@@ -29,6 +29,9 @@ const recommendList = [
     "第42次推介",
     "第41次推介",
 ];
+
+const isProd = import.meta.env.PROD;
+const url = isProd ? "/anne/book/" : "/";
 ---
 
 {
@@ -68,6 +71,7 @@ const recommendList = [
     list={type === "recommend" ? recommendList : defaultList}
     default={type === "recommend" ? null : "default"}
     recommend={type === "recommend" ? "recommend" : null}
+    url={url}
 />
 
 <style is:global lang="scss">
