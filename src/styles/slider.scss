@@ -47,6 +47,17 @@
         z-index: -1;
         background-image: var(--bg-img);
         filter: blur(100px);
+
+        @media (max-width: $tablet) {
+            width: 0;
+            height: 0;
+            background-image: none;
+            display: none;
+        }
+
+        img {
+            display: none;
+        }
     }
 
     img.splide__bg {
