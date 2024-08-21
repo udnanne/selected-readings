@@ -22,21 +22,9 @@ const years = [
 ---
 
 <nav>
-    <a
-        href="/online"
-        class={type == "online" ? "btn active" : "btn"}
-        title="線上活動 連結">線上活動</a
-    >
-    <a
-        href="/entity"
-        class={type == "entity" ? "btn active" : "btn"}
-        title="實體活動 連結">實體活動</a
-    >
-    <a
-        href="/review"
-        class={type == "review" ? "btn active" : "btn"}
-        title="精彩回顧 連結">精彩回顧</a
-    >
+    <a href="/online" class={type == "online" ? "active" : ""}>線上活動</a>
+    <a href="/entity" class={type == "entity" ? "active" : ""}>實體活動</a>
+    <a href="/review" class={type == "review" ? "active" : ""}>精彩回顧</a>
 </nav>
 
 {type == "review" && <SliderActivities client:only years={years} />}
@@ -57,19 +45,19 @@ const years = [
         a {
             color: var(--primary-color);
             background-color: var(--tertiary-color);
-            border-color: var(--tertiary-color);
             border-radius: 5px 5px 0 0;
             font-size: 22px;
             font-weight: var(--weight-normal);
             letter-spacing: 3px;
             margin-inline: 10px;
-            padding: 6px 17px;
+            padding: 9px 17px;
+            transition: all 0.3s ease;
 
             @media (max-width: $tablet) {
                 font-size: 16px;
                 letter-spacing: 0.3px;
                 margin-inline: 0;
-                padding: 5px 7px;
+                padding: 8px 7px;
             }
 
             &:first-child {
@@ -90,14 +78,12 @@ const years = [
 
             &:hover {
                 color: white;
-                border-color: var(--primary-color);
                 background-color: var(--primary-color);
             }
 
             &.active {
                 color: white;
                 background-color: var(--primary-color);
-                border-color: var(--primary-color);
             }
         }
     }

@@ -56,7 +56,7 @@ export default function SliderSignup() {
                     報名前，請先下载以下表格檔案，填妥後，進行以下報名步驟
                 </p>
 
-                <button className="btn file mb-20" type="button">
+                <a href="/logo.png" download="參選讀物資料" className="file mb-20">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="15"
@@ -71,7 +71,7 @@ export default function SliderSignup() {
                     </svg>
 
                     <span>表二：參選讀物資料</span>
-                </button>
+                </a>
 
                 <ul>
                     <li data-order="(1)">

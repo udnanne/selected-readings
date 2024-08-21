@@ -201,17 +201,11 @@
         margin-block: 10px 0;
     }
 
-    a {
+    .link-underline {
         display: inline-block;
-        color: var(--primary-color);
-        text-decoration: underline;
         text-underline-offset: 4px;
+        bottom: 0;
         letter-spacing: 0.3px;
-        transition: all 0.3s ease;
-
-        &:hover {
-            color: var(--septenary-color);
-        }
     }
 
     &__link--block {
@@ -506,7 +500,7 @@
             button {
                 max-width: 120px;
                 width: 100%;
-                padding-block: 7px;
+                padding-block: 6px;
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
@@ -551,6 +545,7 @@
         max-width: 88px;
         width: 100%;
         background-color: white;
+        border-style: solid;
         border-width: 1px;
         border-color: var(--primary-color);
         border-radius: 50px;
@@ -560,6 +555,7 @@
         margin-inline: auto;
         display: flex;
         justify-content: space-between;
+        transition: all 0.3s ease;
 
         @media (max-width: $tablet) {
             max-width: 78px;
