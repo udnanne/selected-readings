@@ -15,15 +15,17 @@ import "../styles/index.scss";
 
 <Layout title="中小學生讀物選介">
     <main>
-        <div class="banner full-container">
+        <div class="banner-area full-container">
             <SliderBanner client:only />
         </div>
 
-        <div class="container">
+        <div class="news-area container">
             <TitleMore classname="index" title="最新消息" />
 
             <SliderNews client:only />
+        </div>
 
+        <div class="guide-area container">
             <TitleMore classname="index" title="選書指南" />
 
             <SliderGuide client:only />
@@ -375,7 +377,7 @@ import "../styles/index.scss";
 </Layout>
 
 <style is:global lang="scss">
-    .banner {
+    .banner-area {
         margin-bottom: 15px;
         aspect-ratio: 1920/600;
         height: auto;
@@ -383,5 +385,13 @@ import "../styles/index.scss";
         @media (max-width: $desktop) {
             aspect-ratio: 1280/600;
         }
+    }
+
+    .news-area {
+        min-height: 360px;
+    }
+
+    .signup-area {
+        min-height: 575px;
     }
 </style>
