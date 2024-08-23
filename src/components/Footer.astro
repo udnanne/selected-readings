@@ -206,11 +206,15 @@
                 &::before {
                     content: "";
                     position: absolute;
-                    bottom: 4px;
+                    bottom: 3px;
                     left: -12px;
                     width: 1px;
                     height: 11px;
                     background-color: white;
+
+                    @media (max-width: $tablet) {
+                        bottom: 2px;
+                    }
                 }
 
                 &:last-child {
