@@ -99,7 +99,7 @@ const { type } = Astro.props;
                 <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="精彩回顧 圖片" width="585" height="160" />
             </picture>*/}
-            <img src="https://placehold.co/315x240" alt="精彩回顧 圖片" width="585" height="160" />
+            <img src="https://placehold.co/585x160" alt="精彩回顧 圖片" width="585" height="160" />
             <div class="activities-card__title">
                 <h3>臺南市安南區土城圖書館《文化部第43次中小學生讀物選介》主題書展</h3>
             </div>
@@ -272,12 +272,6 @@ const { type } = Astro.props;
         }
     }
 
-    .review .activities-card {
-        img {
-            height: 160px;
-        }
-    }
-
     .online .activities-card {
         @media (max-width: $tablet) {
             padding-inline: 10px;
@@ -288,6 +282,7 @@ const { type } = Astro.props;
             border-radius: 5px 5px 0 0;
 
             @media (max-width: $tablet) {
+                aspect-ratio: 315/160;
                 border-radius: 0;
             }
         }

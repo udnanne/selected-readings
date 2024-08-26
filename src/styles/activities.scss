@@ -21,9 +21,12 @@
 .entity .main-content {
     grid-template-columns: repeat(2, 1fr);
 
+    @media (max-width: $tablet) {
+        gap: 20px;
+    }
+
     @media (max-width: $mobile) {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
 }
 

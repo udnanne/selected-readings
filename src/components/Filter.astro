@@ -154,10 +154,14 @@ const { search, catebtn, featured } = Astro.props;
                     </svg>
                 </div>
 
-                <ul class="options">
-                    <li class="option">.xls</li>
-                    <li class="option">.odf</li>
-                </ul>
+                <div class="options">
+                    <a href="/logo.png" download="完整書單" class="option"
+                        >.xls</a
+                    >
+                    <a href="/logo.png" download="完整書單" class="option"
+                        >.odf</a
+                    >
+                </div>
             </div>
 
             <div class="report selector">
@@ -182,10 +186,14 @@ const { search, catebtn, featured } = Astro.props;
                     </svg>
                 </div>
 
-                <ul class="options">
-                    <li class="option">.pdf</li>
-                    <li class="option">.odf</li>
-                </ul>
+                <div class="options">
+                    <a href="/logo.png" download="評選報告" class="option"
+                        >.pdf</a
+                    >
+                    <a href="/logo.png" download="評選報告" class="option"
+                        >.odf</a
+                    >
+                </div>
             </div>
 
             <div class="age selector">
@@ -257,9 +265,15 @@ const { search, catebtn, featured } = Astro.props;
                             </svg>
                         </div>
 
-                        <ul class="options">
-                            <li class="option">第45次精選之星手冊</li>
-                        </ul>
+                        <div class="options">
+                            <a
+                                href="/logo.png"
+                                download="第45次精選之星手冊"
+                                class="option"
+                            >
+                                第45次精選之星手冊
+                            </a>
+                        </div>
                     </div>
                 ) : null
             }
