@@ -13,9 +13,7 @@ const { type } = Astro.props;
                 <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="實體活動 圖片" width="585" height="160" />
             </picture>*/}
-            <div class="activities-card__image">
-                <img src="https://placehold.co/585x160" alt="實體活動 圖片" width="585" height="160" />
-            </div>
+            <img src="https://placehold.co/585x160" alt="實體活動 圖片" width="585" height="160" />
             <div class="activities-card__title">
                 <span>主題</span>
                 <h3>臺南市安南區土城圖書館《文化部第43次中小學生讀物選介》主題書展</h3>
@@ -31,9 +29,7 @@ const { type } = Astro.props;
                 <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="實體活動 圖片" width="585" height="160" />
             </picture>*/}
-            <div class="activities-card__image">
-                <img src="https://placehold.co/585x160" alt="實體活動 圖片" width="585" height="160" />
-            </div>
+            <img src="https://placehold.co/585x160" alt="實體活動 圖片" width="585" height="160" />
             <div class="activities-card__title">
                 <span>主題</span>
                 <h3>雲林縣土庫鎮立圖書館馬光分館 《第43次中小學生讀物選介》主題書展</h3>
@@ -49,9 +45,7 @@ const { type } = Astro.props;
                 <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="實體活動 圖片" width="585" height="160" />
             </picture>*/}
-            <div class="activities-card__image">
-                <img src="https://placehold.co/585x160" alt="實體活動 圖片" width="585" height="160" />
-            </div>
+            <img src="https://placehold.co/585x160" alt="實體活動 圖片" width="585" height="160" />
             <div class="activities-card__title">
                 <span>主題</span>
                 <h3>小兔子書坊 一起陪孩子探尋好書</h3>
@@ -71,9 +65,7 @@ const { type } = Astro.props;
                 <source srcset="https://placehold.co/290x240" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="線上活動 圖片" width="290" height="240" />
             </picture>*/}
-            <div class="activities-card__image">
-                <img src="https://placehold.co/315x240" alt="線上活動 圖片" width="290" height="240" />
-            </div>
+            <img src="https://placehold.co/315x240" alt="線上活動 圖片" width="290" height="240" />
             <div class="activities-card__title">
                 <h3>【讀之冒險】第45次中小學生讀物選介書展7折起</h3>
             </div>
@@ -91,9 +83,7 @@ const { type } = Astro.props;
                 <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="精彩回顧 圖片" width="585" height="160" />
             </picture>*/}
-            <div class="activities-card__image">
-                <img src="https://placehold.co/585x160" alt="精彩回顧 圖片" width="585" height="160" />
-            </div>
+            <img src="https://placehold.co/585x160" alt="精彩回顧 圖片" width="585" height="160" />
             <div class="activities-card__title">
                 <span>主題</span>
                 <h3>雲林縣土庫鎮立圖書館馬光分館 《第43次中小學生讀物選介》主題書展</h3>
@@ -109,9 +99,7 @@ const { type } = Astro.props;
                 <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="精彩回顧 圖片" width="585" height="160" />
             </picture>*/}
-            <div class="activities-card__image">
-                <img src="https://placehold.co/315x240" alt="精彩回顧 圖片" width="585" height="160" />
-            </div>
+            <img src="https://placehold.co/315x240" alt="精彩回顧 圖片" width="585" height="160" />
             <div class="activities-card__title">
                 <h3>臺南市安南區土城圖書館《文化部第43次中小學生讀物選介》主題書展</h3>
             </div>
@@ -125,9 +113,7 @@ const { type } = Astro.props;
                 <source srcset="https://placehold.co/585x160" media="(min-width: 1024px)" />
                 <img src="https://placehold.co/315x160" alt="精彩回顧 圖片" width="585" height="160" />
             </picture>*/}
-            <div class="activities-card__image">
-                <img src="https://placehold.co/585x160" alt="精彩回顧 圖片" width="585" height="160" />
-            </div>
+            <img src="https://placehold.co/585x160" alt="精彩回顧 圖片" width="585" height="160" />
             <div class="activities-card__title">
                 <span>主題</span>
                 <h3>小兔子書坊 一起陪孩子探尋好書</h3>
@@ -181,15 +167,10 @@ const { type } = Astro.props;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
         }
 
-        &__image{
-            position: relative;
-
-            img {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
 
         &__title {
@@ -266,14 +247,6 @@ const { type } = Astro.props;
             padding-top: 10px;
         }
 
-        &__image{
-            aspect-ratio: 585/160;
-
-            @media (max-width: $tablet) {
-                aspect-ratio: 315/160;
-            }
-        }
-
         &:has(span) .activities-card__title {
             display: grid;
             grid-template-columns: 50px auto;
@@ -299,25 +272,23 @@ const { type } = Astro.props;
         }
     }
 
+    .review .activities-card {
+        img {
+            height: 160px;
+        }
+    }
+
     .online .activities-card {
         @media (max-width: $tablet) {
             padding-inline: 10px;
             padding-top: 10px;
         }
 
-        &__image{
-            aspect-ratio: 290/240;
+        img {
+            border-radius: 5px 5px 0 0;
 
             @media (max-width: $tablet) {
-                aspect-ratio: 315/160;
-            }
-
-            img {
-                border-radius: 5px 5px 0 0;
-
-                @media (max-width: $tablet) {
-                    border-radius: 0;
-                }
+                border-radius: 0;
             }
         }
 

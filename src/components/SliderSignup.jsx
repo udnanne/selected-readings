@@ -83,7 +83,7 @@ export default function SliderSignup() {
                         <span className="example">例如：聯合線上股份有限公司_表二參選讀物資料。</span>
                     </li>
                     <li data-order="(3)">
-                        <button className="btn file" type="button">
+                        <a href="/logo.png" download="填表範例下載" className="file">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="15"
@@ -98,7 +98,7 @@ export default function SliderSignup() {
                             </svg>
 
                             <span>表二：填表範例下載</span>
-                        </button>
+                        </a>
                     </li>
                 </ul>
             </div>
