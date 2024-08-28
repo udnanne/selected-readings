@@ -3,39 +3,79 @@ import SliderAside from "./SliderAside";
 import "../styles/slider.scss";
 
 interface Props {
-    all: boolean;
-    selection: boolean;
-    active: boolean;
     type: string;
 }
 
-const { all, selection, active, type } = Astro.props;
-
-const defaultList = [
-    "人文社科類",
-    "叢書工具書類",
-    "圖畫書類",
-    "文學翻譯類",
-    "文學類",
-    "漫畫類",
-    "自然科普類",
-    "雜誌類",
-];
-
-const recommendList = [
-    "第45次推介",
-    "第44次推介",
-    "第43次推介",
-    "第42次推介",
-    "第41次推介",
-];
+const { type } = Astro.props;
 
 const isProd = import.meta.env.PROD;
 const url = isProd ? "/anne/book/" : "/";
+
+const path = type.includes("selection")
+    ? "selection-category"
+    : "books-category";
+
+const defaultList = [
+    {
+        title: "人文社科類",
+        url: `${path}?type=1`,
+    },
+    {
+        title: "叢書工具書類",
+        url: `${path}?type=2`,
+    },
+    {
+        title: "圖畫書類",
+        url: `${path}?type=3`,
+    },
+    {
+        title: "文學翻譯類",
+        url: `${path}?type=4`,
+    },
+    {
+        title: "文學類",
+        url: `${path}?type=5`,
+    },
+    {
+        title: "漫畫類",
+        url: `${path}?type=6`,
+    },
+    {
+        title: "自然科普類",
+        url: `${path}?type=7`,
+    },
+    {
+        title: "雜誌類",
+        url: `${path}?type=8`,
+    },
+];
+
+const recommendList = [
+    {
+        title: "第45次推介",
+        url: `recommend?type=1`,
+    },
+    {
+        title: "第44次推介",
+        url: `recommend?type=2`,
+    },
+    {
+        title: "第43次推介",
+        url: `recommend?type=3`,
+    },
+    {
+        title: "第42次推介",
+        url: `recommend?type=4`,
+    },
+    {
+        title: "第41次推介",
+        url: `recommend?type=5`,
+    },
+];
 ---
 
 {
-    all ? (
+    type === "books-category" ? (
         <a href="/books" class="all">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,11 +106,8 @@ const url = isProd ? "/anne/book/" : "/";
 
 <SliderAside
     client:only
-    active={active}
-    selection={selection}
+    type={type}
     list={type === "recommend" ? recommendList : defaultList}
-    default={type === "recommend" ? null : "default"}
-    recommend={type === "recommend" ? "recommend" : null}
     url={url}
 />
 

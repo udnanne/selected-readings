@@ -18,39 +18,30 @@ export default function SliderAside(props) {
                 },
             }}
         >
-            {props.selection ?
+            {props.type.includes("selection") ?
                 <SplideSlide>
-                    <a href="/selection" className={props.active ? "" : "active"}>
+                    <a href="/selection" className={props.type === "selection" ? "active" : ""}>
                         評選報告
                     </a>
                 </SplideSlide>
                 : null
             }
 
-            {props.recommend ? props.list.map((item, index) => (
-                (index === 0) ?
+            {props.list.map((item, index) => (
+                (index === 0 && props.type == "recommend") ?
                     <SplideSlide key={index}>
-                        <a href="#" className="active">
-                            {item}
+                        <a href={`${props.url}${item.url}`} className={
+                            window.location.search.split("?")[1] === undefined || item.url.split("?")[1] === window.location.search.split("?")[1] ? "active" : ""
+                        }>
+                            {item.title}
                         </a>
                     </SplideSlide>
                     :
                     <SplideSlide key={index}>
-                        <a href="#">
-                            {item}
-                        </a>
-                    </SplideSlide>
-            )) : props.list.map((item, index) => (
-                (index === 0) ?
-                    <SplideSlide key={index}>
-                        <a href={props.selection ? `${props.url}selection-category` : `${props.url}books-category`} className={props.active ? "active" : ""}>
-                            {item}
-                        </a>
-                    </SplideSlide>
-                    :
-                    <SplideSlide key={index}>
-                        <a href="#">
-                            {item}
+                        <a href={`${props.url}${item.url}`} className={
+                            (item.url.indexOf("?") === -1 || item.url.split("?")[1] === window.location.search.split("?")[1]) ? "active" : ""
+                        }>
+                            {item.title}
                         </a>
                     </SplideSlide>
             ))}
