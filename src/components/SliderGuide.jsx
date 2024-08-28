@@ -26,9 +26,9 @@ export default function SliderGuide(props) {
             }}
         >
             {
-                props.list.map(({ img, alt, label, title, content }, index) => (
+                props.list.map(({ img, alt, label, title, content, url }, index) => (
                     <SplideSlide key={index}>
-                        <a href="#" className="splide__card common-card__card" aria-label="查看書籍">
+                        <a href={url} className="splide__card common-card__card" aria-label="查看書籍">
                             <div className="splide__card--img common-card__card--img">
                                 <img
                                     src={img}
