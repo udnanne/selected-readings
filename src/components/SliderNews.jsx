@@ -24,7 +24,7 @@ export default function SliderNews(props) {
         >
             {props.list.map((item, index) => (
                 <SplideSlide key={index}>
-                    <a href={`/news#${item.id}`} className="splide__card common-card__card" aria-label="查看消息">
+                    <a href={`${props.url}/news#${item.id}`} className="splide__card common-card__card" aria-label="查看消息">
                         <div className="splide__card--img common-card__card--img">
                             <img
                                 src={item.img}

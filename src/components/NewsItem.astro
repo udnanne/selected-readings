@@ -7,6 +7,9 @@ interface Props {
 
 const { slider } = Astro.props;
 
+const isProd = import.meta.env.PROD;
+const url = isProd ? "/anne/book/" : "/";
+
 const newsList = [
     {
         title: "文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活動開跑",
@@ -132,7 +135,7 @@ const newsList = [
 
 {
     slider ? (
-        <SliderNews client:only list={newsList} />
+        <SliderNews client:only list={newsList} url={url} />
     ) : (
         newsList.map((news, index) => (
             <article class="news-item close" id={news.id}>
