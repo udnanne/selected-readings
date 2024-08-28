@@ -6,7 +6,7 @@ function bgImgStyle(src) {
     };
 }
 
-export default function SliderBanner() {
+export default function SliderBanner(props) {
     return (
         <Splide
             className="splide-banner" aria-label="橫幅"
@@ -19,40 +19,16 @@ export default function SliderBanner() {
                 },
             }}
         >
-            <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1280x600" alt="首頁大圖1" width="1280" height="600" loading="lazy" fetchpriority="high" />
-                <div className="splide__bg" style={bgImgStyle("https://placehold.co/1280x600")}></div>
-            </SplideSlide>
-
-            <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1500x600" alt="首頁大圖2" width="1280" height="600" loading="lazy" />
-                <div className="splide__bg" style={bgImgStyle("https://placehold.co/1500x600")}></div>
-            </SplideSlide>
-
-            <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1280x800" alt="首頁大圖3" width="1280" height="600" loading="lazy" />
-                <div className="splide__bg" style={bgImgStyle("https://placehold.co/1280x800")}></div>
-            </SplideSlide>
-
-            <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1500x800" alt="首頁大圖4" width="1280" height="600" loading="lazy" />
-                <div className="splide__bg" style={bgImgStyle("https://placehold.co/1500x800")}></div>
-            </SplideSlide>
-
-            <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1080x600" alt="首頁大圖5" width="1280" height="600" loading="lazy" />
-                <div className="splide__bg" style={bgImgStyle("https://placehold.co/1080x600")}></div>
-            </SplideSlide>
-
-            <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1280x400" alt="首頁大圖6" width="1280" height="600" loading="lazy" />
-                <div className="splide__bg" style={bgImgStyle("https://placehold.co/1280x400")}></div>
-            </SplideSlide>
-
-            <SplideSlide>
-                <img className="splide__img" src="https://placehold.co/1080x400" alt="首頁大圖7" width="1280" height="600" loading="lazy" />
-                <div className="splide__bg" style={bgImgStyle("https://placehold.co/1080x400")}></div>
-            </SplideSlide>
+            {
+                props.list.map(({ img, alt }, index) => (
+                    <SplideSlide key={index}>
+                        <img className="splide__img" src={img} alt={alt} width="1280" height="600" loading="lazy" fetchpriority={
+                            index === 0 ? "high" : "auto"
+                        } />
+                        <div className="splide__bg" style={bgImgStyle(img)}></div>
+                    </SplideSlide>
+                ))
+            }
         </Splide>
     );
 }

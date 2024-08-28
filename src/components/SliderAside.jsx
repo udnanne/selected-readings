@@ -27,21 +27,21 @@ export default function SliderAside(props) {
                 : null
             }
 
-            {props.list.map((item, index) => (
+            {props.list.map(({ url, title }, index) => (
                 (index === 0 && props.type == "recommend") ?
                     <SplideSlide key={index}>
-                        <a href={`${props.url}${item.url}`} className={
-                            window.location.search.split("?")[1] === undefined || item.url.split("?")[1] === window.location.search.split("?")[1] ? "active" : ""
+                        <a href={`${props.url}${url}`} className={
+                            window.location.search.split("?")[1] === undefined || url.split("?")[1] === window.location.search.split("?")[1] ? "active" : ""
                         }>
-                            {item.title}
+                            {title}
                         </a>
                     </SplideSlide>
                     :
                     <SplideSlide key={index}>
-                        <a href={`${props.url}${item.url}`} className={
-                            (item.url.indexOf("?") === -1 || item.url.split("?")[1] === window.location.search.split("?")[1]) ? "active" : ""
+                        <a href={`${props.url}${url}`} className={
+                            (url.split("?")[1] === window.location.search.split("?")[1]) ? "active" : ""
                         }>
-                            {item.title}
+                            {title}
                         </a>
                     </SplideSlide>
             ))}

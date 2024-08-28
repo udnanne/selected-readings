@@ -11,12 +11,96 @@ import "../styles/title.scss";
 import "../styles/card.scss";
 import "../styles/slider.scss";
 import "../styles/index.scss";
+import { a } from "../../dist/assets/ActivitiesCard";
+
+const bannerList = [
+    {
+        img: `https://placehold.co/1280x600`,
+        alt: "首頁大圖1",
+    },
+    {
+        img: `https://placehold.co/1500x600`,
+        alt: "首頁大圖2",
+    },
+    {
+        img: `https://placehold.co/1280x800`,
+        alt: "首頁大圖3",
+    },
+    {
+        img: `https://placehold.co/1500x800`,
+        alt: "首頁大圖4",
+    },
+    {
+        img: `https://placehold.co/1080x600`,
+        alt: "首頁大圖5",
+    },
+    {
+        img: `https://placehold.co/1280x400`,
+        alt: "首頁大圖6",
+    },
+    {
+        img: `https://placehold.co/1080x400`,
+        alt: "首頁大圖7",
+    },
+];
+
+const guideList = [
+    {
+        img: `https://placehold.co/180x250`,
+        alt: "《做伙來踅大稻埕》台文繪本套書 圖片",
+        label: "圖畫書類",
+        title: "《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)",
+        content: "《大稻埕動物園》圖文：林小杯 /《大稻埕ê山珍海味》圖：吳睿哲",
+    },
+    {
+        img: `https://placehold.co/250x250`,
+        alt: "《做伙來踅大稻埕》台文繪本套書 圖片",
+        label: "圖畫書類",
+        title: "《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)",
+        content: "《大稻埕動物園》圖文：林小杯 /《大稻埕ê山珍海味》圖：吳睿哲",
+    },
+    {
+        img: `https://placehold.co/180x280`,
+        alt: "《做伙來踅大稻埕》台文繪本套書 圖片",
+        label: "圖畫書類",
+        title: "《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)",
+        content: "《大稻埕動物園》圖文：林小杯 /《大稻埕ê山珍海味》圖：吳睿哲",
+    },
+    {
+        img: `https://placehold.co/280x280`,
+        alt: "《做伙來踅大稻埕》台文繪本套書 圖片",
+        label: "圖畫書類",
+        title: "《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)",
+        content: "《大稻埕動物園》圖文：林小杯 /《大稻埕ê山珍海味》圖：吳睿哲",
+    },
+    {
+        img: `https://placehold.co/150x250`,
+        alt: "《做伙來踅大稻埕》台文繪本套書 圖片",
+        label: "圖畫書類",
+        title: "《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)",
+        content: "《大稻埕動物園》圖文：林小杯 /《大稻埕ê山珍海味》圖：吳睿哲",
+    },
+    {
+        img: `https://placehold.co/180x150`,
+        alt: "《做伙來踅大稻埕》台文繪本套書 圖片",
+        label: "圖畫書類",
+        title: "《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)",
+        content: "《大稻埕動物園》圖文：林小杯 /《大稻埕ê山珍海味》圖：吳睿哲",
+    },
+    {
+        img: `https://placehold.co/150x180`,
+        alt: "《做伙來踅大稻埕》台文繪本套書 圖片",
+        label: "圖畫書類",
+        title: "《做伙來踅大稻埕》台文繪本套書(《大稻埕動物園》台文繪本+《大稻埕ê山珍海味》台文迷你圖鑑)",
+        content: "《大稻埕動物園》圖文：林小杯 /《大稻埕ê山珍海味》圖：吳睿哲",
+    },
+];
 ---
 
 <Layout title="中小學生讀物選介">
     <main>
         <div class="banner-area full-container">
-            <SliderBanner client:only />
+            <SliderBanner client:only list={bannerList} />
         </div>
 
         <div class="news-area container">
@@ -28,7 +112,7 @@ import "../styles/index.scss";
         <div class="guide-area container">
             <TitleMore classname="index" title="選書指南" />
 
-            <SliderGuide client:only />
+            <SliderGuide client:only list={guideList} />
         </div>
 
         <div class="signup-area full-container">
