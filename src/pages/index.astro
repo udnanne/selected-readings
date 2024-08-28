@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Title from "../components/Title.astro";
 import TitleMore from "../components/TitleMore.astro";
 import SliderBanner from "../components/SliderBanner.jsx";
-import SliderNews from "../components/SliderNews.jsx";
+import NewsItem from "../components/NewsItem.astro";
 import SliderGuide from "../components/SliderGuide.jsx";
 import SliderSignup from "../components/SliderSignup.jsx";
 
@@ -22,7 +22,7 @@ import "../styles/index.scss";
         <div class="news-area container">
             <TitleMore classname="index" title="最新消息" />
 
-            <SliderNews client:only />
+            <NewsItem slider={true} />
         </div>
 
         <div class="guide-area container">

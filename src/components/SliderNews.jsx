@@ -1,6 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-export default function SliderNews() {
+export default function SliderNews(props) {
     return (
         <Splide
             className="splide-news" aria-label="最新消息"
@@ -22,145 +22,41 @@ export default function SliderNews() {
                 },
             }}
         >
-            <SplideSlide>
-                <a href="#" className="splide__card common-card__card" aria-label="查看消息">
-                    <div className="splide__card--img common-card__card--img">
-                        <img
-                            src="https://placehold.co/290x240"
-                            alt="有獎徵答等推廣活動開跑 圖片"
-                            width="290"
-                            height="240"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div className="splide__card--text common-card__card--text">
-                        <h3>
-                            <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活動開跑
-                        </h3>
-                        <time dateTime="">112.10.06</time>
-                    </div>
-                </a>
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#" className="splide__card common-card__card" aria-label="查看消息">
-                    <div className="splide__card--img common-card__card--img">
-                        <img
-                            src="https://placehold.co/350x240"
-                            alt="有獎徵答等推廣活動開跑 圖片"
-                            width="290"
-                            height="240"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div className="splide__card--text common-card__card--text">
-                        <h3>
-                            <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活動開跑
-                        </h3>
-                        <time dateTime="">112.10.06</time>
-                    </div>
-                </a>
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#" className="splide__card common-card__card" aria-label="查看消息">
-                    <div className="splide__card--img common-card__card--img">
-                        <img
-                            src="https://placehold.co/290x350"
-                            alt="有獎徵答等推廣活動開跑 圖片"
-                            width="290"
-                            height="240"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div className="splide__card--text common-card__card--text">
-                        <h3>
-                            <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活動開跑
-                        </h3>
-                        <time dateTime="">112.10.06</time>
-                    </div>
-                </a>
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#" className="splide__card common-card__card" aria-label="查看消息">
-                    <div className="splide__card--img common-card__card--img">
-                        <img
-                            src="https://placehold.co/350x290"
-                            alt="有獎徵答等推廣活動開跑 圖片"
-                            width="290"
-                            height="240"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div className="splide__card--text common-card__card--text">
-                        <h3>
-                            <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活動開跑
-                        </h3>
-                        <time dateTime="">112.10.06</time>
-                    </div>
-                </a>
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#" className="splide__card common-card__card" aria-label="查看消息">
-                    <div className="splide__card--img common-card__card--img">
-                        <img
-                            src="https://placehold.co/240x240"
-                            alt="有獎徵答等推廣活動開跑 圖片"
-                            width="290"
-                            height="240"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div className="splide__card--text common-card__card--text">
-                        <h3>
-                            <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活動開跑
-                        </h3>
-                        <time dateTime="">112.10.06</time>
-                    </div>
-                </a>
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#" className="splide__card common-card__card" aria-label="查看消息">
-                    <div className="splide__card--img common-card__card--img">
-                        <img
-                            src="https://placehold.co/290x200"
-                            alt="有獎徵答等推廣活動開跑 圖片"
-                            width="290"
-                            height="240"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div className="splide__card--text common-card__card--text">
-                        <h3>
-                            <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活動開跑
-                        </h3>
-                        <time dateTime="">112.10.06</time>
-                    </div>
-                </a>
-            </SplideSlide>
-
-            <SplideSlide>
-                <a href="#" className="splide__card common-card__card" aria-label="查看消息">
-                    <div className="splide__card--img common-card__card--img">
-                        <img
-                            src="https://placehold.co/240x200"
-                            alt="有獎徵答等推廣活動開跑 圖片"
-                            width="290"
-                            height="240"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div className="splide__card--text common-card__card--text">
-                        <h3>
-                            <span>112.10.06</span>文化部「第45次中小學生讀物選介」獲選好書－有獎徵答等推廣活動開跑
-                        </h3>
-                        <time dateTime="">112.10.06</time>
-                    </div>
-                </a>
-            </SplideSlide>
+            {props.list.map((item, index) => (
+                <SplideSlide key={index}>
+                    <a href={`/news#${item.id}`} className="splide__card common-card__card" aria-label="查看消息">
+                        <div className="splide__card--img common-card__card--img">
+                            <img
+                                src={item.img}
+                                alt={item.alt}
+                                width="290"
+                                height="240"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div className="splide__card--text common-card__card--text">
+                            <h3>
+                                <span>{item.date}</span>{item.title}
+                            </h3>
+                            <time dateTime={
+                                new Date(
+                                    item.date
+                                        .split(".")
+                                        .map((dateItem, dateIndex) => {
+                                            if (dateIndex === 0) {
+                                                return parseInt(dateItem) + 1911;
+                                            }
+                                            return dateItem;
+                                        })
+                                        .join("-")
+                                )
+                                    .toISOString()
+                                    .split("T")[0]
+                            }>{item.date}</time>
+                        </div>
+                    </a>
+                </SplideSlide>
+            ))}
         </Splide>
     );
 }
