@@ -20,7 +20,7 @@ export default function SliderAside(props) {
         >
             {props.type.includes("selection") ?
                 <SplideSlide>
-                    <a href={`${props.url}/selection`} className={props.type === "selection" ? "active" : ""}>
+                    <a href={`${props.url}selection`} className={props.type === "selection" ? "active" : ""}>
                         評選報告
                     </a>
                 </SplideSlide>
