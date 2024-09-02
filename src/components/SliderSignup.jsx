@@ -3,8 +3,15 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 export default function SliderSignup(props) {
     const mainRef = useRef(null);
-    const handleSplide = (id) => { if (mainRef.current) { mainRef.current.go(id); } };
-    const handleBtn = () => { if (mainRef.current) { mainRef.current.go('+${1}'); } };
+    const handleSplide = (id) => {
+        if (mainRef.current) { mainRef.current.go(id); }
+    };
+    const handleBtn = () => {
+        if (mainRef.current) { mainRef.current.go('+${1}'); }
+        const current = mainRef.current.splideRef.current;
+        const link = current?.querySelector('.splide__slide.is-active a')?.getAttribute('href');
+        if (link) window.open(link, '_blank');
+    };
 
     return (
         <>
@@ -26,7 +33,12 @@ export default function SliderSignup(props) {
             >
                 {props.list.map((item, index) => (
                     <SplideSlide key={index} onClick={() => handleSplide(index)}>
-                        {item}
+                        {item.url ? (
+                            <a href={item.url}>{item.title}</a>
+                        ) : (
+                            item.title
+                        )
+                        }
                     </SplideSlide>
                 ))}
             </Splide>
