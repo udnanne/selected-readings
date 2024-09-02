@@ -748,8 +748,7 @@
                 }
             }
 
-            &:hover,
-            &.open {
+            @mixin navListOpen {
                 ul {
                     display: flex;
                     flex-direction: column;
@@ -787,6 +786,16 @@
                         stroke: var(--primary-color);
                     }
                 }
+            }
+
+            &:hover {
+                @media (min-width: 1024px) {
+                    @include navListOpen;
+                }
+            }
+
+            &.open {
+                @include navListOpen;
             }
         }
 

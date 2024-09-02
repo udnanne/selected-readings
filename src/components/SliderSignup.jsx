@@ -34,7 +34,7 @@ export default function SliderSignup(props) {
                 {props.list.map((item, index) => (
                     <SplideSlide key={index} onClick={() => handleSplide(index)}>
                         {item.url ? (
-                            <a href={item.url}>{item.title}</a>
+                            <a href={item.url} target="block">{item.title}</a>
                         ) : (
                             item.title
                         )
