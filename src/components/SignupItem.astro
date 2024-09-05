@@ -1,0 +1,318 @@
+---
+import SliderSignup from "./SliderSignup";
+
+interface Props {
+    type: string;
+}
+
+const { type } = Astro.props;
+
+const stepList = [
+    { title: "下載檔案" },
+    { title: "線上填表、列印表單" },
+    { title: "檔案上傳" },
+    { title: "完成線上報名、郵寄讀物及文件" },
+    { title: "資料修改" },
+];
+---
+
+<SliderSignup client:only list={stepList}>
+    {/*可在class添加"mb-10"、"mb-20"更改"margin-botton"*/}
+    <div slot="download" class="signup__wrapper signup__wrapper--download">
+        <p class="mb-10">活動簡章：</p>
+
+        <ul class="mb-10">
+            <li data-order="(1)">
+                採網路報名，請於線上報名填表前，先詳閱活動簡章及注意事項。
+            </li>
+            <li data-order="(2)">
+                下截【表二：參選讀物資料】表格檔案，填妥後再開始進行線上報名步驟。
+            </li>
+        </ul>
+
+        <div class="line"></div>
+
+        <p class="blue bold mb-10">
+            報名前，請先下载以下表格檔案，填妥後，進行以下報名步驟
+        </p>
+
+        <a href="/logo.png" download="參選讀物資料" class="file mb-20">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="20.205"
+                viewBox="0 0 15 20.205"
+            >
+                <path
+                    id="Path_16276"
+                    data-name="Path 16276"
+                    d="M3.333,16.837h.833V16H3.333Zm1.667,0h6.667V16H5ZM3.333,14.312h.833V13.47H3.333Zm1.667,0h6.667V13.47H5ZM3.333,11.786h.833v-.842H3.333Zm1.667,0h6.667v-.842H5ZM3.333,9.261h.833V8.419H3.333ZM5,9.261h6.667V8.419H5ZM3.333,6.735h.833V5.893H3.333ZM5,6.735h6.667V5.893H5ZM1.667,1.684H10V4.157h3.333V18.468H1.667ZM0,0V20.2H15V3.367L11.615,0Z"
+                    fill="#fff"></path>
+            </svg>
+
+            <span>表二：參選讀物資料</span>
+        </a>
+
+        <ul>
+            <li data-order="(1)">
+                請自行依據參選讀物之數量，增加檔案表格中之sheet工作表。<br />
+                <span class="example"
+                    >例如：欲提交10本參選讀物，請於檔案中，增加10個sheet工作表。</span
+                >
+            </li>
+            <li data-order="(2)">
+                上傳檔案命名方式：申請人姓名（或名稱）_表二参選讀物資料。<br />
+                <span class="example"
+                    >例如：聯合線上股份有限公司_表二參選讀物資料。</span
+                >
+            </li>
+            <li data-order="(3)">
+                <a href="/logo.png" download="填表範例下載" class="file">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="20.205"
+                        viewBox="0 0 15 20.205"
+                    >
+                        <path
+                            id="Path_16276"
+                            data-name="Path 16276"
+                            d="M3.333,16.837h.833V16H3.333Zm1.667,0h6.667V16H5ZM3.333,14.312h.833V13.47H3.333Zm1.667,0h6.667V13.47H5ZM3.333,11.786h.833v-.842H3.333Zm1.667,0h6.667v-.842H5ZM3.333,9.261h.833V8.419H3.333ZM5,9.261h6.667V8.419H5ZM3.333,6.735h.833V5.893H3.333ZM5,6.735h6.667V5.893H5ZM1.667,1.684H10V4.157h3.333V18.468H1.667ZM0,0V20.2H15V3.367L11.615,0Z"
+                            fill="#fff"></path>
+                    </svg>
+
+                    <span>表二：填表範例下載</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div slot="fill" class="signup__wrapper signup__wrapper--fill">
+        線上填表、列印表單
+    </div>
+
+    <div slot="upload" class="signup__wrapper signup__wrapper--upload">
+        檔案上傳
+    </div>
+
+    <div slot="send" class="signup__wrapper signup__wrapper--send">
+        完成線上報名、郵寄讀物及文件
+    </div>
+
+    <div slot="revise" class="signup__wrapper signup__wrapper--revise">
+        資料修改
+    </div>
+</SliderSignup>
+
+<style is:global lang="scss">
+    .signup-area,
+    .signup {
+        margin-top: 40px;
+
+        @media (max-width: $tablet) {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .next {
+            margin-block: 30px;
+            border-radius: 50px;
+            border-width: 1px;
+            border-color: var(--primary-color);
+            background-color: white;
+            color: var(--primary-color);
+            padding: 6px 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 18px;
+            font-weight: var(--weight-regular);
+            letter-spacing: 0.3px;
+
+            @media (max-width: $tablet) {
+                font-size: 16px;
+            }
+
+            svg path {
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover {
+                border-color: var(--septenary-color);
+                color: var(--septenary-color);
+
+                svg path {
+                    stroke: var(--septenary-color);
+                }
+            }
+        }
+    }
+
+    .signup__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .line {
+            width: 100%;
+            height: 21px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                height: 0;
+                border-bottom: 1px dashed var(--septenary-color);
+            }
+        }
+
+        p,
+        li {
+            font-size: 18px;
+            font-weight: var(--weight-regular);
+            letter-spacing: 0.3px;
+            text-align: left;
+            color: #000;
+
+            @media (max-width: $tablet) {
+                font-size: 16px;
+                letter-spacing: 0.2px;
+            }
+        }
+
+        p {
+            margin-block: 0;
+
+            &.blue {
+                color: var(--primary-color);
+            }
+
+            &.bold {
+                font-weight: var(--weight-bold);
+            }
+        }
+
+        ul {
+            list-style: none;
+            margin-block: 0;
+            padding-inline-start: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+
+            &::before {
+                content: attr(data-order);
+                margin-right: 4px;
+            }
+
+            &:has(.file)::before {
+                margin-right: 2px;
+                position: relative;
+                top: -5px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .example {
+                font-size: 14px;
+
+                @media (max-width: $tablet) {
+                    letter-spacing: 0.4px;
+                }
+            }
+
+            &:has(.example) {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                width: calc(100% - 27px);
+                position: relative;
+                left: 27px;
+
+                &::before {
+                    position: absolute;
+                    left: -27px;
+                }
+            }
+        }
+
+        .file {
+            width: fit-content;
+            display: inline-grid;
+            grid-template-columns: 15px auto;
+            gap: 10px;
+            align-items: center;
+            padding: 3px 10px;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 16px;
+            font-weight: var(--weight-regular);
+            letter-spacing: 0.3px;
+            text-align: left;
+
+            &.btn {
+                border-width: 0px;
+            }
+
+            &:hover {
+                background-color: var(--septenary-color);
+            }
+        }
+
+        a.file {
+            transition: all 0.3s ease;
+        }
+
+        .mb-10 {
+            margin-bottom: 10px;
+        }
+
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .signup-area {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: var(--tertiary-color);
+            z-index: -1;
+        }
+
+        .signup__wrapper {
+            max-width: 800px;
+            width: 100%;
+
+            @media (max-width: $tablet) {
+                width: calc(100% - 40px);
+            }
+        }
+    }
+
+    .signup {
+        .signup__wrapper {
+            @media (max-width: $desktop) {
+                padding-inline: 20px;
+            }
+        }
+
+        .next {
+            margin-inline: auto;
+        }
+    }
+</style>

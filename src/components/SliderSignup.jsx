@@ -1,17 +1,41 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 export default function SliderSignup(props) {
-    const mainRef = useRef(null);
+    const splideRef = useRef(null);
+    const [current, setCurrent] = useState(0);
+
     const handleSplide = (id) => {
-        if (mainRef.current) { mainRef.current.go(id); }
+        if (splideRef.current) { splideRef.current.go(id); }
     };
+
     const handleBtn = () => {
-        if (mainRef.current) { mainRef.current.go('+${1}'); }
-        const current = mainRef.current.splideRef.current;
-        const link = current?.querySelector('.splide__slide.is-active a')?.getAttribute('href');
-        if (link) window.open(link, '_blank');
+        if (splideRef.current && current < props.list.length - 1) {
+            splideRef.current.go('+${1}');
+        }
     };
+
+    function handleWrapper(id) {
+        switch (id) {
+            case 0:
+                return props.download;
+            case 1:
+                return props.fill;
+            case 2:
+                return props.upload;
+            case 3:
+                return props.send;
+            case 4:
+                return props.revise;
+            default:
+                return props.download;
+        }
+    }
+
+    useEffect(() => {
+        handleWrapper(current);
+    }
+        , [current]);
 
     return (
         <>
@@ -24,26 +48,22 @@ export default function SliderSignup(props) {
                     arrows: false,
                     pagination: false,
                     breakpoints: {
-                        767: {
+                        1023: {
                             drag: 'free',
                         },
                     },
                 }}
-                ref={mainRef}
+                ref={splideRef}
+                onActive={(splide) => setCurrent(splide.index)}
             >
                 {props.list.map((item, index) => (
                     <SplideSlide key={index} onClick={() => handleSplide(index)}>
-                        {item.url ? (
-                            <a href={item.url} target="block">{item.title}</a>
-                        ) : (
-                            item.title
-                        )
-                        }
+                        <span data-order={index + 1}></span>{item.title}
                     </SplideSlide>
                 ))}
             </Splide>
 
-            {props.wrapper}
+            {handleWrapper(current)}
 
             <button className="btn next" type="button" onClick={() => handleBtn()}>
                 <span>下一步</span>

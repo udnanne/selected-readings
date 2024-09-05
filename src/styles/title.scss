@@ -72,6 +72,7 @@
 
     &--news,
     &--brochure,
+    &--signup,
     &--qa,
     &--method,
     &--join,
@@ -88,7 +89,8 @@
         }
     }
 
-    &--brochure {
+    &--brochure,
+    &--signup {
         @media (max-width: $tablet) {
             display: flex;
             flex-direction: column;
