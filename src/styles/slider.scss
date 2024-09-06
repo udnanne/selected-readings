@@ -294,7 +294,7 @@
     }
 
     .splide__slide {
-        padding: 8px 10px;
+        padding: 8px 20px;
         background-color: white;
         color: var(--septenary-color);
         font-size: 16px;
@@ -304,6 +304,7 @@
         transition: all 0.3s ease-in-out;
 
         @media (max-width: $tablet) {
+            padding: 8px 10px;
             font-weight: var(--weight-regular);
         }
 
