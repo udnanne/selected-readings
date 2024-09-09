@@ -301,7 +301,9 @@
         font-weight: var(--weight-medium);
         letter-spacing: 0.5px;
         cursor: pointer;
-        transition: all 0.3s ease-in-out;
+        transition-property: all;
+        transition-timing-function: var(--transition-out-back);
+        transition-duration: 0.3s;
 
         @media (max-width: $tablet) {
             padding: 8px 10px;
@@ -325,7 +327,9 @@
             border: 1px solid var(--septenary-color);
             border-radius: 50%;
             margin-right: 5px;
-            transition: border-color 0.3s ease-in-out;
+            transition-property: border-color;
+            transition-timing-function: var(--transition-out-back);
+            transition-duration: 0.3s;
 
             &::before {
                 content: attr(data-order);

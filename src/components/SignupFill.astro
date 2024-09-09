@@ -1,0 +1,172 @@
+---
+import Title from "./Title.astro";
+---
+
+<ul class="mb-20">
+    <li class="blue bold">
+        (1) 請填寫以下欄位，完成【表一：申請人基本資料】填寫。
+    </li>
+    <li class="bold">
+        (2) 參選讀物統計區，填寫時請填要報名的數量，寄送讀物時請每種寄兩冊。<br
+        />
+        <span class="example">
+            範例如下：<br />
+            ‧單冊圖書：共1冊（寄件時請寄兩冊）<br />
+            ‧套書叢書：共1套4冊（寄件時請寄8冊）<br />
+            ‧雜誌：共12期12冊（寄件時請寄24冊）<br />
+        </span>
+    </li>
+    <li class="blue bold">
+        (3)
+        完成填表後，務必預覽報名表，並以A4紙列印，準備郵寄使用，並請至下一步驟上傳表二。
+    </li>
+    <li>
+        (4)
+        如預覽本表時，發現資料有誤，可按「重新填寫」按鈕，重寫修正，代在次預覽時予以列印。
+    </li>
+    <li>
+        (5)
+        下一步驟的「檔案上傳」頁面中，申請單位名稱（或姓名）及聯絡人E-mail請務必填寫與表一
+        （此頁）線上填寫時的資料一致，以避免讀取不到報名資訊。
+    </li>
+</ul>
+
+<form action="" method="">
+    <div class="department-data">
+        <Title classname="signup-form" title={["申請單位資料"]} />
+
+        <div class="mark input__wrapper">
+            <label for="department">申請單位名稱(或姓名)：</label>
+            <input type="text" id="department" name="department" />
+        </div>
+
+        <div class="mark input__wrapper input__wrapper--address">
+            <label for="address">地址：</label>
+
+            <div>
+                <input type="text" id="zip" name="zip" />
+                <label for="zip">郵遞區號</label>
+            </div>
+
+            <div>
+                <input type="text" id="address" name="address" />
+            </div>
+        </div>
+
+        <div class="mark input__wrapper">
+            <label for="responsible">負責人姓名：</label>
+            <input type="text" id="responsible" name="responsible" />
+        </div>
+    </div>
+
+    <div class="contact-data">
+        <Title classname="signup-form" title={["聯絡人"]} />
+
+        <div class="mark input__wrapper">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" />
+        </div>
+
+        <div class="mark input__wrapper input__wrapper--tel">
+            <label>電話：</label>
+
+            <div>
+                <label for="tel">日</label>
+                <input type="tel" id="tel" name="tel" />
+            </div>
+
+            <div>
+                <label for="mobile">手機</label>
+                <input type="tel" id="mobile" name="mobile" />
+            </div>
+        </div>
+
+        <div class="input__wrapper">
+            <label for="fax">傳真：</label>
+            <input type="text" id="fax" name="fax" />
+        </div>
+
+        <div class="mark input__wrapper">
+            <label for="email">Email：</label>
+            <input type="email" id="email" name="email" />
+        </div>
+    </div>
+
+    <div class="readings-data">
+        <Title classname="signup-form" title={["參選讀物統計"]} />
+
+        <div class="mark input__wrapper">
+            <label for="single">單冊圖書：</label>
+            <div>
+                共<input type="text" id="single" name="single" />冊
+            </div>
+        </div>
+
+        <div class="mark input__wrapper">
+            <label for="series">套書叢書：</label>
+
+            <div class="series__wrapper">
+                <div>
+                    共<input type="text" id="series" name="series" />套
+                </div>
+
+                <div>
+                    <input
+                        type="text"
+                        id="series-total"
+                        name="series-total"
+                    />冊
+                </div>
+            </div>
+        </div>
+
+        <div class="mark input__wrapper">
+            <label for="magazine">雜誌：</label>
+
+            <div class="magazine__wrapper">
+                <div>
+                    共<input
+                        type="text"
+                        id="magazine"
+                        name="magazine"
+                    />期(合訂本)
+                </div>
+
+                <div>
+                    <input
+                        type="text"
+                        id="magazine-total"
+                        name="magazine-total"
+                    />冊
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="notice">
+        <ul>
+            <li data-order="1.">
+                上列出版品合於中小學生讀物選介之參選要件；申請人為參選讀物之著作財產權人或其授權之人，且申請人同意參選讀物或推介者，無償永久授權該讀物之封面及表二所載「內容摘要」文字（以下簡稱「授權標的」）予本部及本部再授權之人，得為不限時間、地域、次數、方式之利用，並代本部向著作人取得不對本部及本部授權之人行使著作人格權之同意書。
+            </li>
+        </ul>
+
+        <p>因應個資法規定，申請人為個人者，請勾選以下資料：</p>
+
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="agree" name="agree" />
+                <label for="agree">
+                    申請人同意提供我國身分證明文件影本一份，並同意本部及本部再授權之人，使用於本案申請人資格審查之用。申請人並得請求資料補充、更正、刪除和停止蒐集、處理或利用之權利。
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="btns">
+        <button type="reset" class="btn">重新填寫</button>
+        <button type="button" class="btn">預覽表單</button>
+        <button type="submit" class="btn">送出資料</button>
+    </div>
+</form>
