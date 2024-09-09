@@ -1,5 +1,7 @@
 ---
+import SignupDownload from "./SignupDownload.astro";
 import SignupFill from "./SignupFill.astro";
+import SignupUpload from "./SignupUpload.astro";
 import SliderSignup from "./SliderSignup";
 import "../styles/signup-form.scss";
 
@@ -15,73 +17,7 @@ const stepList = [
 <SliderSignup client:only list={stepList}>
     {/*可在class添加"mb-10"、"mb-20"更改"margin-botton"*/}
     <div slot="download" class="signup__wrapper signup__wrapper--download">
-        <p class="mb-10">活動簡章：</p>
-
-        <ul class="mb-10">
-            <li>
-                (1) 採網路報名，請於線上報名填表前，先詳閱活動簡章及注意事項。
-            </li>
-            <li>
-                (2)
-                下截【表二：參選讀物資料】表格檔案，填妥後再開始進行線上報名步驟。
-            </li>
-        </ul>
-
-        <div class="line"></div>
-
-        <p class="blue bold mb-10">
-            報名前，請先下载以下表格檔案，填妥後，進行以下報名步驟
-        </p>
-
-        <a href="/logo.png" download="參選讀物資料" class="file mb-20">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="20.205"
-                viewBox="0 0 15 20.205"
-            >
-                <path
-                    id="Path_16276"
-                    data-name="Path 16276"
-                    d="M3.333,16.837h.833V16H3.333Zm1.667,0h6.667V16H5ZM3.333,14.312h.833V13.47H3.333Zm1.667,0h6.667V13.47H5ZM3.333,11.786h.833v-.842H3.333Zm1.667,0h6.667v-.842H5ZM3.333,9.261h.833V8.419H3.333ZM5,9.261h6.667V8.419H5ZM3.333,6.735h.833V5.893H3.333ZM5,6.735h6.667V5.893H5ZM1.667,1.684H10V4.157h3.333V18.468H1.667ZM0,0V20.2H15V3.367L11.615,0Z"
-                    fill="#fff"></path>
-            </svg>
-
-            <span>表二：參選讀物資料</span>
-        </a>
-
-        <ul>
-            <li data-order="(1)">
-                請自行依據參選讀物之數量，增加檔案表格中之sheet工作表。<br />
-                <span class="example"
-                    >例如：欲提交10本參選讀物，請於檔案中，增加10個sheet工作表。</span
-                >
-            </li>
-            <li data-order="(2)">
-                上傳檔案命名方式：申請人姓名（或名稱）_表二参選讀物資料。<br />
-                <span class="example"
-                    >例如：聯合線上股份有限公司_表二參選讀物資料。</span
-                >
-            </li>
-            <li data-order="(3)">
-                <a href="/logo.png" download="填表範例下載" class="file">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="15"
-                        height="20.205"
-                        viewBox="0 0 15 20.205"
-                    >
-                        <path
-                            id="Path_16276"
-                            data-name="Path 16276"
-                            d="M3.333,16.837h.833V16H3.333Zm1.667,0h6.667V16H5ZM3.333,14.312h.833V13.47H3.333Zm1.667,0h6.667V13.47H5ZM3.333,11.786h.833v-.842H3.333Zm1.667,0h6.667v-.842H5ZM3.333,9.261h.833V8.419H3.333ZM5,9.261h6.667V8.419H5ZM3.333,6.735h.833V5.893H3.333ZM5,6.735h6.667V5.893H5ZM1.667,1.684H10V4.157h3.333V18.468H1.667ZM0,0V20.2H15V3.367L11.615,0Z"
-                            fill="#fff"></path>
-                    </svg>
-
-                    <span>表二：填表範例下載</span>
-                </a>
-            </li>
-        </ul>
+        <SignupDownload />
     </div>
 
     <div slot="fill" class="signup__wrapper signup__wrapper--fill">
@@ -89,7 +25,7 @@ const stepList = [
     </div>
 
     <div slot="upload" class="signup__wrapper signup__wrapper--upload">
-        檔案上傳
+        <SignupUpload />
     </div>
 
     <div slot="send" class="signup__wrapper signup__wrapper--send">
