@@ -1,0 +1,264 @@
+---
+import Title from "./Title.astro";
+---
+
+<ul class="mb-20">
+    <li data-order="一、">
+        文化部第四十五次中小學生讀物選介簡章
+        <a
+            href="/logo.png"
+            download="文化部第四十五次中小學生讀物選介簡章"
+            class="file"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="20.205"
+                viewBox="0 0 15 20.205"
+            >
+                <path
+                    id="Path_16276"
+                    data-name="Path 16276"
+                    d="M3.333,16.837h.833V16H3.333Zm1.667,0h6.667V16H5ZM3.333,14.312h.833V13.47H3.333Zm1.667,0h6.667V13.47H5ZM3.333,11.786h.833v-.842H3.333Zm1.667,0h6.667v-.842H5ZM3.333,9.261h.833V8.419H3.333ZM5,9.261h6.667V8.419H5ZM3.333,6.735h.833V5.893H3.333ZM5,6.735h6.667V5.893H5ZM1.667,1.684H10V4.157h3.333V18.468H1.667ZM0,0V20.2H15V3.367L11.615,0Z"
+                    fill="#fff"></path>
+            </svg>
+
+            <span>（PDF檔）</span>
+        </a>
+    </li>
+
+    <li data-order="二、" class="nested">
+        表一：
+        <a href="/logo.png" download="報名表" class="file mb-10">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="20.205"
+                viewBox="0 0 15 20.205"
+            >
+                <path
+                    id="Path_16276"
+                    data-name="Path 16276"
+                    d="M3.333,16.837h.833V16H3.333Zm1.667,0h6.667V16H5ZM3.333,14.312h.833V13.47H3.333Zm1.667,0h6.667V13.47H5ZM3.333,11.786h.833v-.842H3.333Zm1.667,0h6.667v-.842H5ZM3.333,9.261h.833V8.419H3.333ZM5,9.261h6.667V8.419H5ZM3.333,6.735h.833V5.893H3.333ZM5,6.735h6.667V5.893H5ZM1.667,1.684H10V4.157h3.333V18.468H1.667ZM0,0V20.2H15V3.367L11.615,0Z"
+                    fill="#fff"></path>
+            </svg>
+
+            <span>報名表（申請人基本資料）</span>
+        </a>
+        <br />
+
+        表二：
+        <a href="/logo.png" download="參選讀物資料" class="file mb-10">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="20.205"
+                viewBox="0 0 15 20.205"
+            >
+                <path
+                    id="Path_16276"
+                    data-name="Path 16276"
+                    d="M3.333,16.837h.833V16H3.333Zm1.667,0h6.667V16H5ZM3.333,14.312h.833V13.47H3.333Zm1.667,0h6.667V13.47H5ZM3.333,11.786h.833v-.842H3.333Zm1.667,0h6.667v-.842H5ZM3.333,9.261h.833V8.419H3.333ZM5,9.261h6.667V8.419H5ZM3.333,6.735h.833V5.893H3.333ZM5,6.735h6.667V5.893H5ZM1.667,1.684H10V4.157h3.333V18.468H1.667ZM0,0V20.2H15V3.367L11.615,0Z"
+                    fill="#fff"></path>
+            </svg>
+
+            <span>參選讀物資料</span>
+        </a>
+
+        <ul>
+            <li data-order="1.">
+                上傳檔案命名方式：申請人姓名（或名稱）_表二參選讀物資料。<br />
+                <span class="example"
+                    >例如：聯合線上股份有限公司_表二參選讀物資料。</span
+                >
+            </li>
+            <li data-order="2.">
+                表二
+                <a href="/logo.png" download="填寫範例下載" class="file">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="20.205"
+                        viewBox="0 0 15 20.205"
+                    >
+                        <path
+                            id="Path_16276"
+                            data-name="Path 16276"
+                            d="M3.333,16.837h.833V16H3.333Zm1.667,0h6.667V16H5ZM3.333,14.312h.833V13.47H3.333Zm1.667,0h6.667V13.47H5ZM3.333,11.786h.833v-.842H3.333Zm1.667,0h6.667v-.842H5ZM3.333,9.261h.833V8.419H3.333ZM5,9.261h6.667V8.419H5ZM3.333,6.735h.833V5.893H3.333ZM5,6.735h6.667V5.893H5ZM1.667,1.684H10V4.157h3.333V18.468H1.667ZM0,0V20.2H15V3.367L11.615,0Z"
+                            fill="#fff"></path>
+                    </svg>
+
+                    <span>填寫範例下載（Excel檔）</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<div class="flow-chart white-bg">
+    <Title classname="signup-flow" title={["線上報名流程圖"]} />
+
+    <ul class="step">
+        <li>
+            <p class="step__content" data-order="1.">
+                下載檔案填寫：<br />
+                【表二：參選讀物資料】（Excel檔）
+            </p>
+        </li>
+
+        <div class="step-arrow">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+            >
+                <g
+                    id="Group_11261"
+                    data-name="Group 11261"
+                    transform="translate(-1765.5 -55)"
+                >
+                    <path
+                        id="Path_16179"
+                        data-name="Path 16179"
+                        d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z"
+                        transform="translate(1765.5 55)"
+                        fill="#86c0e9"></path>
+                    <path
+                        id="Path_16178"
+                        data-name="Path 16178"
+                        d="M7.622,0,0,7.184,7.622,15l.438-.4L.841,7.2,8.025.4Z"
+                        transform="translate(1773.001 75.03) rotate(-90)"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"></path>
+                </g>
+            </svg>
+        </div>
+
+        <li>
+            <p class="step__content" data-order="2.">
+                線上填表、列印表單：<br />
+                填寫【表一：申請人基本資料】預覽、列印表單
+            </p>
+        </li>
+
+        <div class="step-arrow">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+            >
+                <g
+                    id="Group_11261"
+                    data-name="Group 11261"
+                    transform="translate(-1765.5 -55)"
+                >
+                    <path
+                        id="Path_16179"
+                        data-name="Path 16179"
+                        d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z"
+                        transform="translate(1765.5 55)"
+                        fill="#86c0e9"></path>
+                    <path
+                        id="Path_16178"
+                        data-name="Path 16178"
+                        d="M7.622,0,0,7.184,7.622,15l.438-.4L.841,7.2,8.025.4Z"
+                        transform="translate(1773.001 75.03) rotate(-90)"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"></path>
+                </g>
+            </svg>
+        </div>
+
+        <li>
+            <p class="step__content" data-order="3.">
+                上傳檔案<br />
+                【表二：參選讀物資料】（Excel檔）
+            </p>
+        </li>
+
+        <div class="step-arrow">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+            >
+                <g
+                    id="Group_11261"
+                    data-name="Group 11261"
+                    transform="translate(-1765.5 -55)"
+                >
+                    <path
+                        id="Path_16179"
+                        data-name="Path 16179"
+                        d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z"
+                        transform="translate(1765.5 55)"
+                        fill="#86c0e9"></path>
+                    <path
+                        id="Path_16178"
+                        data-name="Path 16178"
+                        d="M7.622,0,0,7.184,7.622,15l.438-.4L.841,7.2,8.025.4Z"
+                        transform="translate(1773.001 75.03) rotate(-90)"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"></path>
+                </g>
+            </svg>
+        </div>
+
+        <li>
+            <p class="step__content" data-order="4.">
+                完成線上報名、郵寄讀物及文件<br />
+                郵寄檢附文件<br />
+                【表一：申請人基本資料】、列印表單<br />
+                【表二：參選讀物資料】、列印表單
+            </p>
+
+            <div class="line"></div>
+
+            <p class="step__content">
+                (1)【表一：申請人基本資料】須加蓋申請人印章。申請人為法人、商號者，應檢附公司、商業設計登記證明文件影本一份；為團體、個人者，應檢附團體立案證明或我國國民身分證明文件影本一份；為機關(構)、學校者、應檢附公函。<br
+                />
+                (2)【表二：參選讀物資料】
+            </p>
+        </li>
+    </ul>
+</div>
+
+<ul class="notice">
+    <li data-order="1.">
+        若因故無法使用線上報名機制時，請將上列表格下載填妥後，e-mail所有表格book.service@
+        moc.gov.tw信箱。
+    </li>
+    <li data-order="2.">
+        郵件主旨：<b>參加中小學生讀物選介-報名表格</b>
+    </li>
+    <li data-order="3.">所有表格請自行以A4紙列印。</li>
+    <li data-order="4.">
+        【表一：申請人基本資料】
+        <b>
+            請加蓋申請人印章<br />
+            （申請人如為法人，應蓋妥法人及其負責人印章）
+        </b>
+    </li>
+    <li data-order="5.">
+        <b>請連同報名應檢附之文件</b>、參選讀物以<b>掛號郵寄</b
+        >至承辦單位「聯合線上股份有限公司」（地址：
+        22161新北市汐止區大同路一段369號）
+    </li>
+    <li data-order="6.">
+        信封上請註明<b>「參加中小學生讀物選介」</b>。
+    </li>
+    <li data-order="7.">收件以郵戳日期為憑，逾期恕不予受理。</li>
+    <li data-order="8.">服務專線：02-8692-5588分機6083，江小姐。</li>
+</ul>

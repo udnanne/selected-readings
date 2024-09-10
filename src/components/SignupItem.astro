@@ -2,6 +2,7 @@
 import SignupDownload from "./SignupDownload.astro";
 import SignupFill from "./SignupFill.astro";
 import SignupUpload from "./SignupUpload.astro";
+import SignupSend from "./SignupSend.astro";
 import SignupRevise from "./SignupRevise.astro";
 import SliderSignup from "./SliderSignup";
 import "../styles/signup-form.scss";
@@ -30,7 +31,7 @@ const stepList = [
     </div>
 
     <div slot="send" class="signup__wrapper signup__wrapper--send">
-        完成線上報名、郵寄讀物及文件
+        <SignupSend />
     </div>
 
     <div slot="revise" class="signup__wrapper signup__wrapper--revise">
@@ -85,6 +86,24 @@ const stepList = [
     .signup__wrapper {
         display: flex;
         flex-direction: column;
+
+        .white-bg {
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 #00000026;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                border-radius: 10px;
+                z-index: -1;
+            }
+        }
 
         .line {
             width: 100%;
@@ -145,7 +164,7 @@ const stepList = [
                 }
             }
 
-            &:has(.example) {
+            &:has(.example):not(.nested) {
                 display: flex;
                 flex-direction: column;
                 gap: 2px;
@@ -209,15 +228,6 @@ const stepList = [
             transition: all 0.3s ease;
         }
 
-        //li .file {
-        //    position: relative;
-        //    top: 3px;
-
-        //    @media (max-width: $tablet) {
-        //        top: 4px;
-        //    }
-        //}
-
         .mb-10 {
             margin-bottom: 10px;
         }
@@ -246,6 +256,109 @@ const stepList = [
                 @media (max-width: $tablet) {
                     font-size: 16px;
                     line-height: 1.516;
+                }
+            }
+        }
+
+        &.signup__wrapper--send {
+            a.file {
+                position: relative;
+                top: 3px;
+            }
+
+            ul:not(.notice) li[data-order] {
+                position: relative;
+                width: calc(100% - 40px);
+                left: 40px;
+
+                &::before {
+                    position: absolute;
+                    left: -40px;
+                }
+
+                &:has(.file)::before {
+                    top: 3px;
+                }
+            }
+
+            li ul:not(.notice) li[data-order],
+            .notice li[data-order] {
+                width: calc(100% - 22px);
+                left: 22px;
+
+                &::before {
+                    left: -22px;
+                }
+            }
+
+            .notice li[data-order] {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                }
+            }
+
+            .step__content {
+                position: relative;
+                max-width: 436px;
+                width: calc(100% - 22px);
+                left: 15px;
+
+                @media (max-width: $tablet) {
+                    left: 11px;
+                }
+
+                &[data-order]::before {
+                    content: attr(data-order);
+                    position: absolute;
+                    top: 0;
+                    left: -22px;
+                }
+            }
+
+            .flow-chart {
+                margin-bottom: 40px;
+                padding-block: 20px 40px;
+                padding-inline: 40px;
+
+                @media (max-width: $tablet) {
+                    margin-bottom: 20px;
+                    padding-block: 0 20px;
+                    padding-inline: 10px;
+                }
+            }
+
+            .step {
+                margin-inline: auto;
+                max-width: 600px;
+
+                @media (max-width: $tablet) {
+                    max-width: 100%;
+                }
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: calc(100% - 30px);
+                    background-color: var(--quinary-color);
+                    border-radius: 50px;
+                    padding: 15px;
+
+                    @media (max-width: $tablet) {
+                        border-radius: 20px;
+                    }
+                }
+
+                li .line {
+                    max-width: 480px;
+                }
+
+                &-arrow {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 10px;
                 }
             }
         }
