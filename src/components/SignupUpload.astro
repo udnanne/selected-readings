@@ -2,11 +2,11 @@
 
 ---
 
-<p class="blue bold mb-10">
+<p class="blue bold mb-20">
     上傳填妥【表二：參選讀物資料】後，請自行列印【表一：申請人基本資料】、【表二：參選讀物資料】各一份，準備郵寄使用。
 </p>
 
-<form action="" method="">
+<form action="" method="" class="upload-form">
     <div class="department-data">
         <div class="mark input__wrapper">
             <label for="department">申請單位名稱(或姓名)：</label>
@@ -19,15 +19,18 @@
         </div>
 
         <p class="bold mb-10">請上傳以下表格</p>
-        <div class="mark input__wrapper">
-            <label for="upload">上傳【表二：參選讀物資料】：</label>
-            <input type="file" id="upload" name="upload" />
+
+        <div class="mark input__wrapper input__wrapper--upload">
+            <label>上傳【表二：參選讀物資料】：</label>
+
+            <div>
+                <input type="file" id="upload" name="upload" />
+                <label for="upload">選擇檔案</label>
+            </div>
         </div>
     </div>
 
-    <div class="btns">
-        <button type="submit" class="btn">送出資料</button>
-    </div>
+    <button type="submit" class="btn">送出資料</button>
 
     <div class="line"></div>
 
@@ -52,19 +55,16 @@
         </a>
 
         <ul>
-            <li data-order="(1)">
-                請自行依據參選讀物之數量，增加檔案表格中之sheet工作表。<br />
-                <span class="example"
-                    >例如：欲提交10本參選讀物，請於檔案中，增加10個sheet工作表。</span
-                >
+            <li data-order="1.">
+                請自行依據參選讀物隻數量，增加檔案表格中之sheet工作表。
             </li>
-            <li data-order="(2)">
-                上傳檔案命名方式：申請人姓名（或名稱）_表二参選讀物資料。<br />
+            <li data-order="2.">
+                上傳檔案命名方式：申請人姓名（或名稱）_表二參選讀物資料。
                 <span class="example"
                     >例如：聯合線上股份有限公司_表二參選讀物資料。</span
                 >
             </li>
-            <li data-order="(3)">
+            <li data-order="3.">
                 <a href="/logo.png" download="填表範例下載" class="file">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

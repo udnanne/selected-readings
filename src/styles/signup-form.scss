@@ -16,19 +16,22 @@
     }
 
     input:not([type="checkbox"]) {
-        height: 23px;
-        padding: 5px 10px;
-        border: 1px solid var(--senary-color);
-        border-radius: 5px;
         font-size: 16px;
 
         @media (max-width: $tablet) {
             font-size: 14px;
         }
 
-        &:focus {
+        &:focus-visible {
             outline: none;
         }
+    }
+
+    input:not([type="checkbox"], #upload) {
+        height: 23px;
+        padding: 5px 10px;
+        border: 1px solid var(--senary-color);
+        border-radius: 5px;
     }
 
     .department-data,
@@ -37,10 +40,19 @@
     .notice,
     .btns {
         padding-inline: 40px;
-        margin-top: 40px;
 
         @media (max-width: $tablet) {
             padding-inline: 10px;
+        }
+    }
+
+    .department-data,
+    .contact-data,
+    .readings-data,
+    .btns {
+        margin-top: 40px;
+
+        @media (max-width: $tablet) {
             margin-top: 20px;
         }
     }
@@ -194,30 +206,106 @@
         }
     }
 
+    .input__wrapper--upload {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        div {
+            position: relative;
+            width: 100%;
+        }
+
+        input {
+            width: calc(100% - 26px);
+            color: var(--septenary-color);
+            line-height: 30px;
+            pointer-events: none;
+            position: relative;
+            left: 26px;
+
+            @media (max-width: $tablet) {
+                font-size: 14px;
+                width: calc(100% - 35px);
+                left: 35px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 80px;
+                height: 100%;
+                background-color: white;
+
+                @media (max-width: $tablet) {
+                    width: 75px;
+                }
+            }
+        }
+
+        label[for="upload"] {
+            position: absolute;
+            left: 0;
+            padding: 3px 16px;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            background-color: white;
+            color: var(--primary-color);
+            font-size: 16px;
+            letter-spacing: 0.48px;
+            line-height: 1.375;
+            cursor: pointer;
+        }
+    }
+
     .mark {
-        &::before {
+        &:before {
             content: "*";
             color: #d11a2f;
             font-size: 24.53px;
             line-height: 0.4896;
             position: absolute;
             left: -12px;
+        }
+
+        &:not(.input__wrapper--upload):before {
             top: 6px;
+        }
+
+        &.input__wrapper--upload:before {
+            top: 12px;
+
+            @media (max-width: $tablet) {
+                top: 6px;
+            }
         }
     }
 
     label:not([for="agree"]) {
         word-break: keep-all;
+        white-space: nowrap;
     }
 
-    label:not([for="agree"], [for="tel"], [for="mobile"]) {
+    label:not(
+            [for="agree"],
+            [for="tel"],
+            [for="mobile"],
+            .input__wrapper--upload label
+        ) {
         display: block;
         width: 100%;
     }
 
     .department-data,
     .contact-data {
-        input:not(#tel, #mobile) {
+        input:not(#tel, #mobile, #upload) {
             width: calc(100% - 22px);
             margin-top: 10px;
         }
@@ -238,27 +326,27 @@
             gap: 30px;
             margin-bottom: 20px;
         }
+    }
 
-        .btn {
-            max-width: 120px;
-            width: 100%;
-            border-width: 1px;
-            border-radius: 5px;
-            padding-block: 7px;
-            font-size: 18px;
-            font-weight: var(--weight-regular);
-            letter-spacing: 0.54px;
-            transition-property: all;
-            transition-timing-function: var(--transition-out-back);
-            transition-duration: 0.3s;
-            word-break: keep-all;
+    button {
+        max-width: 120px;
+        width: 100%;
+        border-width: 1px;
+        border-radius: 5px;
+        padding-block: 7px;
+        font-size: 18px;
+        font-weight: var(--weight-regular);
+        letter-spacing: 0.54px;
+        transition-property: all;
+        transition-timing-function: var(--transition-out-back);
+        transition-duration: 0.3s;
+        word-break: keep-all;
 
-            @media (max-width: $tablet) {
-                font-size: 16px;
-            }
+        @media (max-width: $tablet) {
+            font-size: 16px;
         }
 
-        .btn:not([type="submit"]) {
+        &:not([type="submit"]) {
             background-color: white;
             color: var(--primary-color);
             border-color: var(--primary-color);
@@ -269,7 +357,7 @@
             }
         }
 
-        .btn[type="submit"] {
+        &[type="submit"] {
             background-color: var(--primary-color);
             color: white;
             border-color: var(--primary-color);
@@ -281,16 +369,29 @@
         }
     }
 
-    .line {
+    &.upload-form button[type="submit"] {
         margin-top: 40px;
+
+        @media (max-width: $tablet) {
+            margin-top: 20px;
+        }
+    }
+
+    .line {
+        margin-top: 30px;
+
+        @media (max-width: $tablet) {
+            margin-top: 10px;
+        }
     }
 
     .notice {
         text-align: left;
+        margin-top: 30px;
         letter-spacing: 0.63px;
 
         @media (max-width: $tablet) {
-            margin-top: 15px;
+            margin-top: 10px;
             letter-spacing: 0.48px;
             font-size: 16px;
         }
@@ -364,6 +465,34 @@
                 &:checked + label {
                     color: var(--primary-color);
                 }
+            }
+        }
+    }
+
+    &.upload-form .notice {
+        margin-bottom: 40px;
+
+        ul {
+            margin-top: 20px;
+        }
+
+        li {
+            &:not(:last-child) {
+                @media (max-width: $tablet) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &[data-order]:has(.file)::before {
+                top: 0;
+            }
+        }
+
+        .example {
+            font-size: 16px;
+
+            @media (max-width: $tablet) {
+                font-size: 14px;
             }
         }
     }
