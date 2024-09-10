@@ -2,6 +2,7 @@
 import SignupDownload from "./SignupDownload.astro";
 import SignupFill from "./SignupFill.astro";
 import SignupUpload from "./SignupUpload.astro";
+import SignupRevise from "./SignupRevise.astro";
 import SliderSignup from "./SliderSignup";
 import "../styles/signup-form.scss";
 
@@ -33,7 +34,7 @@ const stepList = [
     </div>
 
     <div slot="revise" class="signup__wrapper signup__wrapper--revise">
-        資料修改
+        <SignupRevise />
     </div>
 </SliderSignup>
 

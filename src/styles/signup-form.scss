@@ -369,11 +369,26 @@
         }
     }
 
-    &.upload-form button[type="submit"] {
-        margin-top: 40px;
+    &.upload-form,
+    &.revise-form {
+        button[type="submit"] {
+            margin-top: 40px;
 
-        @media (max-width: $tablet) {
-            margin-top: 20px;
+            @media (max-width: $tablet) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &.revise-form {
+        margin-top: 5px;
+
+        button[type="submit"] {
+            margin-bottom: 40px;
+
+            @media (max-width: $tablet) {
+                margin-bottom: 20px;
+            }
         }
     }
 
