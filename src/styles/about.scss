@@ -1,0 +1,12 @@
+.about {
+    text-align: left;
+    font-size: 18px;
+    font-weight: var(--weight-regular);
+    letter-spacing: 0.14px;
+
+    @media (max-width: $desktop) {
+        margin-inline: 20px;
+        font-size: 16px;
+        letter-spacing: 0.72px;
+    }
+}

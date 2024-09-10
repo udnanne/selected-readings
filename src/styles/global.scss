@@ -38,6 +38,10 @@ a {
     text-decoration: none;
 }
 
+b {
+    font-weight: var(--weight-bold);
+}
+
 .link-underline {
     color: var(--primary-color);
     text-decoration: underline;

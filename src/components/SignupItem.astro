@@ -261,6 +261,14 @@ const stepList = [
         }
 
         &.signup__wrapper--send {
+            .example {
+                font-size: 16px;
+
+                @media (max-width: $tablet) {
+                    font-size: 14px;
+                }
+            }
+
             a.file {
                 position: relative;
                 top: 3px;
@@ -315,6 +323,12 @@ const stepList = [
                     top: 0;
                     left: -22px;
                 }
+
+                .example {
+                    display: block;
+                    width: 100%;
+                    left: 0;
+                }
             }
 
             .flow-chart {
@@ -355,10 +369,14 @@ const stepList = [
                     max-width: 480px;
                 }
 
-                &-arrow {
+                &__arrow {
                     display: flex;
                     justify-content: center;
                     margin-bottom: 10px;
+                }
+
+                &__title {
+                    font-weight: var(--weight-medium);
                 }
             }
         }
