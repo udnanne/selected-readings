@@ -201,31 +201,13 @@ const stepList = [
         }
 
         .file {
-            width: fit-content;
-            display: inline-grid;
             grid-template-columns: 15px auto;
-            gap: 10px;
-            align-items: center;
             padding: 3px 10px;
-            border-radius: 5px;
-            background-color: var(--primary-color);
-            color: white;
-            font-size: 16px;
-            font-weight: var(--weight-regular);
-            letter-spacing: 0.3px;
-            text-align: left;
+            white-space: nowrap;
 
-            &.btn {
-                border-width: 0px;
+            @media (max-width: $smallMobile) {
+                white-space: normal;
             }
-
-            &:hover {
-                background-color: var(--septenary-color);
-            }
-        }
-
-        a.file {
-            transition: all 0.3s ease;
         }
 
         .mb-10 {

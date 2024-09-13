@@ -93,6 +93,28 @@ button.btn {
     font-family: var(--font-family);
 }
 
+.file {
+    width: fit-content;
+    display: inline-grid;
+    gap: 10px;
+    align-items: center;
+    border-width: 0;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: var(--weight-regular);
+    letter-spacing: 0.3px;
+    text-align: left;
+
+    &:hover {
+        background-color: var(--septenary-color);
+    }
+}
+
+a.file {
+    transition: all 0.3s ease;
+}
+
 .breadcrumb {
     margin-block: 20px 40px;
     display: flex;
