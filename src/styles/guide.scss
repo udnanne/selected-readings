@@ -392,11 +392,11 @@
         flex-direction: column;
         gap: 10px;
         text-align: left;
-        padding-inline-start: 20px;
+        padding-inline-end: 20px;
 
         @media (max-width: $tablet) {
             gap: 5px;
-            padding-inline-start: 0;
+            padding-inline-end: 0;
             padding-block-end: 10px;
         }
     }
