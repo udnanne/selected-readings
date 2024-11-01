@@ -1,0 +1,273 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.astro";
+import Filter from "../components/Filter.astro";
+import "../styles/title.scss";
+import "../styles/slider.scss";
+import "../styles/card.scss";
+import "../styles/guide.scss";
+---
+
+<Layout title="咱的日子—我們的日常（中／台雙語）">
+    <main>
+        <div class="container breadcrumb">
+            <nav>
+                <a href="/">首頁</a> / <a href="/books">選書指南</a> / <a
+                    href="/books-category">當屆獲選書單</a
+                > / <a href="/books-detail">咱的日子—我們的日常（中／台雙語）</a
+                >
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="guide books-detail">
+                <div class="main-content">
+                    <div class="top-part">
+                        <Title title={["所有書籍"]} classname="books" />
+
+                        <Filter
+                            search="獲選書籍"
+                            catebtn="書籍類別"
+                            featured={false}
+                        />
+                    </div>
+
+                    <div class="middle-part">
+                        <img
+                            src="https://placehold.co/180x250"
+                            alt="咱的日子—我們的日常（中／台雙語） 圖片"
+                            width="180"
+                            height="250"
+                        />
+
+                        <div class="details__wrapper">
+                            <h2>咱的日子—我們的日常（中／台雙語）</h2>
+
+                            <div class="details">
+                                <div class="details__row">
+                                    <div class="details__title">
+                                        <span>次</span>
+                                        <span>別</span>
+                                    </div>
+
+                                    <span class="details__content">45次</span>
+                                </div>
+                                <div class="details__row">
+                                    <div class="details__title">
+                                        <span>類</span>
+                                        <span>別</span>
+                                    </div>
+
+                                    <span class="details__content"
+                                        >圖畫書類</span
+                                    >
+                                </div>
+                                <div class="details__row">
+                                    <div class="details__title">
+                                        <span>作</span>
+                                        <span>者</span>
+                                    </div>
+
+                                    <span class="details__content"
+                                        >儲玉玲 / 著、儲嘉慧 / 繪</span
+                                    >
+                                </div>
+                                <div class="details__row">
+                                    <div class="details__title">
+                                        <span>適</span>
+                                        <span>讀</span>
+                                        <span>年</span>
+                                        <span>齡</span>
+                                    </div>
+
+                                    <span class="details__content"
+                                        >學齡前、小學低年級、小學中年級、小學高年級</span
+                                    >
+                                </div>
+                                <div class="details__row">
+                                    <div class="details__title">
+                                        <span>出</span>
+                                        <span>版</span>
+                                        <span>社</span>
+                                    </div>
+
+                                    <span class="details__content"
+                                        >聯經出版事業股份有限公司</span
+                                    >
+                                </div>
+                                <div class="details__row">
+                                    <div class="details__title">
+                                        <span>I</span>
+                                        <span>S</span>
+                                        <span>B</span>
+                                        <span>N</span>
+                                    </div>
+
+                                    <span class="details__content"
+                                        >9789570864922</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-part">
+                        <div class="introduction__wrapper">
+                            <div class="introduction">
+                                <div class="introduction__title">
+                                    <span>簡</span>
+                                    <span>介</span>
+                                </div>
+
+                                <span class="introduction__content"
+                                    >黑兜是一隻老狗，走得很慢，當主人在花園工作的時候，黑兜就會在一旁躺著，很安心的陪伴著。</span
+                                >
+                            </div>
+                            <div class="comments">
+                                <div class="comments__title">
+                                    <span>推</span>
+                                    <span>薦</span>
+                                    <span>評</span>
+                                    <span>語</span>
+                                </div>
+                                <span class="comments__content"
+                                    >文字平淡卻充滿情感的原創台語繪本。</span
+                                >
+                            </div>
+                        </div>
+
+                        <div class="share">
+                            <a href="#" class="share--fb">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 30 30"
+                                >
+                                    <g id="Group_11329" data-name="Group 11329">
+                                        <path
+                                            id="Path_16307"
+                                            data-name="Path 16307"
+                                            d="M13.886.042A15,15,0,1,0,29.949,13.8,14.977,14.977,0,0,0,13.886.042M16.411,9.8c-.011,1.006-.029,2.133-.046,3.189a24.1,24.1,0,0,1,3.593.07c.077.337-.529,3.03-.655,3.807l-3.017.018v9.425H12.269c-.005,0-.1-9.454-.106-9.455l-3.458-.016.054-3.745,3.434-.01.031-3.5c.262-4.54,3.631-4.479,7.809-4.245L20.051,8.5c-1.262.044-3.646-.164-3.64,1.3"
+                                            transform="translate(0 0)"
+                                            fill="#d8d8d8"
+                                            fill-rule="evenodd"></path>
+                                    </g>
+                                </svg>
+                            </a>
+
+                            <a href="#" class="share--line">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 30 30"
+                                >
+                                    <g id="Group_11329" data-name="Group 11329">
+                                        <g
+                                            id="Group_11621"
+                                            data-name="Group 11621"
+                                        >
+                                            <g
+                                                id="Group_11621-2"
+                                                data-name="Group 11621"
+                                                transform="translate(0 0)"
+                                            >
+                                                <path
+                                                    id="Path_16339"
+                                                    data-name="Path 16339"
+                                                    d="M30,15A15,15,0,1,1,15,0,15,15,0,0,1,30,15"
+                                                    transform="translate(0 0)"
+                                                    fill="#d8d8d8"></path>
+                                                <path
+                                                    id="Path_16340"
+                                                    data-name="Path 16340"
+                                                    d="M27.749,16.8c0-4.806-4.819-8.715-10.741-8.715S6.269,11.991,6.269,16.8c0,4.308,3.821,7.917,8.982,8.6.349.075.826.232.946.53a2.208,2.208,0,0,1,.035.97s-.126.758-.153.92c-.046.271-.216,1.061.93.578a34.616,34.616,0,0,0,8.439-6.236h0a7.748,7.748,0,0,0,2.3-5.362"
+                                                    transform="translate(-2.009 -2.59)"
+                                                    fill="#fff"></path>
+                                                <path
+                                                    id="Path_16341"
+                                                    data-name="Path 16341"
+                                                    d="M14.615,22.571H12.481a.563.563,0,0,1-.563-.564V17.74a.563.563,0,0,1,1.126,0v3.7h1.571a.563.563,0,0,1,0,1.127"
+                                                    transform="translate(-3.82 -5.505)"
+                                                    fill="#d8d8d8"></path>
+                                                <path
+                                                    id="Path_16342"
+                                                    data-name="Path 16342"
+                                                    d="M18.6,22.007a.563.563,0,1,1-1.126,0V17.739a.563.563,0,1,1,1.126,0Z"
+                                                    transform="translate(-5.601 -5.504)"
+                                                    fill="#d8d8d8"></path>
+                                                <path
+                                                    id="Path_16343"
+                                                    data-name="Path 16343"
+                                                    d="M24.654,22.007a.563.563,0,0,1-1.014.338l-2.187-2.978v2.639a.563.563,0,1,1-1.127,0V17.739a.563.563,0,0,1,.385-.534.576.576,0,0,1,.179-.029.566.566,0,0,1,.451.226l2.187,2.979V17.739a.563.563,0,0,1,1.127,0Z"
+                                                    transform="translate(-6.514 -5.504)"
+                                                    fill="#d8d8d8"></path>
+                                                <path
+                                                    id="Path_16344"
+                                                    data-name="Path 16344"
+                                                    d="M30.5,19.31a.563.563,0,1,1,0,1.126h-1.57v1.008H30.5a.563.563,0,1,1,0,1.127H28.37a.565.565,0,0,1-.563-.564V19.875h0V17.739a.564.564,0,0,1,.563-.563H30.5a.564.564,0,0,1,0,1.127h-1.57V19.31Z"
+                                                    transform="translate(-8.912 -5.504)"
+                                                    fill="#d8d8d8"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+
+                            <button class="btn share--link">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 30 30"
+                                >
+                                    <g id="Group_11329" data-name="Group 11329">
+                                        <path
+                                            id="Path_16307"
+                                            data-name="Path 16307"
+                                            d="M13.886.042A15,15,0,1,0,29.949,13.8,14.977,14.977,0,0,0,13.886.042"
+                                            transform="translate(0 0)"
+                                            fill="#d8d8d8"
+                                            fill-rule="evenodd"></path>
+                                        <g
+                                            id="Group_11623"
+                                            data-name="Group 11623"
+                                            transform="translate(6 4.5)"
+                                        >
+                                            <g
+                                                id="Group_11622"
+                                                data-name="Group 11622"
+                                                transform="translate(0 0)"
+                                            >
+                                                <path
+                                                    id="Path_16345"
+                                                    data-name="Path 16345"
+                                                    d="M17.928,11.331V6.726l-.158-.379L12.527.631,12.4.5h-6a.957.957,0,0,0-.717.712V4.351H1.217A.961.961,0,0,0,.5,5.063V19.522a.962.962,0,0,0,.936.732v0h10.34v0a.961.961,0,0,0,.682-.282h0a.962.962,0,0,0,.282-.684h0V16.405H16.96v0a.961.961,0,0,0,.682-.282h0a.963.963,0,0,0,.282-.684h0V12.412h.025v-1.08Zm-6.264,7.846H1.548v-.044h-.1V5.415h.1V5.4H3.669l-.01.012H5.226V5.4h.458V15.672a.961.961,0,0,0,.936.732v0h5.044Zm5.184-7.306v3.455H6.732v-.044h-.1V1.564h.1V1.553H8.852l-.01.011h1.567V1.553h1.282V5.864a1.2,1.2,0,0,0,.345.846,1.156,1.156,0,0,0,.83.352h3.98Z"
+                                                    transform="translate(-0.226 -0.226)"
+                                                    fill="#fff"></path>
+                                                <path
+                                                    id="Path_16346"
+                                                    data-name="Path 16346"
+                                                    d="M17.928,11.331V6.726l-.158-.379L12.527.631,12.4.5h-6a.957.957,0,0,0-.717.712V4.351H1.217A.961.961,0,0,0,.5,5.063V19.522a.962.962,0,0,0,.936.732v0h10.34v0a.961.961,0,0,0,.682-.282h0a.962.962,0,0,0,.282-.684h0V16.405H16.96v0a.961.961,0,0,0,.682-.282h0a.963.963,0,0,0,.282-.684h0V12.412h.025v-1.08Zm-6.264,7.846H1.548v-.044h-.1V5.415h.1V5.4H3.669l-.01.012H5.226V5.4h.458V15.672a.961.961,0,0,0,.936.732v0h5.044Zm5.184-7.306v3.455H6.732v-.044h-.1V1.564h.1V1.553H8.852l-.01.011h1.567V1.553h1.282V5.864a1.2,1.2,0,0,0,.345.846,1.156,1.156,0,0,0,.83.352h3.98Z"
+                                                    transform="translate(-0.226 -0.226)"
+                                                    fill="none"
+                                                    stroke="#fff"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
