@@ -47,6 +47,7 @@ export default function SliderSignup(props) {
                     autoWidth: true,
                     arrows: false,
                     pagination: false,
+                    start: parseInt(props.start),
                     breakpoints: {
                         1023: {
                             drag: 'free',

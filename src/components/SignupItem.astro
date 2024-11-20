@@ -7,6 +7,11 @@ import SignupRevise from "./SignupRevise.astro";
 import SliderSignup from "./SliderSignup";
 import "../styles/signup-form.scss";
 
+interface Props {
+    start: string;
+}
+const { start } = Astro.props;
+
 const stepList = [
     { title: "下載檔案" },
     { title: "線上填表、列印表單" },
@@ -16,7 +21,7 @@ const stepList = [
 ];
 ---
 
-<SliderSignup client:only list={stepList}>
+<SliderSignup client:only list={stepList} start={start}>
     {/*可在class添加"mb-10"、"mb-20"更改"margin-botton"*/}
     <div slot="download" class="signup__wrapper signup__wrapper--download">
         <SignupDownload />
