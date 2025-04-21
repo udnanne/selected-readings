@@ -1,6 +1,8 @@
 ---
+import FillterSearch from "./FillterSearch";
+
 interface Props {
-    search: string;
+    search: string | { title: string; url: string }[];
     catebtn: string;
     featured: boolean;
 }
@@ -10,7 +12,9 @@ const { search, catebtn, featured } = Astro.props;
 
 <div class="filter">
     <div class="search filter-row">
-        <span class="label">{search}-全部-不限年齡</span>
+        <span class="label">
+            <FillterSearch client:only search={search} />-全部-不限年齡
+        </span>
         <form action="" method="">
             <input
                 type="text"

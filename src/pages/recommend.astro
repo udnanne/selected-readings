@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Title from "../components/Title.astro";
-import Aside from "../components/Aside.astro";
+import Aside, { recommendList } from "../components/Aside.astro";
 import Filter from "../components/Filter.astro";
 import Card from "../components/Card.astro";
 import PageController from "../components/PageController.astro";
@@ -32,7 +32,7 @@ import "../styles/guide.scss";
                         <Title title={["歷屆推薦"]} classname="recommend" />
 
                         <Filter
-                            search="第45次推介"
+                            search={recommendList}
                             catebtn="書籍類別"
                             featured={true}
                         />
