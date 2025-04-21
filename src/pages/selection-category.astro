@@ -1,10 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Title from "../components/Title.astro";
-import Aside from "../components/Aside.astro";
+import Aside, { getDefaultList } from "../components/Aside.astro";
 import "../styles/title.scss";
 import "../styles/slider.scss";
 import "../styles/guide.scss";
+
+const defaultList = getDefaultList("selection-category");
 ---
 
 <Layout title="評選報告">
@@ -25,7 +27,7 @@ import "../styles/guide.scss";
 
                 <div class="main-content">
                     <div class="top-part">
-                        <Title title={["人文社科類"]} classname="selection" />
+                        <Title title={defaultList} classname="selection" />
 
                         <div class="middle-part">
                             <span class="convener">召集人：謝佳螢</span>

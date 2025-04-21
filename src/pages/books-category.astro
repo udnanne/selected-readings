@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Title from "../components/Title.astro";
-import Aside from "../components/Aside.astro";
+import Aside, { getDefaultList } from "../components/Aside.astro";
 import Filter from "../components/Filter.astro";
 import Card from "../components/Card.astro";
 import PageController from "../components/PageController.astro";
@@ -9,6 +9,8 @@ import "../styles/title.scss";
 import "../styles/slider.scss";
 import "../styles/card.scss";
 import "../styles/guide.scss";
+
+const defaultList = getDefaultList("books-category");
 ---
 
 <Layout title="當屆獲選書單">
@@ -29,7 +31,7 @@ import "../styles/guide.scss";
 
                 <div class="main-content">
                     <div class="top-part">
-                        <Title title={["人文社科類"]} classname="books" />
+                        <Title title={defaultList} classname="books" />
 
                         <Filter
                             search="獲選書籍"

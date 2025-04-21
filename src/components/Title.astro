@@ -1,16 +1,14 @@
 ---
+import TitleDefault from "./TitleDefault";
+
 interface Props {
     classname: string;
-    title: string[];
+    title: string[] | { title: string; url: string }[];
 }
 
 const { classname, title } = Astro.props;
 ---
 
 <h2 class={`title title--${classname}`}>
-    {
-        title.map((item) => {
-            return <span>{item}</span>;
-        })
-    }
+    <TitleDefault client:only title={title} />
 </h2>
