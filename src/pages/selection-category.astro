@@ -7,6 +7,17 @@ import "../styles/slider.scss";
 import "../styles/guide.scss";
 
 const defaultList = getDefaultList("selection-category");
+const currentType =
+    typeof window !== "undefined"
+        ? new URLSearchParams(window.location.search).get("type") || "1"
+        : "1";
+const currentCategory =
+    defaultList.find((item) => item.url.includes(`type=${currentType}`))
+        ?.title || "人文社科類";
+
+console.log("Current Type:", currentType);
+console.log("Default List:", defaultList);
+console.log("Current Category:", currentCategory);
 ---
 
 <Layout title="評選報告">
@@ -15,7 +26,7 @@ const defaultList = getDefaultList("selection-category");
             <nav>
                 <a href="/">首頁</a> / <a href="/books">選書指南</a> / <a
                     href="/selection">當屆評選報告</a
-                > / <a href="/selection-category">人文社科類</a>
+                > / <a href="/selection-category">{currentCategory}</a>
             </nav>
         </div>
 
@@ -113,4 +124,27 @@ const defaultList = getDefaultList("selection-category");
             selector.classList.remove("open");
         }
     });
+
+    // 在客户端获取 URL 参数
+    const urlParams = new URLSearchParams(window.location.search);
+    const type = urlParams.get("type") || "1";
+    const categoryElement = document.querySelector(
+        ".breadcrumb nav a:last-child",
+    );
+    const defaultList = [
+        { title: "人文社科類", url: "selection-category?type=1" },
+        { title: "叢書工具書類", url: "selection-category?type=2" },
+        { title: "圖畫書類", url: "selection-category?type=3" },
+        { title: "文學翻譯類", url: "selection-category?type=4" },
+        { title: "文學類", url: "selection-category?type=5" },
+        { title: "漫畫類", url: "selection-category?type=6" },
+        { title: "自然科普類", url: "selection-category?type=7" },
+        { title: "雜誌類", url: "selection-category?type=8" },
+    ];
+    const currentCategory =
+        defaultList.find((item) => item.url.includes(`type=${type}`))?.title ||
+        "人文社科類";
+    if (categoryElement) {
+        categoryElement.textContent = currentCategory;
+    }
 </script>
