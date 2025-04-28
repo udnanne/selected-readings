@@ -1,9 +1,10 @@
 ---
 import FillterSearch from "./FillterSearch";
+import SelectorBtn from "./SelectorBtn";
 
 interface Props {
     search: string | { title: string; url: string }[];
-    catebtn: string;
+    catebtn: string | { title: string; url: string }[];
     featured: boolean;
 }
 
@@ -66,7 +67,7 @@ const { search, catebtn, featured } = Astro.props;
         <div class="method selector__wrapper">
             <div class="cate selector">
                 <div class="selector-btn">
-                    <span>{catebtn}</span>
+                    <SelectorBtn client:only catebtn={catebtn} />
 
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -87,6 +88,7 @@ const { search, catebtn, featured } = Astro.props;
                 </div>
 
                 <div class="options">
+                    <a href="#" class="option">所有書籍</a>
                     <a href="#" class="option">人文社科類</a>
                     <a href="#" class="option">叢書工具書類</a>
                     <a href="#" class="option">圖畫書類</a>
