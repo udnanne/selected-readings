@@ -1,5 +1,21 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
+function dateTimeFormat(date) {
+    //將民國年轉換為西元年 (EX: 112.1.1 時，回傳 2023-01-01)
+    const parts = date.split(".");
+
+    // 檢查是否為預期格式 (year.month.day)
+    if (parts.length !== 3) {
+        return new Date(date); // 回傳原始日期
+    }
+
+    const year = parseInt(parts[0]) + 1911; // 民國年轉西元年
+    const month = parts[1].padStart(2, '0'); // 月份補零
+    const day = parts[2].padStart(2, '0');   // 日期補零
+
+    return new Date(`${year}-${month}-${day}`);
+}
+
 export default function SliderNews(props) {
     return (
         <Splide
@@ -39,17 +55,7 @@ export default function SliderNews(props) {
                                 <span>{item.date}</span>{item.title}
                             </h3>
                             <time dateTime={
-                                new Date(
-                                    item.date
-                                        .split(".")
-                                        .map((dateItem, dateIndex) => {
-                                            if (dateIndex === 0) {
-                                                return parseInt(dateItem) + 1911;
-                                            }
-                                            return dateItem;
-                                        })
-                                        .join("-")
-                                )
+                                dateTimeFormat(item.date)
                                     .toISOString()
                                     .split("T")[0]
                             }>{item.date}</time>
