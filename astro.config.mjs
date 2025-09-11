@@ -20,20 +20,32 @@ function copyStaticPages() {
                 mkdirSync(distDir, { recursive: true });
             }
             
-            // 複製 judges.html
-            const judgesSource = resolve(staticPagesDir, 'judges.html');
-            const judgesTarget = resolve(distDir, 'judges.html');
+            // 複製 judges/index.html
+            const judgesSourceDir = resolve(staticPagesDir, 'judges');
+            const judgesTargetDir = resolve(distDir, 'judges');
+            const judgesSource = resolve(judgesSourceDir, 'index.html');
+            const judgesTarget = resolve(judgesTargetDir, 'index.html');
+            
             if (existsSync(judgesSource)) {
+                if (!existsSync(judgesTargetDir)) {
+                    mkdirSync(judgesTargetDir, { recursive: true });
+                }
                 copyFileSync(judgesSource, judgesTarget);
-                console.log('✓ 複製 judges.html 到 dist/');
+                console.log('✓ 複製 judges/index.html 到 dist/judges/');
             }
             
-            // 複製 criteria.html
-            const criteriaSource = resolve(staticPagesDir, 'criteria.html');
-            const criteriaTarget = resolve(distDir, 'criteria.html');
+            // 複製 criteria/index.html
+            const criteriaSourceDir = resolve(staticPagesDir, 'criteria');
+            const criteriaTargetDir = resolve(distDir, 'criteria');
+            const criteriaSource = resolve(criteriaSourceDir, 'index.html');
+            const criteriaTarget = resolve(criteriaTargetDir, 'index.html');
+            
             if (existsSync(criteriaSource)) {
+                if (!existsSync(criteriaTargetDir)) {
+                    mkdirSync(criteriaTargetDir, { recursive: true });
+                }
                 copyFileSync(criteriaSource, criteriaTarget);
-                console.log('✓ 複製 criteria.html 到 dist/');
+                console.log('✓ 複製 criteria/index.html 到 dist/criteria/');
             }
         }
     };
