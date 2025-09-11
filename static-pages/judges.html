@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="評審委員名單">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta name="generator" content="Astro v4.13.1">
+    <title>評審委員名單</title>
+    <link rel="stylesheet" href="../assets/about-2.css?202507202025">
+    <style>
+        .title {
+            font-size: 22px;
+            font-weight: var(--weight-regular);
+            letter-spacing: 3px;
+            position: relative;
+            padding-inline: 10px;
+            width: fit-content;
+            color: #000
+        }
+
+        @media (max-width: 1023px) {
+            .title {
+                font-size: 20px;
+                letter-spacing: 2px
+            }
+        }
+
+        .title:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 8px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 0;
+            border-radius: 8px;
+            z-index: -1
+        }
+
+        .title__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .title__wrapper .more {
+            height: 32px;
+            display: flex;
+            align-items: center
+        }
+
+        .title__wrapper .more:hover svg g path {
+            fill: var(--primary-color)
+        }
+
+        .title--index {
+            margin-block: 25px 15px
+        }
+
+        @media (max-width: 1023px) {
+            .title--index {
+                margin-block-start: 15px
+            }
+        }
+
+        @media (max-width: 1320px) {
+            .title__wrapper--index {
+                margin-inline: 20px
+            }
+        }
+
+        .title__wrapper--index .more {
+            margin-block: 25px 15px
+        }
+
+        @media (max-width: 1023px) {
+            .title__wrapper--index .more {
+                margin-block-start: 15px
+            }
+        }
+
+        .title--signup-area {
+            margin-block: 30px 20px
+        }
+
+        @media (max-width: 1023px) {
+            .title--signup-area {
+                margin-block: 20px
+            }
+        }
+
+        .title--news,
+        .title--about,
+        .title--brochure,
+        .title--signup,
+        .title--qa,
+        .title--method,
+        .title--join,
+        .title--winners,
+        .title--contact {
+            margin-block: 0 20px
+        }
+
+        @media (max-width: 1320px) {
+
+            .title--news,
+            .title--about,
+            .title--brochure,
+            .title--signup,
+            .title--qa,
+            .title--method,
+            .title--join,
+            .title--winners,
+            .title--contact {
+                margin-inline: 20px
+            }
+        }
+
+        @media (max-width: 1023px) {
+
+            .title--news,
+            .title--about,
+            .title--brochure,
+            .title--signup,
+            .title--qa,
+            .title--method,
+            .title--join,
+            .title--winners,
+            .title--contact {
+                margin-block-start: 30px
+            }
+        }
+
+        @media (max-width: 1023px) {
+
+            .title--brochure,
+            .title--signup {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start
+            }
+        }
+
+        .title--books,
+        .title--recommend {
+            margin-block: 0 40px
+        }
+
+        @media (max-width: 1023px) {
+
+            .title--books,
+            .title--recommend {
+                margin-block: 30px 20px
+            }
+        }
+
+        .title--selection {
+            margin-block: 0 40px
+        }
+
+        @media (max-width: 1023px) {
+            .title--selection {
+                margin-block: 0;
+                order: 1
+            }
+        }
+
+        .title--mark {
+            margin-block: 0 20px
+        }
+
+        @media (max-width: 1023px) {
+            .title--mark {
+                margin-block-start: 30px
+            }
+        }
+
+        .title--method-box,
+        .title--join__form {
+            margin-block: 0 20px
+        }
+
+        .title--signup-form,
+        .title--signup-flow {
+            margin-inline: auto
+        }
+
+        .judges {
+            text-align: left;
+        }
+
+        .judges h3 {
+            font-weight: normal;
+            color: #3B84B7;
+            margin: 30px 0 20px 0;
+            font-size: 20px;
+        }
+
+        /* 評審委員表格樣式 */
+        .judges_table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 20px 0;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #d8d8d8;
+            font-size: 18px;
+        }
+
+        .judges_table thead tr {
+            background-color: #E5F4FF;
+        }
+
+        .judges_table th,
+        .judges_table td {
+            border: none;
+            border-right: 1px solid #d8d8d8;
+            border-bottom: 1px solid #d8d8d8;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .judges_table th:last-child,
+        .judges_table td:last-child {
+            border-right: none;
+        }
+
+        .judges_table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .judges_table {
+                font-size: 14px;
+            }
+
+            .judges_table th,
+            .judges_table td {
+                padding: 8px 4px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../assets/join.css?202507202025">
+    <script type="module" src="../assets/hoisted6.js?202507202025"></script>
+</head>
+
+<body>
+    <!-- 這裡會包含完整的 header 和 navigation -->
+    <!-- 由後端注入或複製自主站的 header -->
+
+    <main>
+        <div class="container breadcrumb">
+            <nav>
+                <a href="../">首頁</a> / <a href="../books">選書指南</a> / <a href="../judges">評審委員名單</a>
+            </nav>
+        </div>
+
+        <div class="container">
+            <h2 class="title title--method">
+                <span>評審委員名單</span>
+            </h2>
+
+            <div class="method">
+                <div class="judges">
+                    <h3>圖畫書類</h3>
+                    <table class="judges_table">
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>現職</th>
+                                <th>專長</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 評審委員資料由後端注入 -->
+                            <tr>
+                                <td>委員姓名</td>
+                                <td>現職職稱</td>
+                                <td>專長領域</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>自然科普類</h3>
+                    <table class="judges_table">
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>現職</th>
+                                <th>專長</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 評審委員資料由後端注入 -->
+                            <tr>
+                                <td>委員姓名</td>
+                                <td>現職職稱</td>
+                                <td>專長領域</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>人文社科類</h3>
+                    <table class="judges_table">
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>現職</th>
+                                <th>專長</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 評審委員資料由後端注入 -->
+                            <tr>
+                                <td>委員姓名</td>
+                                <td>現職職稱</td>
+                                <td>專長領域</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>文學類</h3>
+                    <table class="judges_table">
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>現職</th>
+                                <th>專長</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 評審委員資料由後端注入 -->
+                            <tr>
+                                <td>委員姓名</td>
+                                <td>現職職稱</td>
+                                <td>專長領域</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>文學翻譯類</h3>
+                    <table class="judges_table">
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>現職</th>
+                                <th>專長</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 評審委員資料由後端注入 -->
+                            <tr>
+                                <td>委員姓名</td>
+                                <td>現職職稱</td>
+                                <td>專長領域</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>叢書工具書類</h3>
+                    <table class="judges_table">
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>現職</th>
+                                <th>專長</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 評審委員資料由後端注入 -->
+                            <tr>
+                                <td>委員姓名</td>
+                                <td>現職職稱</td>
+                                <td>專長領域</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 這裡會包含完整的 footer -->
+    <!-- 由後端注入或複製自主站的 footer -->
+</body>
+
+</html>
