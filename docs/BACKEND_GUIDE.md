@@ -15,14 +15,14 @@
 前端使用 Astro 的島嶼架構，動態組件透過 `<astro-island>` 標籤載入：
 
 ```html
-<astro-island 
-    uid="Z1uAFBx" 
-    component-url="./assets/SliderNews.js" 
-    component-export="default" 
-    renderer-url="./assets/client.js" 
-    props="{&quot;list&quot;:[...],&quot;url&quot;:[...]}" 
-    ssr="" 
-    client="only" 
+<astro-island
+    uid="Z1uAFBx"
+    component-url="./assets/SliderNews.js"
+    component-export="default"
+    renderer-url="./assets/client.js"
+    props="{&quot;list&quot;:[...],&quot;url&quot;:[...]}"
+    ssr=""
+    client="only"
     opts="{&quot;name&quot;:&quot;SliderNews&quot;,&quot;value&quot;:true}">
 </astro-island>
 ```
@@ -303,11 +303,11 @@ A: 確認檔案編碼為 UTF-8
 ## 📞 技術支援
 
 如有問題請聯繫前端開發團隊：
-- **Email**: [開發團隊信箱]
+- **Email**: [anne.lin@udngroup.com]
 - **專案**: 中小學生讀物選介官網
-- **GitHub**: [專案連結]
+- **GitHub**: [https://github.com/udnanne/selected-readings/tree/main]
 
 ---
 
-**文件版本**: v1.0  
+**文件版本**: v1.0
 **最後更新**: 2025年9月11日
