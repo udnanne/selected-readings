@@ -11,50 +11,46 @@ const { type } = Astro.props;
 const isProd = import.meta.env.PROD;
 const url = isProd ? "/anne/book/" : "/";
 
-export function getDefaultList(type: string) {
-    const path = type.includes("selection")
-        ? "selection-category"
-        : "books-category";
+const path = type.includes("selection")
+    ? "selection-category"
+    : "books-category";
 
-    return [
-        {
-            title: "人文社科類",
-            url: `${path}?type=1`,
-        },
-        {
-            title: "叢書工具書類",
-            url: `${path}?type=2`,
-        },
-        {
-            title: "圖畫書類",
-            url: `${path}?type=3`,
-        },
-        {
-            title: "文學翻譯類",
-            url: `${path}?type=4`,
-        },
-        {
-            title: "文學類",
-            url: `${path}?type=5`,
-        },
-        {
-            title: "漫畫類",
-            url: `${path}?type=6`,
-        },
-        {
-            title: "自然科普類",
-            url: `${path}?type=7`,
-        },
-        {
-            title: "雜誌類",
-            url: `${path}?type=8`,
-        },
-    ];
-}
+const defaultList = [
+    {
+        title: "人文社科類",
+        url: `${path}?type=1`,
+    },
+    {
+        title: "叢書工具書類",
+        url: `${path}?type=2`,
+    },
+    {
+        title: "圖畫書類",
+        url: `${path}?type=3`,
+    },
+    {
+        title: "文學翻譯類",
+        url: `${path}?type=4`,
+    },
+    {
+        title: "文學類",
+        url: `${path}?type=5`,
+    },
+    {
+        title: "漫畫類",
+        url: `${path}?type=6`,
+    },
+    {
+        title: "自然科普類",
+        url: `${path}?type=7`,
+    },
+    {
+        title: "雜誌類",
+        url: `${path}?type=8`,
+    },
+];
 
-const defaultList = getDefaultList(type);
-
-export const recommendList = [
+const recommendList = [
     {
         title: "第45次推介",
         url: `recommend?type=1`,

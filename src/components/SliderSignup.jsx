@@ -1,23 +1,21 @@
-import { useRef, useState, useEffect, useCallback, useMemo } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 export default function SliderSignup(props) {
     const splideRef = useRef(null);
-    const [current, setCurrent] = useState(parseInt(props.start) || 0);
+    const [current, setCurrent] = useState(0);
 
-    const handleSplide = useCallback((id) => {
-        if (splideRef.current && typeof id === 'number') {
-            splideRef.current.go(id);
-        }
-    }, []);
+    const handleSplide = (id) => {
+        if (splideRef.current) { splideRef.current.go(id); }
+    };
 
-    const handleBtn = useCallback(() => {
+    const handleBtn = () => {
         if (splideRef.current && current < props.list.length - 1) {
-            splideRef.current.go(`+${1}`);
+            splideRef.current.go('+${1}');
         }
-    }, [current, props.list.length]);
+    };
 
-    const handleWrapper = useCallback((id) => {
+    function handleWrapper(id) {
         switch (id) {
             case 0:
                 return props.download;
@@ -32,21 +30,7 @@ export default function SliderSignup(props) {
             default:
                 return props.download;
         }
-    }, [props.download, props.fill, props.upload, props.send, props.revise]);
-
-    const splideOptions = useMemo(() => ({
-        type: "slide",
-        drag: false,
-        autoWidth: true,
-        arrows: false,
-        pagination: false,
-        start: parseInt(props.start) || 0,
-        breakpoints: {
-            1023: {
-                drag: 'free',
-            },
-        },
-    }), [props.start]);
+    }
 
     useEffect(() => {
         handleWrapper(current);
@@ -56,9 +40,20 @@ export default function SliderSignup(props) {
     return (
         <>
             <Splide
-                className="splide-signup full-container" 
-                aria-label="報名專區"
-                options={splideOptions}
+                className="splide-signup full-container" aria-label="報名專區"
+                options={{
+                    type: "slide",
+                    drag: false,
+                    autoWidth: true,
+                    arrows: false,
+                    pagination: false,
+                    start: parseInt(props.start),
+                    breakpoints: {
+                        1023: {
+                            drag: 'free',
+                        },
+                    },
+                }}
                 ref={splideRef}
                 onActive={(splide) => setCurrent(splide.index)}
             >
