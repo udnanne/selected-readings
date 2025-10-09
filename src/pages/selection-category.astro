@@ -1,13 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Title from "../components/Title.astro";
-import Aside, { getDefaultList } from "../components/Aside.astro";
-import Breadcrumb from "../components/Breadcrumb.jsx";
+import Aside from "../components/Aside.astro";
 import "../styles/title.scss";
 import "../styles/slider.scss";
 import "../styles/guide.scss";
-
-const defaultList = getDefaultList("selection-category");
 ---
 
 <Layout title="評選報告">
@@ -16,9 +13,7 @@ const defaultList = getDefaultList("selection-category");
             <nav>
                 <a href="/">首頁</a> / <a href="/books">選書指南</a> / <a
                     href="/selection">當屆評選報告</a
-                > / <a href="/selection-category">
-                    <Breadcrumb client:only list={defaultList} />
-                </a>
+                > / <a href="/selection-category">人文社科類</a>
             </nav>
         </div>
 
@@ -30,7 +25,7 @@ const defaultList = getDefaultList("selection-category");
 
                 <div class="main-content">
                     <div class="top-part">
-                        <Title title={defaultList} classname="selection" />
+                        <Title title={["人文社科類"]} classname="selection" />
 
                         <div class="middle-part">
                             <span class="convener">召集人：謝佳螢</span>
