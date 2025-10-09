@@ -14,18 +14,18 @@ function copyStaticPages() {
         writeBundle() {
             const staticPagesDir = resolve(__dirname, 'static-pages');
             const distDir = resolve(__dirname, 'dist');
-            
+
             // 確保 dist 目錄存在
             if (!existsSync(distDir)) {
                 mkdirSync(distDir, { recursive: true });
             }
-            
+
             // 複製 judges/index.html
             const judgesSourceDir = resolve(staticPagesDir, 'judges');
             const judgesTargetDir = resolve(distDir, 'judges');
             const judgesSource = resolve(judgesSourceDir, 'index.html');
             const judgesTarget = resolve(judgesTargetDir, 'index.html');
-            
+
             if (existsSync(judgesSource)) {
                 if (!existsSync(judgesTargetDir)) {
                     mkdirSync(judgesTargetDir, { recursive: true });
@@ -33,13 +33,13 @@ function copyStaticPages() {
                 copyFileSync(judgesSource, judgesTarget);
                 console.log('✓ 複製 judges/index.html 到 dist/judges/');
             }
-            
+
             // 複製 criteria/index.html
             const criteriaSourceDir = resolve(staticPagesDir, 'criteria');
             const criteriaTargetDir = resolve(distDir, 'criteria');
             const criteriaSource = resolve(criteriaSourceDir, 'index.html');
             const criteriaTarget = resolve(criteriaTargetDir, 'index.html');
-            
+
             if (existsSync(criteriaSource)) {
                 if (!existsSync(criteriaTargetDir)) {
                     mkdirSync(criteriaTargetDir, { recursive: true });
