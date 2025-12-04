@@ -93,9 +93,3 @@ function copyStaticPages() {
 ```
 
 這確保了在每次建置時，靜態頁面都會被正確複製到輸出目錄，並保持與 Astro 一致的目錄結構。
-
-## 📋 原始檔案來源
-
-這些檔案來自「新增的頁面」資料夾中的原始 HTML 檔案：
-- `新增的頁面/judges/index.html` → `static-pages/judges/index.html`
-- `新增的頁面/criteria/index.html` → `static-pages/criteria/index.html`
