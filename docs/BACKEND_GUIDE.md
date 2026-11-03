@@ -139,13 +139,33 @@ dist/
 ```
 
 #### 1.5 標題組件 (TitleDefault)
-**搜尋關鍵字**: `component-url="./assets/TitleDefault.js"`
+**適用頁面**: 各頁標題。`books-category`、`selection-category` 依網址 `type` 切換；其餘頁面傳入固定文字。
 
-**資料格式**:
+**搜尋關鍵字**: `component-url="./assets/TitleDefault.js"` 或 `component-url="../assets/TitleDefault.js"`
+
+元件不接收 `type`。頁面網址帶有 `?type=` 時，從 `title` 清單找出 `url` 含有 `type=<數字>` 的項目，顯示該項目的 `title`。沒有 `type` 時當作 `1`。`title` 第一項若是字串，則直接顯示該字串，忽略網址參數。
+
+**固定文字**:
 ```json
 {
   "title": [1, [
-    [0, "標題文字"]
+    [0, "關於我們"]
+  ]]
+}
+```
+
+**依類別切換**（`books-category` 的 `url` 路徑；`selection-category` 改為 `selection-category?type=1`）:
+```json
+{
+  "title": [1, [
+    [0, {
+      "title": [0, "人文社科類"],
+      "url": [0, "books-category?type=1"]
+    }],
+    [0, {
+      "title": [0, "叢書工具書類"],
+      "url": [0, "books-category?type=2"]
+    }]
   ]]
 }
 ```
@@ -157,49 +177,116 @@ dist/
 
 **搜尋關鍵字**: `SliderAside.js`
 
-**資料格式**:
+屬性是 `type`、`list`、`url`。`list` 每一筆只有 `title` 與 `url`，沒有封面或作者。`url` 必須含有 `type=<數字>`，連結會與頁面網址的 `?type=` 比對以標示目前分類。`recommend` 使用推介清單，其餘頁面使用八個書籍類別。
+
 ```json
 {
-  "list": [
+  "type": [0, "books-category"],
+  "url": [0, "/"],
+  "list": [1, [
     [0, {
-      "img": [0, "書籍封面URL"],
-      "alt": [0, "書籍描述"],
-      "label": [0, "分類標籤"],
-      "title": [0, "書籍標題"],
-      "content": [0, "作者資訊"],
-      "url": [0, "詳情頁URL"]
+      "title": [0, "人文社科類"],
+      "url": [0, "books-category?type=1"]
+    }],
+    [0, {
+      "title": [0, "叢書工具書類"],
+      "url": [0, "books-category?type=2"]
     }]
-  ]
+  ]]
 }
 ```
 
-#### 2.2 搜尋組件 (FillterSearch)
-**適用頁面**: books, books-category, books-detail
+以下元件用同一份清單顯示目前分類。後端改名稱或順序時，`type` 數字要與側欄 `url` 一致。這些元件都不接收 `type` 參數，而是由瀏覽器讀取網址上的 `?type=`。
+
+#### 2.2 搜尋列標題 (FillterSearch)
+**適用頁面**: `recommend` 依 `type` 切換。`books`、`books-category`、`books-detail` 傳入固定文字。
 
 **搜尋關鍵字**: `component-url="../assets/FillterSearch.js"`
 
-**資料格式**:
+屬性名稱是 `search`。傳入字串時直接顯示，忽略網址參數。傳入清單時，沒有 `type` 就顯示第一筆。
+
+**固定文字**:
 ```json
 {
-  "placeholder": [0, "搜尋關鍵字"]
+  "search": [0, "獲選書籍"]
 }
 ```
 
-#### 2.3 分類組件 (FillterCate)
-**適用頁面**: books, books-category
+**依推介切換**（`recommend`）:
+```json
+{
+  "search": [1, [
+    [0, {
+      "title": [0, "第45次推介"],
+      "url": [0, "recommend?type=1"]
+    }],
+    [0, {
+      "title": [0, "第44次推介"],
+      "url": [0, "recommend?type=2"]
+    }]
+  ]]
+}
+```
+
+#### 2.3 分類標題 (FillterCate)
+**適用頁面**: `books-category` 依 `type` 切換。`books`、`recommend` 傳入固定文字「全部」。`books-detail` 沒有傳這個屬性。
 
 **搜尋關鍵字**: `component-url="../assets/FillterCate.js"`
 
-**資料格式**:
+屬性名稱是 `cate`。清單項目是 `title` 與 `url`，不要使用 `categories`、`id`、`name` 或 `count`。傳入字串時直接顯示。傳入清單時，沒有 `type` 就顯示第一筆。
+
+**固定文字**:
 ```json
 {
-  "categories": [
+  "cate": [0, "全部"]
+}
+```
+
+**依類別切換**（`books-category`）:
+```json
+{
+  "cate": [1, [
     [0, {
-      "id": [0, "category-1"],
-      "name": [0, "分類名稱"],
-      "count": [0, 10]
+      "title": [0, "人文社科類"],
+      "url": [0, "books-category?type=1"]
     }]
-  ]
+  ]]
+}
+```
+
+#### 2.4 類別按鈕 (SelectorBtn)
+**適用頁面**: `books-category` 依 `type` 切換。`books`、`books-detail`、`recommend` 傳入固定文字，例如「書籍類別」。
+
+**搜尋關鍵字**: `component-url="../assets/SelectorBtn.js"`
+
+屬性名稱是 `catebtn`。清單格式與 `FillterCate` 的 `cate` 相同。傳入字串時直接顯示。傳入清單時，沒有 `type` 就顯示第一筆。
+
+**固定文字**:
+```json
+{
+  "catebtn": [0, "書籍類別"]
+}
+```
+
+#### 2.5 麵包屑 (Breadcrumb)
+**適用頁面**: selection-category
+
+**搜尋關鍵字**: `component-url="../assets/Breadcrumb.js"`
+
+屬性名稱是 `list`，沒有固定字串模式。每一筆是 `title` 與 `url`，`url` 須含 `type=<數字>`。沒有 `type` 時顯示第一筆。元件只輸出被選中的文字。
+
+```json
+{
+  "list": [1, [
+    [0, {
+      "title": [0, "人文社科類"],
+      "url": [0, "selection-category?type=1"]
+    }],
+    [0, {
+      "title": [0, "叢書工具書類"],
+      "url": [0, "selection-category?type=2"]
+    }]
+  ]]
 }
 ```
 
@@ -309,5 +396,5 @@ A: 確認檔案編碼為 UTF-8
 
 ---
 
-**文件版本**: v1.0
-**最後更新**: 2025年9月11日
+**文件版本**: v1.1
+**最後更新**: 2026年11月3日

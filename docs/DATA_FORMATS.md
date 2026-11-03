@@ -137,7 +137,7 @@ component-url="./assets/SliderGuide.js"
 
 ---
 
-## 🎯 SliderAside (側邊欄書籍)
+## 🎯 SliderAside (側邊欄分類)
 
 ### 使用頁面
 - books/index.html
@@ -151,20 +151,47 @@ component-url="./assets/SliderGuide.js"
 SliderAside.js
 ```
 
+### 欄位說明
+- `type`: 頁面種類，例如 `books-category`、`selection-category`、`recommend`
+- `url`: 站點前綴，正式環境為 `/anne/book/`，本機為 `/`
+- `list`: 分類清單。每一筆只有 `title` 與 `url`，`url` 必須含 `type=<數字>`
+- `recommend` 的 `list` 是推介次數；其餘頁面是八個書籍類別
+
 ### 完整範例
 ```json
 {
+  "type": [0, "books-category"],
+  "url": [0, "/"],
   "list": [
     1,
     [
-      [0, {
-        "img": [0, "https://example.com/book-1.jpg"],
-        "alt": [0, "書籍封面描述"],
-        "label": [0, "圖畫書類"],
-        "title": [0, "書籍標題"],
-        "content": [0, "作者資訊"],
-        "url": [0, "books-detail"]
-      }]
+      [0, { "title": [0, "人文社科類"], "url": [0, "books-category?type=1"] }],
+      [0, { "title": [0, "叢書工具書類"], "url": [0, "books-category?type=2"] }],
+      [0, { "title": [0, "圖畫書類"], "url": [0, "books-category?type=3"] }],
+      [0, { "title": [0, "文學翻譯類"], "url": [0, "books-category?type=4"] }],
+      [0, { "title": [0, "文學類"], "url": [0, "books-category?type=5"] }],
+      [0, { "title": [0, "漫畫類"], "url": [0, "books-category?type=6"] }],
+      [0, { "title": [0, "自然科普類"], "url": [0, "books-category?type=7"] }],
+      [0, { "title": [0, "雜誌類"], "url": [0, "books-category?type=8"] }]
+    ]
+  ]
+}
+```
+
+`selection-category` 把每一筆的路徑改成 `selection-category?type=1` 這種形式。`recommend` 的清單如下：
+
+```json
+{
+  "type": [0, "recommend"],
+  "url": [0, "/"],
+  "list": [
+    1,
+    [
+      [0, { "title": [0, "第45次推介"], "url": [0, "recommend?type=1"] }],
+      [0, { "title": [0, "第44次推介"], "url": [0, "recommend?type=2"] }],
+      [0, { "title": [0, "第43次推介"], "url": [0, "recommend?type=3"] }],
+      [0, { "title": [0, "第42次推介"], "url": [0, "recommend?type=4"] }],
+      [0, { "title": [0, "第41次推介"], "url": [0, "recommend?type=5"] }]
     ]
   ]
 }
@@ -175,7 +202,8 @@ SliderAside.js
 ## 🎯 TitleDefault (標題組件)
 
 ### 使用頁面
-- 多個頁面的標題區塊
+- 固定文字：關於我們、最新消息等一般頁面
+- 依 `?type=` 切換：books-category/index.html、selection-category/index.html
 
 ### 搜尋關鍵字
 ```html
@@ -183,13 +211,31 @@ component-url="./assets/TitleDefault.js"
 component-url="../assets/TitleDefault.js"
 ```
 
-### 完整範例
+### 行為
+`title` 第一項是字串時，顯示該字串。第一項是物件時，找出 `url` 含有目前 `type` 的項目並顯示其 `title`。網址沒有 `type` 時當作 `1`。
+
+### 固定文字
 ```json
 {
   "title": [
     1,
     [
-      [0, "頁面標題文字"]
+      [0, "關於我們"]
+    ]
+  ]
+}
+```
+
+### 依類別切換
+清單與側欄相同。`books-category` 使用 `books-category?type=1`，`selection-category` 使用 `selection-category?type=1`。
+
+```json
+{
+  "title": [
+    1,
+    [
+      [0, { "title": [0, "人文社科類"], "url": [0, "selection-category?type=1"] }],
+      [0, { "title": [0, "叢書工具書類"], "url": [0, "selection-category?type=2"] }]
     ]
   ]
 }
@@ -197,37 +243,141 @@ component-url="../assets/TitleDefault.js"
 
 ---
 
-## 🎯 FillterSearch (搜尋組件)
+## 🎯 FillterSearch (搜尋列標題)
 
 ### 使用頁面
-- books/index.html
-- books-category/index.html
-- books-detail/index.html
+- 固定文字「獲選書籍」：books/index.html、books-category/index.html、books-detail/index.html
+- 依 `?type=` 切換：recommend/index.html
 
 ### 搜尋關鍵字
 ```html
 component-url="../assets/FillterSearch.js"
 ```
 
+### 行為
+屬性名稱是 `search`。字串直接顯示。清單比對 `url` 裡的 `type=`，沒有 `type` 時顯示第一筆。
+
+### 固定文字
+```json
+{
+  "search": [0, "獲選書籍"]
+}
+```
+
+### 依推介切換
+```json
+{
+  "search": [
+    1,
+    [
+      [0, { "title": [0, "第45次推介"], "url": [0, "recommend?type=1"] }],
+      [0, { "title": [0, "第44次推介"], "url": [0, "recommend?type=2"] }]
+    ]
+  ]
+}
+```
+
+---
+
+## 🎯 FillterCate (分類標題)
+
+### 使用頁面
+- 依 `?type=` 切換：books-category/index.html
+- 固定文字「全部」：books/index.html、recommend/index.html
+- books-detail/index.html 沒有傳入 `cate`
+
+### 搜尋關鍵字
+```html
+component-url="../assets/FillterCate.js"
+```
+
+### 行為
+屬性名稱是 `cate`。清單項目只有 `title` 與 `url`。字串直接顯示。清單沒有 `type` 時顯示第一筆。
+
+### 固定文字
+```json
+{
+  "cate": [0, "全部"]
+}
+```
+
+### 依類別切換
+```json
+{
+  "cate": [
+    1,
+    [
+      [0, { "title": [0, "人文社科類"], "url": [0, "books-category?type=1"] }],
+      [0, { "title": [0, "叢書工具書類"], "url": [0, "books-category?type=2"] }]
+    ]
+  ]
+}
+```
+
+---
+
+## 🎯 SelectorBtn (類別按鈕)
+
+### 使用頁面
+- 依 `?type=` 切換：books-category/index.html
+- 固定文字：books/index.html、books-detail/index.html、recommend/index.html
+
+### 搜尋關鍵字
+```html
+component-url="../assets/SelectorBtn.js"
+```
+
+### 行為
+屬性名稱是 `catebtn`。字串直接顯示在按鈕上。清單格式與 `FillterCate` 的 `cate` 相同，沒有 `type` 時顯示第一筆。
+
+### 固定文字
+```json
+{
+  "catebtn": [0, "書籍類別"]
+}
+```
+
+### 依類別切換
+```json
+{
+  "catebtn": [
+    1,
+    [
+      [0, { "title": [0, "人文社科類"], "url": [0, "books-category?type=1"] }]
+    ]
+  ]
+}
+```
+
+---
+
+## 🎯 Breadcrumb (麵包屑)
+
+### 使用頁面
+- selection-category/index.html
+
+### 搜尋關鍵字
+```html
+component-url="../assets/Breadcrumb.js"
+```
+
+### 行為
+屬性名稱是 `list`。只輸出被選中的分類名稱，放在麵包屑最後一層。每一筆都要有 `title` 與含 `type=<數字>` 的 `url`。沒有 `type` 時顯示第一筆。
+
 ### 完整範例
 ```json
 {
-  "placeholder": [0, "請輸入搜尋關鍵字"],
-  "categories": [
+  "list": [
     1,
     [
-      [0, {
-        "id": [0, "all"],
-        "name": [0, "全部"]
-      }],
-      [0, {
-        "id": [0, "picture"],
-        "name": [0, "圖畫書類"]
-      }],
-      [0, {
-        "id": [0, "literature"],
-        "name": [0, "文學類"]
-      }]
+      [0, { "title": [0, "人文社科類"], "url": [0, "selection-category?type=1"] }],
+      [0, { "title": [0, "叢書工具書類"], "url": [0, "selection-category?type=2"] }],
+      [0, { "title": [0, "圖畫書類"], "url": [0, "selection-category?type=3"] }],
+      [0, { "title": [0, "文學翻譯類"], "url": [0, "selection-category?type=4"] }],
+      [0, { "title": [0, "文學類"], "url": [0, "selection-category?type=5"] }],
+      [0, { "title": [0, "漫畫類"], "url": [0, "selection-category?type=6"] }],
+      [0, { "title": [0, "自然科普類"], "url": [0, "selection-category?type=7"] }],
+      [0, { "title": [0, "雜誌類"], "url": [0, "selection-category?type=8"] }]
     ]
   ]
 }
