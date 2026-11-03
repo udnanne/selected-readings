@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import { fileURLToPath } from 'url';
 import { resolve, dirname } from 'path';
-import { copyFileSync, mkdirSync, existsSync } from 'fs';
+import { copyFileSync, mkdirSync, existsSync, readFileSync } from 'fs';
 import react from "@astrojs/react";
 import relativeLinks from "astro-relative-links";
 const __filename = fileURLToPath(import.meta.url);
@@ -11,6 +11,43 @@ const __dirname = dirname(__filename);
 function copyStaticPages() {
     return {
         name: 'copy-static-pages',
+        configureServer(server) {
+            server.middlewares.use((req, res, next) => {
+                const pathname = (req.url ?? '').split('?')[0];
+                const pageMatch = pathname.match(/^\/(judges|criteria)\/?$/);
+                if (pageMatch) {
+                    const file = resolve(__dirname, 'static-pages', pageMatch[1], 'index.html');
+                    if (!existsSync(file)) {
+                        next();
+                        return;
+                    }
+
+                    res.statusCode = 200;
+                    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+                    res.end(readFileSync(file));
+                    return;
+                }
+
+                const assetMatch = pathname.match(/^\/assets\/(about-2\.css|join\.css|hoisted6\.js)$/);
+                if (!assetMatch) {
+                    next();
+                    return;
+                }
+
+                const asset = resolve(__dirname, 'dist/assets', assetMatch[1]);
+                if (!existsSync(asset)) {
+                    next();
+                    return;
+                }
+
+                const type = assetMatch[1].endsWith('.js')
+                    ? 'text/javascript; charset=utf-8'
+                    : 'text/css; charset=utf-8';
+                res.statusCode = 200;
+                res.setHeader('Content-Type', type);
+                res.end(readFileSync(asset));
+            });
+        },
         writeBundle() {
             const staticPagesDir = resolve(__dirname, 'static-pages');
             const distDir = resolve(__dirname, 'dist');
