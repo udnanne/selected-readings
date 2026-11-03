@@ -138,18 +138,6 @@ dist/
 }
 ```
 
-#### 1.5 標題組件 (TitleDefault)
-**搜尋關鍵字**: `component-url="./assets/TitleDefault.js"`
-
-**資料格式**:
-```json
-{
-  "title": [1, [
-    [0, "標題文字"]
-  ]]
-}
-```
-
 ### 2. 書籍相關頁面
 
 #### 2.1 側邊欄 (SliderAside)
@@ -168,36 +156,6 @@ dist/
       "title": [0, "書籍標題"],
       "content": [0, "作者資訊"],
       "url": [0, "詳情頁URL"]
-    }]
-  ]
-}
-```
-
-#### 2.2 搜尋組件 (FillterSearch)
-**適用頁面**: books, books-category, books-detail
-
-**搜尋關鍵字**: `component-url="../assets/FillterSearch.js"`
-
-**資料格式**:
-```json
-{
-  "placeholder": [0, "搜尋關鍵字"]
-}
-```
-
-#### 2.3 分類組件 (FillterCate)
-**適用頁面**: books, books-category
-
-**搜尋關鍵字**: `component-url="../assets/FillterCate.js"`
-
-**資料格式**:
-```json
-{
-  "categories": [
-    [0, {
-      "id": [0, "category-1"],
-      "name": [0, "分類名稱"],
-      "count": [0, 10]
     }]
   ]
 }
