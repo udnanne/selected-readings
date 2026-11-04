@@ -124,7 +124,7 @@ const guideList = [
         <div class="signup-area full-container">
             <Title classname="signup-area" title={["報名專區"]} />
 
-            <SignupItem />
+            <SignupItem start="0" />
         </div>
 
         <div class="tour">
@@ -464,6 +464,21 @@ const guideList = [
             </a>
         </div>
     </main>
+
+    <a class="float-promo" href="/method" aria-label="前往答題抽獎兌好禮">
+        <picture>
+            <source
+                media="(max-width: 1023px)"
+                srcset="/TEK2604UB037-(mobile2)96x104.png"
+            />
+            <img
+                src="/TEK2604UB037-(web2)120x130.png"
+                alt="答題抽獎兌好禮"
+                width="120"
+                height="130"
+            />
+        </picture>
+    </a>
 </Layout>
 
 <style is:global lang="scss">
@@ -483,6 +498,30 @@ const guideList = [
 
     .guide-area {
         min-height: 390px;
+    }
+
+    .float-promo {
+        position: fixed;
+        z-index: 5;
+        right: max(24px, calc((100vw - var(--container-largeDesktop)) / 2 - 36px));
+        bottom: 48px;
+        line-height: 0;
+
+        img {
+            display: block;
+            width: 120px;
+            height: 130px;
+        }
+
+        @media (max-width: $tablet) {
+            right: 8px;
+            bottom: 24px;
+
+            img {
+                width: 96px;
+                height: 104px;
+            }
+        }
     }
 
     .signup-area {
